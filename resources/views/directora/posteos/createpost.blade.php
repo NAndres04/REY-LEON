@@ -1,0 +1,82 @@
+@extends('home')
+
+@section('titulodirectora')
+     
+@endsection    
+
+@section('contenidodirectora')
+
+<div class="py-32 h-screen ">
+    <div class="flex bg-white rounded-lg shadow-lg overflow-hidden mx-auto max-w-sm lg:max-w-4xl">
+          <div class=" lg:block lg:w-1/2 bg-cover" >
+            <form action="{{ route ('imagenes.store')}}" method="POST" enctype="multipart/form-data" id="dropzone" class="dropzone border-dashed border-2 w-full h-96 rounded flex flex-col justify-center items-center">
+                @csrf
+
+            </form>
+          </div>
+          <div class="w-full p-8 lg:w-1/2">
+              <h2 class="text-2xl font-semibold text-gray-700 text-center">Publicar actividad</h2>
+              <p class="text-xl text-gray-600 text-center">Por favor ingrese las fotos o videos!</p>
+        
+              
+              <!-- crear publicacion  -->
+              <form action="{{ route ('posts.store')}}" method="POST" novalidate>
+                  @csrf
+             
+              <div class="mt-4">
+                  <label class="block text-gray-700 text-sm font-bold mb-2" for="titulo">Título</label>
+                  <input 
+                  class="bg-gray-200 text-gray-700 focus:outline-none focus:shadow-outline border border-gray-300 rounded py-2 px-4 block w-full appearance-none
+                  @error ('titulo') border-red-500 @enderror" 
+                  id="titulo"
+                  name="titulo"
+                  type="text"
+                  placeholder="Ingrese el título"
+                  value="{{old('titulo')}}"
+                  />
+                  @error('titulo')
+                      <p class="bg-red-500 text-white my-2 rounded-lg text-sm p-2 text-center">{{$message}} </p>
+                  @enderror
+              </div>
+              <!-- fin crear publicacion -->
+              <!-- Descripcion -->
+              <div class="mt-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="descripcion">Descripción</label>
+                <textarea 
+                class="bg-gray-200 text-gray-700 focus:outline-none focus:shadow-outline border border-gray-300 rounded py-2 px-4 block w-full appearance-none
+                @error ('descripcion') border-red-500 @enderror" 
+                id="descripcion"
+                name="descripcion"
+                placeholder="Ingrese la descripción"
+                >
+                {{old('descripcion')}} 
+                </textarea>
+                @error('descripcion')
+                    <p class="bg-red-500 text-white my-2 rounded-lg text-sm p-2 text-center">{{$message}} </p>
+                @enderror
+            </div>
+            <!-- fin Descripcion -->
+            <!-- IMAGEN -->
+            <div class="mt-8">
+                <input
+                name="imagen"
+                type="hidden"
+                value="{{old ('imagen')}}"
+                />
+                @error('imagen')
+                    <p class="bg-red-500 text-white my-2 rounded-lg text-sm p-2 text-center">{{$message}} </p>
+                @enderror
+            </div>
+            <!-- fin imagen -->
+        
+              <div class="mt-8">
+                  <button class="bg-gray-700 text-white font-bold py-2 px-4 w-full rounded hover:bg-gray-600">Publicar actividad</button>
+              </div>
+              </form>
+            </div>
+         </div>
+       </div>
+       
+
+@endsection 
+<script src="{{ asset('js/app.js') }}" defer></script>
