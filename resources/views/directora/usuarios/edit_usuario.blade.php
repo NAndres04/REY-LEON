@@ -126,11 +126,15 @@
                             <label class="block text-gray-700 text-sm font-bold mb-2" for="rol">Tipo de Cuenta</label>
                             <select class="bg-gray-200 text-gray-700 focus:outline-none focus:shadow-outline border border-gray-300 rounded py-2 px-4 block w-full
                             @error ('rol') border-red-500 @enderror" 
-                            value="{{old('rol')}}" 
+                            value="{{$usuarios->rol}}" 
                             id="rol" 
                             name="rol">
+                            <option value="{{ $usuarios->rol }}" @if($usuarios->rol == $usuarios->ROLES() ) selected @endif>{{ $usuarios->ROLES()  }}</option>
+                            @if($usuarios->rol == 0 )
                             <option value="1">Educadora</option>
+                            @else
                             <option value="0">Directora</option>
+                            @endif
                             </select>
                             @error('rol')
                             <p class="bg-red-500 text-white my-2 rounded-lg text-sm p-2 text-center">{{$message}} </p>
