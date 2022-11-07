@@ -10,7 +10,6 @@ class Apoderado extends Model
     use HasFactory;
 
     protected $fillable = [
-        'id',
         'rut',
         'nombre',
         'ap_paterno',

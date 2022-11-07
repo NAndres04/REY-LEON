@@ -10,7 +10,8 @@ class Alumno extends Model
     use HasFactory;
 
     protected $fillable = [
-        'rut_apoderado',
+        'id',
+        'id_apoderado',
         'id_curso',
         'rut',
         'nro_documento',
@@ -29,10 +30,11 @@ class Alumno extends Model
     ];
 
     public function cursos(){
-        return $this->belongsTo('App/Curso');
+        return $this->belongsTo(Curso::class, 'id_curso');
     }
 
     public function apoderados(){
-        return $this->belongsTo('App/Apoderado');
+        return $this->belongsTo(Apoderado::class, 'id_apoderado');
     }
+
 }

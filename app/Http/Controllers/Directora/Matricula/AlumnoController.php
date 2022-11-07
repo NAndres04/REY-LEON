@@ -12,12 +12,14 @@ class AlumnoController extends Controller
 {
     public function index(){
         $cursos = Curso::all();
+        $apoderados = Apoderado::all();
+        $alumnos = Alumno::all();
         return view('directora.matricula.matricula_alumno');
         
     }
     public function store(Request $request){
         $alumno = Alumno::create([
-            'rut_apoderado' => $request ->rut_apoderado,
+            'id_apoderado' => $request ->id_apoderado,
             'rut' => $request->rut,
             'nro_documento' => $request->nro_documento,
             'nombre' => $request->nombre,
@@ -33,6 +35,41 @@ class AlumnoController extends Controller
             'discapacidad' => $request->discapacidad,
             'id_curso' => $request->id_curso,
         ]);
-        return view('directora.inicio_directora');
+        return view('directora.directora');
     }
+
+    public function show(Alumno $alumnos)
+    {
+        return view('directora.alumnos.info_alumno', compact('alumnos'));
+    }
+
+
+    public function edit(Alumno $alumnos)
+    {
+        $cursos = Curso::all();
+        $alumnos->rut;
+        $alumnos->nro_documento;
+        $alumnos->nombre;
+        $alumnos->ap_paterno;
+        $alumnos->ap_materno;
+        $alumnos->fecha_nac;
+        $alumnos->ciudad_nac;
+        $alumnos->nacionalidad;
+        $alumnos->domicilio;
+        $alumnos->edad;
+        $alumnos->nombre_emergencia;
+        $alumnos->fono_emergencia;
+        $alumnos->discapacidad;
+        return view('directora.alumnos.edit_alumno', [
+            'cursos' => $cursos,
+            'alumnos' => $alumnos
+        ]);
+    }
+
+    public function update(Request $request, Alumno $alumnos)
+    {
+        $alumnos->update($request->all());
+        return view('directora.alumnos.info_alumno', compact('alumnos'));
+    }
+
 }

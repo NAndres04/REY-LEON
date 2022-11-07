@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('alumnos', function (Blueprint $table) {
             $table->id();
-            $table->string('rut_apoderado')->foreignId('rut_apoderado')->constrained('apoderados');;
+            $table->foreignId('id_apoderado')->constrained('apoderados');
             $table->foreignId('id_curso')->constrained('cursos');
             $table->string('rut');
             $table->string('nro_documento');

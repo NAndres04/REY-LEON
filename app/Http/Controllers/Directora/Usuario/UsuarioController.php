@@ -52,4 +52,32 @@ class UsuarioController extends Controller
         return view('directora.usuarios.ver_usuario', compact('usuarios'));
         
     }
+
+    public function show(User $usuarios)
+    {
+        return view('directora.usuarios.info_usuario', compact('usuarios'));
+    }
+
+    public function edit(User $usuarios)
+    {
+        $usuarios->rut;
+        $usuarios->nombre;
+        $usuarios->ap_paterno;
+        $usuarios->ap_materno;
+        $usuarios->fecha_nac;
+        $usuarios->fono;
+        $usuarios->direccion;
+        $usuarios->nro_casa;
+        $usuarios->email;
+        $usuarios->rol;
+        return view('directora.usuarios.edit_usuario', [
+            'usuarios' => $usuarios
+        ]);
+    }
+
+    public function update(Request $request, User $usuarios)
+    {
+        $usuarios->update($request->all());
+        return view('directora.usuarios.info_usuario', compact('usuarios'));
+    }
 }

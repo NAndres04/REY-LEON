@@ -2,9 +2,9 @@
  * First we will load all of this project's JavaScript dependencies which
  * includes Vue and other libraries. It is a great starting point when
  * building robust, powerful web applications using Vue and Laravel.
- */
+ *
 
-//import './bootstrap';
+import './bootstrap';
 import {Dropzone} from "dropzone";
 
 Dropzone.autoDiscover =false;
@@ -35,14 +35,14 @@ const dropzone = new Dropzone("#dropzone",{
 
 /*dropzone.on('sending', function(file,xhr,formData){
   console.log(formData);
-});*/
+});
 
 dropzone.on('success', function(file,response){
     document.querySelector('[name="imagen"]').value = response.imagen;
   });
 /*dropzone.on('error', function(file,message){
     console.log(message); 
-});*/
+});
 dropzone.on('removedfile', function(){
   document.querySelector('[name="imagen"]').value = '';
 });

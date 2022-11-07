@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Casts\Attribute;
 
 class Post extends Model
 {
@@ -13,6 +14,17 @@ class Post extends Model
         'titulo',
         'descripcion',
         'imagen',
-        'user_id'
-    ];
+        'galeria',
+        'user_id',
+    ];  
+
+    protected function galeria(): Attribute {
+        return Attribute::make(
+            get: fn ($value) => explode('++', $value)
+        );
+    }
+
+
+
+
 }

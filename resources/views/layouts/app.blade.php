@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://unpkg.com/dropzone@5/dist/min/dropzone.min.css" type="text/css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
     <title>KingLions Calama - @yield('titulo')</title>
+    @livewireStyles
 
 </head>
 
@@ -47,11 +48,12 @@
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="/actividades"
+                                            <a href="{{ route('posts.index') }}"
                                                 class="group relative before:absolute before:inset-x-0 before:bottom-0 before:h-2 before:origin-right before:scale-x-0">
                                                 <span class="relative group-hover:text-amber-800">Actividades</span>
                                             </a>
                                         </li>
+                                       
 
                                         <div class="relative inline-block text-left">
                                             <div>
@@ -199,6 +201,7 @@
             </div>
         </footer>
     </div>
+    @livewireScripts
 </body>
 
 <script>

@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
    
     <title>KingLions Calama - @yield('titulodirectora')</title>
+    @livewireStyles
 
 </head>
 
@@ -54,6 +55,12 @@
                                                 <span class="relative group-hover:text-amber-800">Actividades</span>
                                             </a>
                                         </li>
+                                        <li>
+                                            <a href="{{ route('posts.ver') }}"
+                                                class="group relative before:absolute before:inset-x-0 before:bottom-0 before:h-2">
+                                                <span class="relative group-hover:text-amber-800">Ver actividades</span>
+                                            </a>
+                                        </li>
                                         <div class="relative inline-block text-left">
                                             <div>
                                                 <button type="button"
@@ -75,18 +82,18 @@
                                                 tabindex="-1">
                                                 <div class="py-1" role="none">
                                                     <!-- Active: "bg-gray-100 text-gray-900", Not Active: "text-gray-700" -->
-                                                    <a href="/ver_alumnos"
-                                                        class="text-black block px-4 py-2 text-sm hover:bg-amber-300"
-                                                        role="menuitem" tabindex="-1" id="menu-item-0">Curso: NT1A</a>
-                                                    <a href="/ver_alumnos"
-                                                        class="text-black block px-4 py-2 text-sm hover:bg-amber-300"
-                                                        role="menuitem" tabindex="-1" id="menu-item-1">Curso: NT1B</a>
-                                                    <a href="/ver_alumnos"
-                                                        class="text-black block px-4 py-2 text-sm hover:bg-amber-300"
-                                                        role="menuitem" tabindex="-1" id="menu-item-2">Curso: NT2A</a>
-                                                    <a href="/ver_alumnos"
-                                                        class="text-black block px-4 py-2 text-sm hover:bg-amber-300"
-                                                        role="menuitem" tabindex="-1" id="menu-item-2">Curso: NT2B</a>
+                                                    <a href="/ver_alumnos_nt1a"
+                                                    class="text-black block px-4 py-2 text-sm hover:bg-amber-300"
+                                                    role="menuitem" tabindex="-1" id="menu-item-0">Curso: NT1A</a>
+                                                <a href="/ver_alumnos_nt1b"
+                                                    class="text-black block px-4 py-2 text-sm hover:bg-amber-300"
+                                                    role="menuitem" tabindex="-1" id="menu-item-1">Curso: NT1B</a>
+                                                <a href="/ver_alumnos_nt2a"
+                                                    class="text-black block px-4 py-2 text-sm hover:bg-amber-300"
+                                                    role="menuitem" tabindex="-1" id="menu-item-2">Curso: NT2A</a>
+                                                <a href="/ver_alumnos_nt2b"
+                                                    class="text-black block px-4 py-2 text-sm hover:bg-amber-300"
+                                                    role="menuitem" tabindex="-1" id="menu-item-2">Curso: NT2B</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -241,6 +248,7 @@
         </footer>
 
     </div>
+    @livewireScripts
 </body>
 <script>
     const boton = document.querySelector('#menu-button');

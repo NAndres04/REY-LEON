@@ -1,12 +1,16 @@
-@extends('layouts.app')
-<!--- Titulo de la vista --->
-@section('titulo')
-@endsection
-<!--- Contenido del frame --->
-@section('contenido')
+
+@extends('home')
+
+@section('titulodirectora')
+     
+@endsection    
+
+@section('contenidodirectora')
+
 <div class="py-6 " >
     @foreach($actividades as $actividad) 
-    <form action="{{route('posts.verPubli',[$actividad->id])}}" method="get" novalidate>
+    <form action="{{route('posts.verPublicacion',[$actividad->id])}}" method="get" novalidate>
+        @csrf
     <span>{{ $actividad->titulo }}</span>
     
     <img src="<?php echo $actividad->imagen ?>" />
@@ -14,5 +18,8 @@
     <button type="submit" class="bg-gray-700 text-white font-bold py-2 px-4 w-full rounded hover:bg-gray-600">Ver publicacion</button>
     </form>
    @endforeach
+
+   
 </div>
-@endsection
+
+@endsection 

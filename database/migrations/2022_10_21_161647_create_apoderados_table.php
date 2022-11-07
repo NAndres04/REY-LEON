@@ -14,7 +14,8 @@ return new class extends Migration
     public function up()
     {
         Schema::create('apoderados', function (Blueprint $table) {
-            $table->string('rut')->primary();
+            $table->id();
+            $table->string('rut');
             $table->string('nombre');
             $table->string('ap_paterno');
             $table->string('ap_materno');
