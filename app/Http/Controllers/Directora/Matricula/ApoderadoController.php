@@ -11,6 +11,20 @@ use App\Models\Curso;
 class ApoderadoController extends Controller
 {
     public function store(Request $request){
+        $this->validate($request,[
+            'rut' => 'required|max:10',
+            'nombre' => 'required|max:30|min:3',
+            'ap_paterno' => 'required|max:10|min:3',
+            'ap_materno' => 'required|max:10|min:3',
+            'fono' => 'required|max:9|min:8',
+            'correo' => 'required|max:60|email|string',
+            'profesion_laboral' => 'required|max:30|min:3',
+            'situacion_laboral' => 'required|max:30|min:3',
+            'grado_estudio' => 'required|max:30|min:1',
+            'tipo_salud' => 'required|max:30|min:1',
+
+      ] );
+
         $apoderado = Apoderado::create([
             'rut' => $request->rut,
             'nombre' => $request->nombre,

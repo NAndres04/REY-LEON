@@ -17,7 +17,7 @@
                         <div>
                             <label class="block text-gray-700 text-sm font-bold mb-2" for="rut_apoderado">Identificador del Apoderado</label>
                             @foreach ($apoderados as $apoderados )
-                            <input type="text" 
+                            <p type="text" 
                             class="bg-gray-200 text-gray-700 focus:outline-none focus:shadow-outline border border-gray-300 rounded py-2 px-4 block w-full
                             appearance-none @error ('id_apoderado') border-red-500 @enderror"
                             value="{{$apoderados->id}}"
@@ -34,7 +34,7 @@
                             appearance-none"
                             />{{ $apoderados->rut }}
                         </div>
-                        <!-- <div>
+                        <div>
                             <label class="block text-gray-700 text-sm font-bold mb-2" for="rut_apoderado">Confirmar Apoderado</label>
                             <input type="text" 
                             class="bg-gray-200 text-gray-700 focus:outline-none focus:shadow-outline border border-gray-300 rounded py-2 px-4 block w-full
@@ -46,7 +46,7 @@
                             @error('id_apoderado')
                             <p class="bg-red-500 text-white my-2 rounded-lg text-sm p-2 text-center">{{$message}} </p>
                             @enderror
-                        </div> -->
+                        </div> 
                     </div>
                     <br>
                     <h2 class="text-lg text-gray-700 font-semibold">Información Personal del Alumno</h2>
