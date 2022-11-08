@@ -21,9 +21,6 @@
                             class="bg-gray-200 text-gray-700 focus:outline-none focus:shadow-outline border border-gray-300 rounded py-2 px-4 block w-full
                             appearance-none @error ('id_apoderado') border-red-500 @enderror"
                             value="{{$apoderados->id}}"
-                            placeholder="12345678-9"
-                            id="id_apoderado"
-                            name="id_apoderado"
                             @endforeach
                             />{{ $apoderados->id }}
                         </div>
@@ -40,6 +37,7 @@
                             class="bg-gray-200 text-gray-700 focus:outline-none focus:shadow-outline border border-gray-300 rounded py-2 px-4 block w-full
                             appearance-none @error ('id_apoderado') border-red-500 @enderror"
                             placeholder="Ingrese el Identificador del Apoderado"
+                            value="{{old('id_apoderado')}}"
                             id="id_apoderado"
                             name="id_apoderado"
                             />
@@ -83,11 +81,15 @@
                             <label class="block text-gray-700 text-sm font-bold mb-2" for="nombre">Nombres</label>
                             <input type="text" 
                             class="bg-gray-200 text-gray-700 focus:outline-none focus:shadow-outline border border-gray-300 rounded py-2 px-4 block w-full
-                            appearance-none"
+                            appearance-none @error ('nombre') border-red-500 @enderror""
+                            value="{{old('nombre')}}"
                             id="nombre"
                             name="nombre"
                             placeholder="Nombres"
                             />
+                            @error('nombre')
+                            <p class="bg-red-500 text-white my-2 rounded-lg text-sm p-2 text-center">{{$message}} </p>
+                            @enderror
                         </div>
                         <div>
                             <label class="block text-gray-700 text-sm font-bold mb-2" for="ap_paterno">Apellido Paterno</label>

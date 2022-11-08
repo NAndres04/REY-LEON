@@ -18,6 +18,25 @@ class AlumnoController extends Controller
         
     }
     public function store(Request $request){
+        $this->validate($request,[
+            'id_apoderado' => 'required|max:10|min:1',
+            'rut' => 'required|max:10',
+            'nro_documento' => 'required|max:10|min:1',
+            'nombre' => 'required|max:30|min:3',
+            'ap_paterno' => 'required|max:10|min:3',
+            'ap_materno' => 'required|max:10|min:3',
+            'fecha_nac' => 'required',
+            'ciudad_nac' => 'required|max:30|min:3',
+            'nacionalidad' => 'required|max:30|min:3',
+            'domicilio' => 'required|max:30|min:3',
+            'edad' => 'required|max:30|min:1',
+            'nombre_emergencia' => 'required|max:50|min:3',
+            'fono_emergencia' => 'required|max:50|min:3',
+            'discapacidad' => 'required|max:50|min:3',
+            'id_curso' => 'required|numeric|min:1',
+
+      ] );
+
         $alumno = Alumno::create([
             'id_apoderado' => $request ->id_apoderado,
             'rut' => $request->rut,
