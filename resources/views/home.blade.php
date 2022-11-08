@@ -49,24 +49,13 @@
                                                 <span class="relative group-hover:text-amber-800">Matrícula</span>
                                             </a>
                                         </li>
-                                        <li>
-                                            <a href="{{ route('posts.create') }}"
-                                                class="group relative before:absolute before:inset-x-0 before:bottom-0 before:h-2">
-                                                <span class="relative group-hover:text-amber-800">Actividades</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="{{ route('posts.ver') }}"
-                                                class="group relative before:absolute before:inset-x-0 before:bottom-0 before:h-2">
-                                                <span class="relative group-hover:text-amber-800">Ver actividades</span>
-                                            </a>
-                                        </li>
+
                                         <div class="relative inline-block text-left">
                                             <div>
                                                 <button type="button"
                                                     class="inline-flex justify-center w-full rounded-md text-black focus:outline-none"
                                                     id="menu-button" aria-expanded="true" aria-haspopup="true">
-                                                    <a href="/ver_cursos">Cursos</a> 
+                                                    <a>Administrar</a> 
                                                     <!-- Heroicon name: solid/chevron-down -->
                                                     <svg class="-mr-1 ml-2 h-5 w-5" xmlns="http://www.w3.org/2000/svg"
                                                         viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
@@ -82,19 +71,26 @@
                                                 tabindex="-1">
                                                 <div class="py-1" role="none">
                                                     <!-- Active: "bg-gray-100 text-gray-900", Not Active: "text-gray-700" -->
-                                                    <a href="/ver_alumnos_nt1a"
+                                                    <a href="{{ route('posts.create') }}"
                                                     class="text-black block px-4 py-2 text-sm hover:bg-amber-300"
-                                                    role="menuitem" tabindex="-1" id="menu-item-0">Curso: NT1A</a>
-                                                <a href="/ver_alumnos_nt1b"
+                                                    role="menuitem" tabindex="-1" id="menu-item-0">Actividades</a>
+                                                <a href="{{ route('posts.ver') }}"
                                                     class="text-black block px-4 py-2 text-sm hover:bg-amber-300"
-                                                    role="menuitem" tabindex="-1" id="menu-item-1">Curso: NT1B</a>
-                                                <a href="/ver_alumnos_nt2a"
-                                                    class="text-black block px-4 py-2 text-sm hover:bg-amber-300"
-                                                    role="menuitem" tabindex="-1" id="menu-item-2">Curso: NT2A</a>
-                                                <a href="/ver_alumnos_nt2b"
-                                                    class="text-black block px-4 py-2 text-sm hover:bg-amber-300"
-                                                    role="menuitem" tabindex="-1" id="menu-item-2">Curso: NT2B</a>
+                                                    role="menuitem" tabindex="-1" id="menu-item-1">Ver actividades</a>
                                                 </div>
+                                            </div>
+                                        </div>
+
+
+
+                                        <div class="relative inline-block text-left">
+                                            <div>
+                                                <button type="button"
+                                                    class="inline-flex justify-center w-full rounded-md text-black focus:outline-none"
+                                                    id="menu-button" aria-expanded="true" aria-haspopup="true">
+                                                    <a href="/ver_cursos">Cursos</a> 
+                                                    <!-- Heroicon name: solid/chevron-down -->
+                                                </button>
                                             </div>
                                         </div>
                                         <li>
