@@ -6,15 +6,11 @@
 
 @section('contenidodirectora')
 <div class="h-full xl:w-8/12 mb-12 xl:mb-0 px-4 mx-auto mt-24">
-    <div class="relative flex flex-col min-w-0 break-words bg-gray-100 w-full mb-6 shadow-lg rounded ">
-        <div class="rounded-t mb-0 px-4 py-3 border-0">
-            <div class="flex flex-wrap items-center">  
-                <div class="relative w-full px-4 max-w-full flex-grow flex-1">
-                    <h1 class="font-semibold text-2xl text-black ">Cursos</h1>
-                </div>            
-            </div>
+    <div class="border rounded-lg border pb-6 border-gray-200 dark:border-gray-700">
+        <div class="flex items-center border-b border-gray-200 dark:border-gray-700  justify-between px-6 py-3">
+            <p tabindex="0" class="focus:outline-none text-2xl leading-tight text-gray-800 dark:text-black ">Cursos</p>
         </div>
-        <div class="block w-full overflow-x-auto ">
+        <div class="px-6 pt-6 overflow-x-auto"> 
             <table class="table border-separate items-center bg-transparent w-full ">
                 <tbody>
                     <tr class="bg-white shadow-2xl">
@@ -65,4 +61,3 @@
 		border-spacing: 0 15px;
 	}
 </style>
-
