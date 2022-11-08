@@ -14,7 +14,7 @@ class AlumnoController extends Controller
         $cursos = Curso::all();
         $apoderados = Apoderado::all();
         $alumnos = Alumno::all();
-        return view('directora.matricula.matricula_alumno');
+        return view('directora.matricula.matricula_alumno', compact('apoderados','cursos'));
         
     }
     public function store(Request $request){
