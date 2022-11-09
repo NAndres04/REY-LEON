@@ -37,8 +37,6 @@ class ApoderadoController extends Controller
             'grado_estudio' => $request->grado_estudio,
             'tipo_salud' => $request->tipo_salud,
         ]);
-        $cursos = Curso::all();
-        $apoderados = Apoderado::all();
-        return view('directora.matricula.matricula_alumno', compact('cursos','apoderados'));
+        return view('directora.matricula.matricula_apoderado_confirmar');
     }
 }
