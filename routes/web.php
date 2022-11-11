@@ -1,9 +1,12 @@
 <?php
 
 use App\Models\Post;
+use App\Mail\TestMail;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\MailController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\ImagenController;
 use App\Http\Controllers\posteosController;
@@ -68,6 +71,13 @@ Route::group(["middleware" => 'AuthDirectora'], function() {
    Route::get('/posts/{id}/modificar', [PostController::class, 'ModificarPubli'])->name('posts.ModificarPubli');
    Route::put('/posts/{id}/modificando', [PostController::class, 'update'])->name('posts.updatePubli');
 
+   //ROUTE:CORREOS
+    //ruta para escoger los cursos
+
+   //ruta para formulario
+   Route::get('/enviarcorreo', [MailController::class,'index'])->name('enviarcorreo.index');
+   //ruta para enviar el correo
+   Route::post('/enviarcorreo/enviando', [MailController::class,'store'])->name('enviarcorreo.store');
 
   //Route: Gestión de Usuarios(Educadora)
             //Route: Vista principal de los usuarios(Educadora)
