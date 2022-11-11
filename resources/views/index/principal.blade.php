@@ -5,9 +5,7 @@
 <!--En este section se agrega un contenido para la descripcion de la plataforma-->
 @section('contenido')
     <script defer src="https://unpkg.com/alpinejs@3.2.3/dist/cdn.min.js"></script>
-
     <!--article u slider para las imagenes del establecimiento en forma de carrucel-->
-    
     <article x-data="slider" class="relative w-full flex flex-shrink-0 overflow-hidden shadow-2xl ">
         <div class="rounded-full bg-gray-600 text-white absolute top-5 right-5 text-sm px-2 text-center z-10">
             <span x-text="currentIndex"></span>/
@@ -20,12 +18,6 @@
                 x-transition:leave-end="opacity-0">
                 <img :src="image" alt="Image"
                     class="absolute inset-0 z-10 h-full w-full object-cover opacity-70" />
-                <figcaption
-                    class="absolute inset-x-0 bottom-1 z-10 w-96 mx-auto p-4 font-light text-sm text-center tracking-widest leading-snug bg-gray-300 bg-opacity-25">
-                    Any kind of content here!
-                    Primum in nostrane potestate est, quid meminerimus? Nulla erit controversia. Vestri haec verecundius,
-                    illi fortasse constantius.
-                </figcaption>
             </figure>
         </template>
         <!--Boton para pasar a la imagen anterior del slider u imagen-->
@@ -48,10 +40,10 @@
     </article>
 
     <!--Formulario para ingresar descripcion de la empresa donde se esoecifican algunos caracteres-->
-    <div class="px-3 md:lg:xl:px-40   border-t border-b py-20 bg-opacity-10">
+    <div class="px-3 md:lg:xl:px-40 border-t border-b py-20 bg-opacity-10">
         <div class="grid grid-cols-1 md:lg:xl:grid-cols-3 group bg-white shadow-xl shadow-neutral-100 border ">
             <div
-                class="p-10 flex flex-col items-center text-center group md:lg:xl:border-r md:lg:xl:border-b hover:bg-slate-50 cursor-pointer">
+                class="p-10 flex flex-col items-center text-center group md:lg:xl:border-r md:lg:xl:border-b hover:bg-slate-50">
                 <span class="p-5 rounded-full bg-red-500 text-white shadow-lg shadow-red-200"><svg
                         xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24"
                         stroke="currentColor" stroke-width="1.5">
@@ -60,10 +52,11 @@
                     </svg></span>
                 <!--Descripcion educadoras capacitadas-->
                 <p class="text-xl font-medium text-slate-700 mt-3">Educadoras capacitadas</p>
-                <p class="mt-2 text-sm text-slate-500">Educadoras con la mejor disponibilidad y atención para los pupilos del establecimiento.</p>
+                <p class="mt-2 text-sm text-slate-500">Educadoras con la mejor disponibilidad y atención para los pupilos
+                    del establecimiento.</p>
             </div>
             <div
-                class="p-10 flex flex-col items-center text-center group md:lg:xl:border-r md:lg:xl:border-b hover:bg-slate-50 cursor-pointer">
+                class="p-10 flex flex-col items-center text-center group md:lg:xl:border-r md:lg:xl:border-b hover:bg-slate-50">
                 <span class="p-5 rounded-full bg-orange-500 text-white shadow-lg shadow-orange-200"><svg
                         xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24"
                         stroke="currentColor" stroke-width="1.5">
@@ -75,10 +68,10 @@
                     </svg></span>
                 <!--Descripcion tareas y actividades-->
                 <p class="text-xl font-medium text-slate-700 mt-3">Tareas y actividades</p>
-                <p class="mt-2 text-sm text-slate-500">El establecimiento participa y desarrolla actividades relacionadas con la cultura y bailes chilenos.</p>
+                <p class="mt-2 text-sm text-slate-500">El establecimiento participa y desarrolla actividades relacionadas
+                    con la cultura y bailes chilenos.</p>
             </div>
-            <div
-                class="p-10 flex flex-col items-center text-center group   md:lg:xl:border-b hover:bg-slate-50 cursor-pointer">
+            <div class="p-10 flex flex-col items-center text-center group   md:lg:xl:border-b hover:bg-slate-50">
                 <span class="p-5 rounded-full bg-yellow-500 text-white shadow-lg shadow-yellow-200"><svg
                         xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24"
                         stroke="currentColor" stroke-width="1.5">
@@ -87,10 +80,10 @@
                     </svg></span>
                 <!--Descripcion horarios-->
                 <p class="text-xl font-medium text-slate-700 mt-3">Horarios</p>
-                <p class="mt-2 text-sm text-slate-500">Existen dos tipos de horarios para llevar al alumno, así estimando conveniente.</p>
+                <p class="mt-2 text-sm text-slate-500">Existen dos tipos de horarios para llevar al alumno, así estimando
+                    conveniente.</p>
             </div>
-            <div
-                class="p-10 flex flex-col items-center text-center group   md:lg:xl:border-r hover:bg-slate-50 cursor-pointer">
+            <div class="p-10 flex flex-col items-center text-center group   md:lg:xl:border-r hover:bg-slate-50">
                 <span class="p-5 rounded-full bg-lime-500 text-white shadow-lg shadow-lime-200"><svg
                         xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24"
                         stroke="currentColor" stroke-width="1.5">
@@ -98,10 +91,10 @@
                     </svg></span>
                 <!--Descripcion establecimiento destacado-->
                 <p class="text-xl font-medium text-slate-700 mt-3">Establecimiento destacado</p>
-                <p class="mt-2 text-sm text-slate-500">El establecimiento es totalmente reconocido dentro de la ciudad, ya que está ubicado en una zona de fácil acceso para los apoderados.</p>
+                <p class="mt-2 text-sm text-slate-500">El establecimiento es totalmente reconocido dentro de la ciudad, ya
+                    que está ubicado en una zona de fácil acceso para los apoderados.</p>
             </div>
-            <div
-                class="p-10 flex flex-col items-center text-center group    md:lg:xl:border-r hover:bg-slate-50 cursor-pointer">
+            <div class="p-10 flex flex-col items-center text-center group    md:lg:xl:border-r hover:bg-slate-50">
                 <span class="p-5 rounded-full bg-teal-500 text-white shadow-lg shadow-teal-200"><svg
                         xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24"
                         stroke="currentColor" stroke-width="1.5">
@@ -110,9 +103,10 @@
                     </svg></span>
                 <!--Descripcion calidad de enseñansa-->
                 <p class="text-xl font-medium text-slate-700 mt-3">Calidad de enseñanza</p>
-                <p class="mt-2 text-sm text-slate-500">El establecimiento es reconocido por la enseñanza que se le entrega a sus alumnos</p>
+                <p class="mt-2 text-sm text-slate-500">El establecimiento es reconocido por la enseñanza que se le entrega
+                    a sus alumnos</p>
             </div>
-            <div class="p-10 flex flex-col items-center text-center group     hover:bg-slate-50 cursor-pointer">
+            <div class="p-10 flex flex-col items-center text-center group     hover:bg-slate-50">
                 <span class="p-5 rounded-full bg-indigo-500 text-white shadow-lg shadow-indigo-200"><svg
                         xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24"
                         stroke="currentColor" stroke-width="1.5">
@@ -121,15 +115,17 @@
                     </svg></span>
                 <!--Descripcion protocolos de seguridad-->
                 <p class="text-xl font-medium text-slate-700 mt-3">Protocolos de seguridad</p>
-                <p class="mt-2 text-sm text-slate-500">Adquiere procesos y protocolos de seguridad para las medidaspreventivas de los alumnos y la pandemia covid-19</p>
+                <p class="mt-2 text-sm text-slate-500">Adquiere procesos y protocolos de seguridad para las
+                    medidaspreventivas de los alumnos y la pandemia covid-19</p>
             </div>
         </div>
         <!--Boton para consultas del usuario redirige a al apartado de ubicacion-->
         <div class="w-full   dark:bg-gray-900 shadow-xl shadow-indigo-200 py-10 px-20 flex justify-between items-center">
             <p class=" text-white"> <span class="text-4xl font-medium">¿Tienes consultas?</span> <br> <span
                     class="text-lg">¡Estamos disponibles para ti! </span></p>
-            <button
-                class="px-5 py-3  font-medium text-slate-700 shadow-xl  hover:bg-white duration-150  bg-yellow-400">Contáctanos en nuestro establecimiento </button>
+            <a href="/ubicacion"
+                class="px-1 py-4 font-medium text-slate-500 shadow-xl  hover:bg-white duration-150  bg-yellow-400">Contáctanos
+                en nuestro establecimiento></a>
         </div>
     </div>
 
@@ -142,7 +138,7 @@
             </div>
             <!--Titulo del apartado-->
             <div class="flex flex-col items-center mt-6 xl:items-start xl:w-1/2 xl:mt-0 text-black">
-                <h2 class="text-3xl font-bold tracking-tight text-gray-800 xl:text-4xl ">
+                <h2 class="text-3xl font-bold tracking-tight text-gray-800 xl:text-4xl">
                     Establecimiento
                 </h2>
                 <!--Descripcion del establecimiento-->
@@ -171,7 +167,8 @@
             </div>
             <div class="flex justify-center xl:w-1/2">
                 <img class="h-80 w-80 sm:w-[28rem] sm:h-[28rem] flex-shrink-0 object-cover rounded-full"
-                    src="{{ asset('img/Rey leon antiguo fuera.jpg') }}" alt="">
+                    src="https://res.cloudinary.com/du7xx1dwx/image/upload/v1668093316/samples/Foto5_a8pjuv.jpg"
+                    alt="">
             </div>
         </div>
     </section>
@@ -181,7 +178,8 @@
         <div class="container flex flex-col items-center px-4 py-12 mx-auto xl:flex-row">
             <div class="flex justify-center xl:w-1/2">
                 <img class="h-80 w-80 sm:w-[28rem] sm:h-[28rem] flex-shrink-0 object-cover rounded-full"
-                    src="{{ asset('img/Rey leon niños.jpg') }}" alt="">
+                    src="https://res.cloudinary.com/du7xx1dwx/image/upload/v1668093677/samples/Foto8_q6e8pg.jpg"
+                    alt="">
             </div>
             <!--Titulo del apartado descripcion-->
             <div class="flex flex-col items-center mt-6 xl:items-start xl:w-1/2 xl:mt-0 text-black">
@@ -202,20 +200,23 @@
     <section class="text-gray-600 ">
         <div class="container px-5 py-24 mx-auto">
             <div class="flex -m-1">
-                <div class="p-0 md:w1/0">
+                <div class="p-4 md:w-0/1">
                     <div
                         class="h-full rounded-xl shadow-cla-blue bg-gradient-to-r from-indigo-50 to-blue-50 overflow-hidden">
                         <img class="lg:h-48 md:h-36 w-full object-cover object-center scale-110 transition-all duration-400 hover:scale-100"
-                            src="{{ asset('img/Rey leon niños 3.jpg') }}" alt="blog">
+                            src="https://res.cloudinary.com/du7xx1dwx/image/upload/v1668093316/samples/Foto6_qgrt0j.jpg"
+                            alt="blog" id="open">
                         <div class="p-6">
                             <!--Actividades inferiores de la plataforma-->
-                            <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">Actividad de
-                                teatro</h2>
+                            <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">Prevención e
+                                información</h2>
                             <!--Descripcion de la actividad-->
-                            <h1 class="title-font text-lg font-medium text-gray-600 mb-3">Teatro y enseñanza infantil</h1>
-                            <p class="leading-relaxed mb-3">A los pupilos se les enseñó sobre el teatro nacional, además de mostrarle una serie de actos dentro del establecimiento.</p>
-                            <div class="flex items-center flex-wrap ">
-                            </div>
+                            <h1 class="title-font text-lg font-medium text-gray-600 mb-3">Prevencion y señalicas
+                            </h1>
+                            <h1 class="title-font text-lg font-medium text-gray-600 mb-3">Diferentes tipos de señales
+                                dentro del establecimiento para evitar una mala organización.</p>
+                                <div class="flex items-center flex-wrap ">
+                                </div>
                         </div>
                     </div>
                 </div>
@@ -223,13 +224,17 @@
                     <div
                         class="h-full rounded-xl shadow-cla-violate bg-gradient-to-r from-pink-50 to-red-50 overflow-hidden">
                         <img class="lg:h-48 md:h-36 w-full object-cover object-center scale-110 transition-all duration-400 hover:scale-100"
-                            src="{{ asset('img/Rey leon niños 3.jpg') }}" alt="blog">
+                            src="https://res.cloudinary.com/du7xx1dwx/image/upload/v1668093316/samples/Foto7_glsloh.jpg"
+                            alt="blog" id="open2">
                         <div class="p-6">
                             <!--Actividades inferiores de la plataforma-->
-                            <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">Actividades</h2>
+                            <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">Salas de
+                                enfermeria</h2>
                             <!--Descripcion de la actividad-->
-                            <h1 class="title-font text-lg font-medium text-gray-600 mb-3">Actividades de canto, entre otros</h1>
-                            <p class="leading-relaxed mb-3">Los pupilos cantaron y realizaron diferente tipo de actividades como jugar a las escondidas en otras actividades.</p>
+                            <h1 class="title-font text-lg font-medium text-gray-600 mb-3">Lugares ante accidedntes
+                            </h1>
+                            <p class="leading-relaxed mb-3">Se encuentran disponibles lugares de sanaciones para los
+                                pupilos del establecimiento.</p>
                             <div class="flex items-center flex-wrap ">
                             </div>
                         </div>
@@ -238,7 +243,250 @@
             </div>
         </div>
     </section>
+
+    <body id="configuracionsobre">
+        <div id="modal_container" class="modal-container">
+            <div class="modal grid grid-cols-2 p-20">
+                <div class=" grid grid-cols-1 text-left p-6">
+                    <h1>Zonas seguras</h1>
+                    <p class="mt-4 text-2xl">
+                        Dentro del establecimiento existen varias zonas seguras especificadas, en las cuales se pueden resguardar segun lo amerite alguna situacion, ejemplo en caso de terremotos u diferentes actividades.
+                    </p>
+                    <button id="close" class="bg-gray-700 text-white font-bold py-2 px-4 w-full rounded hover:bg-gray-600 mt-4">Cerrar</button>
+                </div>
+                <div class=" grid grid-cols-1">
+                    <img class="mx-auto max-w-lg h-80"
+                        src="https://res.cloudinary.com/du7xx1dwx/image/upload/v1668189787/samples/i7jw3dqtzplvzq2cvxx2.jpg"
+                        alt="">
+                </div>
+            </div>
+        </div>
+
+        <div id="modal_container2" class="modal-container2">
+            <div class="modal grid grid-cols-2 p-20">
+                <div class=" grid grid-cols-1 text-left p-6">
+                    <h1>Protocolos de seguridad</h1>
+                    <p class="mt-4 text-2xl">
+                        Dentro del establecimiento se consideran artículos de primeros auxilios, como además atención
+                        primaria
+                        en caso de que algún pupilo sufra algún accidente como una caída u golpe leve, en el cual se podrá
+                        realizar una pequeña contención de algunas lecciones, en este caso, también se consideran artículos
+                        como
+                        alcohol, parche curitas y vendas.
+                    </p>
+                    <button id="close2" class="bg-gray-700 text-white font-bold py-2 px-4 w-full rounded hover:bg-gray-600 mt-4">Cerrar</button>
+                </div>
+                <div class=" grid grid-cols-1">
+                    <img class="mx-auto max-w-lg h-80"
+                        src="https://res.cloudinary.com/du7xx1dwx/image/upload/v1668204127/samples/Enfermeria1_pu8zh2.jpg"
+                        alt="">
+                </div>
+            </div>
+        </div>
+    </body>
+
+    <script>
+        const open = document.getElementById('open');
+        const modal_container = document.getElementById('modal_container');
+        const close = document.getElementById('close');
+
+        open.addEventListener('click', () => {
+            modal_container.classList.add('show');
+        });
+
+        close.addEventListener('click', () => {
+            modal_container.classList.remove('show');
+        });
+    </script>
+
+    <script>
+        const open2 = document.getElementById('open2');
+        const modal_container2 = document.getElementById('modal_container2');
+        const close2 = document.getElementById('close2');
+
+        open2.addEventListener('click', () => {
+            modal_container2.classList.add('show');
+        });
+
+        close2.addEventListener('click', () => {
+            modal_container2.classList.remove('show');
+        });
+    </script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+
+        .configuracionsobre {
+            background-color: #edeef6;
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 200vh;
+            margin: 0;
+        }
+
+        .modal-container {
+            display: flex;
+            background-color: rgba(0, 0, 0, 0.3);
+            align-items: center;
+            justify-content: center;
+            position: fixed;
+            pointer-events: none;
+            opacity: 0;
+            top: 0;
+            left: 0;
+            height: 100vh;
+            width: 100vw;
+            transition: opacity 0.3s ease;
+        }
+
+        .modal-container2 {
+            display: flex;
+            background-color: rgba(0, 0, 0, 0.3);
+            align-items: center;
+            justify-content: center;
+            position: fixed;
+            pointer-events: none;
+            opacity: 0;
+            top: 0;
+            left: 0;
+            height: 100vh;
+            width: 100vw;
+            transition: opacity 0.3s ease;
+        }
+
+
+        .show {
+            pointer-events: auto;
+            opacity: 1;
+        }
+
+        .modal {
+            background-color: #fff;
+            width: 1000px;
+            max-width: 100%;
+            padding: 30px 50px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        .show2 {
+            pointer-events: auto;
+            opacity: 1;
+        }
+
+        .modal2 {
+            background-color: #fff;
+            width: 1000px;
+            max-width: 100%;
+            padding: 30px 50px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        .modal h1 {
+            margin: 0;
+        }
+
+        .modal p {
+            opacity: 0.7;
+            font-size: 14px;
+        }
+
+        .modal2 h1 {
+            margin: 0;
+        }
+
+        .modal2 p {
+            opacity: 0.7;
+            font-size: 14px;
+        }
+
+        .modal-container2 {
+            display: flex;
+            background-color: rgba(0, 0, 0, 0.3);
+            align-items: center;
+            justify-content: center;
+            position: fixed;
+            pointer-events: none;
+            opacity: 0;
+            top: 0;
+            left: 0;
+            height: 100vh;
+            width: 100vw;
+            transition: opacity 0.3s ease;
+        }
+        .modal-container {
+            display: flex;
+            background-color: rgba(0, 0, 0, 0.3);
+            align-items: center;
+            justify-content: center;
+            position: fixed;
+            pointer-events: none;
+            opacity: 0;
+            top: 0;
+            left: 0;
+            height: 100vh;
+            width: 100vw;
+            transition: opacity 0.3s ease;
+        }
+
+        .show {
+            pointer-events: auto;
+            opacity: 1;
+        }
+
+        .show2 {
+            pointer-events: auto;
+            opacity: 1;
+        }
+    </style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--Scrip para la funcion del carusel-->
+    <script>
+        document.addEventListener('alpine:init', () => {
+            let galeria = document.getElementById("Galeria").textContent;
+            console.log(galeria);
+            Alpine.data('slider', () => ({
+                currentIndex: 1,
+                images: JSON.parse(galeria),
+                //Comando para volver a la imagen anterior
+                back() {
+                    if (this.currentIndex > 1) {
+                        this.currentIndex = this.currentIndex - 1;
+                    }
+                },
+                //Comando para proceder a la pagina siguiente
+                next() {
+                    if (this.currentIndex < this.images.length) {
+                        this.currentIndex = this.currentIndex + 1;
+                    } else if (this.currentIndex <= this.images.length) {
+                        this.currentIndex = this.images.length - this.currentIndex + 1
+                    }
+                },
+            }))
+        })
+    </script>
+
+    <script defer src="https://unpkg.com/alpinejs@3.2.3/dist/cdn.min.js"></script>
+    </div>
 @endsection
+
 
 <!--Scrip para la funcion del carusel-->
 <script>
@@ -246,11 +494,10 @@
         Alpine.data('slider', () => ({
             currentIndex: 1,
             images: [
-                'https://source.unsplash.com/1600x900/?beach',
-                'https://source.unsplash.com/1600x900/?cat',
-                'https://source.unsplash.com/1600x900/?dog',
-                'https://source.unsplash.com/1600x900/?lego',
-                'https://source.unsplash.com/1600x900/?textures&patterns'
+                'https://res.cloudinary.com/du7xx1dwx/image/upload/v1668092259/samples/Foto1_wi7yiv.jpg',
+                'https://res.cloudinary.com/du7xx1dwx/image/upload/v1668092544/samples/Foto4_lkbeth.jpg',
+                'https://res.cloudinary.com/du7xx1dwx/image/upload/v1668092545/samples/Foto3_i7nk8y.jpg',
+                'https://res.cloudinary.com/du7xx1dwx/image/upload/v1668092546/samples/Foto2_pxdajl.jpg',
             ],
             //Comando para volver a la imagen anterior
             back() {

@@ -27,7 +27,6 @@
                         </div>
 
                         <div class="flex items-center justify-end border-l lg:border-l-0">
-                            <input type="checkbox" name="hamburger" id="hamburger" class="peer" hidden>
                             <label for="hamburger"
                                 class="peer-checked:hamburger block relative z-20 p-6 -mr-6 cursor-pointer lg:hidden">
                                 <div aria-hidden="true"
@@ -113,7 +112,7 @@
                 </div>
             </div>
         </header>
-
+        
         <div class="top-bar"></div>
         <main class="bg-slate-50">
             <div class="container mx-auto">
@@ -202,6 +201,7 @@
         </footer>
     </div>
     @livewireScripts
+    <script src="https://unpkg.com/flowbite@1.5.3/dist/flowbite.js"></script>
 </body>
 
 <script>
