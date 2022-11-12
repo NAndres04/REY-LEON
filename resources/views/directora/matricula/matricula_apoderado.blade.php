@@ -23,6 +23,9 @@
                             id="rut"
                             name="rut"
                             placeholder="12345678-9"
+                            maxlength="10"
+                            onkeyup="this.value=validate_input(this.value)" 
+                            oninput="form_rut(this)"
                             />
                             @error('rut')
                             <p class="bg-red-500 text-white my-2 rounded-lg text-sm p-2 text-center">{{$message}} </p>
@@ -163,3 +166,35 @@
     </div>
 </div>
 @endsection 
+<script>
+    function validate_input(string){//Solo numeros
+    var out = '';
+    var filtro = '1234567890k-';//Caracteres validos
+	
+    //Recorrer el texto y verificar si el caracter se encuentra en la lista de validos 
+    for (var i=0; i<string.length; i++)
+       if (filtro.indexOf(string.charAt(i)) != -1) 
+             //Se añaden a la salida los caracteres validos
+	     out += string.charAt(i);
+	
+    //Retornar valor filtrado
+    return out;
+} 
+</script>
+
+<script>
+    function form_rut(rut) {
+       // Despejar Puntos
+       var valor = rut.value.replace('.','');
+    // Despejar Guión
+    valor = valor.replace('-','');
+
+    // Aislar Cuerpo y Dígito Verificador
+    cuerpo = valor.slice(0,-1);
+    dv = valor.slice(-1);
+
+    // Formatear RUN
+    rut.value = cuerpo + '-'+ dv
+}
+</script>
+

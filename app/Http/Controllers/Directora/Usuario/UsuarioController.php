@@ -20,7 +20,7 @@ class UsuarioController extends Controller
 
     public function store(Request $request){
         $this->validate($request,[
-            'rut' => 'required|max:10',
+            'rut' => 'required|cl_rut',
             'nombre' => 'required|max:30|min:3',
             'ap_paterno' => 'required|max:10|min:3',
             'ap_materno' => 'required|max:10|min:3',
