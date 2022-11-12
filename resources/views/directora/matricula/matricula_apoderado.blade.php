@@ -8,7 +8,12 @@
 <div class="w-full bg-grey-lightest" style="padding-top: 4rem;">
     <div class="container mx-auto py-8 flex">
         <div class="w-5/6 lg:w-1/2 mx-auto bg-white rounded shadow">
-            <div class="py-4 px-8 text-black text-2xl border-b border-grey-lighter font-bold ">Matrícula</div>
+            <div class="py-4 px-8 text-black text-2xl border-b border-grey-lighter font-bold text-center flex justify-between">
+                <h6 class="text-blueGray-700 text-xl font-bold">Matrícula</h6>
+                <button class="bg-blue-500 text-white active:bg-blue-600 font-bold uppercase text-xs px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none mr-1 ease-linear transition-all duration-150">
+                <a href="/buscar_apoderado">Registrar Alumno</a> 
+                </button>
+            </div>
             <div class="py-4 px-8">
                 <h2 class="text-lg text-gray-700 font-semibold">Información Personal del Apoderado</h2>
                 <form action="{{route('apoderado.store')}}" method="POST">
@@ -157,8 +162,10 @@
                             <p class="bg-red-500 text-white my-2 rounded-lg text-sm p-2 text-center">{{$message}} </p>
                             @enderror
                         </div>
-                        <div class="flex rounded-md bg-white py-4 px-4 overflow-x-auto">
-                            <button class="px-6 py-3 bg-green-500 rounded-md text-white font-medium tracking-wide hover:bg-green-700">Siguiente</button>
+                        <div>
+                            <button class="bg-green-500 text-white active:bg-green-600 font-bold uppercase text-xs px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none mr-1 ease-linear transition-all duration-150">
+                            Guardar
+                            </button>
                         </div>
                 </form>
             </div>
