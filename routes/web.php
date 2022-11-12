@@ -65,11 +65,11 @@ Route::group(["middleware" => 'AuthDirectora'], function() {
     //ruta para ver todos los posteos realizados
     Route::get('/posts/verpost', [PostController::class, 'verPost'])->name('posts.ver');
    //Ruta para ver el posteo seleccionado
-   Route::get('/posts/{id}', [PostController::class, 'verPublicacion'])->name('posts.verPublicacion');
+    Route::get('/posts/{id}', [PostController::class, 'verPublicacion'])->name('posts.verPublicacion');
 
-   Route::delete('/posts/{id}/eliminar', [PostController::class, 'eliminarPubli'])->name('posts.eliminarPubli');
-   Route::get('/posts/{id}/modificar', [PostController::class, 'ModificarPubli'])->name('posts.ModificarPubli');
-   Route::put('/posts/{id}/modificando', [PostController::class, 'update'])->name('posts.updatePubli');
+    Route::delete('/posts/{id}/eliminar', [PostController::class, 'eliminarPubli'])->name('posts.eliminarPubli');
+    Route::get('/posts/{id}/modificar', [PostController::class, 'ModificarPubli'])->name('posts.ModificarPubli');
+    Route::put('/posts/{id}/modificando', [PostController::class, 'update'])->name('posts.updatePubli');
 
    //ROUTE:CORREOS
     //ruta para escoger los cursos
@@ -98,6 +98,11 @@ Route::group(["middleware" => 'AuthDirectora'], function() {
             Route::get('/matricula_apoderado', function () {return view('directora.matricula.matricula_apoderado'); });
             //Route: Matrícula Alumno
             Route::get('/matricula_alumno', [AlumnoController::class, 'index'])->name('alumno.index');
+
+             //Route: Selecionar Apoderado
+            Route::get('/buscar_apoderado', [ApoderadoController::class, 'index'])->name('apoderado.index');
+            //Route: Matricula Apoderado Existente
+            Route::get('/matricula_alumno/{apoderados}', [ApoderadoController::class, 'apoderadoseleccionado'])->name('apoderado.apoderadoseleccionado');
 
             //Route: Insert Apoderado
             Route::post('apoderado', [ApoderadoController::class, 'store'])->name('apoderado.store');

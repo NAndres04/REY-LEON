@@ -64,6 +64,12 @@
                         <p tabindex="0" class="focus:outline-none text-sm leading-none text-justify text-gray-800 dark:text-black mt-1">{{ $alumnos->discapacidad }}</p>
                     </div>
                 </div>
+                <div>
+                    <div class="px-6">
+                        <p tabindex="0" class="focus:outline-none text-xs text-gray-500">Matrícula Física</p>
+                        <p tabindex="0" class="focus:outline-none text-sm leading-none text-justify text-gray-800 dark:text-black mt-1"></p>
+                    </div>
+                </div>
             </div>
             <br>
             <div class="py-4 px-8 text-black text-2xl border-b border-grey-lighter font-bold ">Información de Emergencia</div>

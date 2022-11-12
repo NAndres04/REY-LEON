@@ -20,7 +20,7 @@ class AlumnoController extends Controller
     public function store(Request $request){
         $this->validate($request,[
             'id_apoderado' => 'required|max:10|min:1',
-            'rut' => 'required|cl_rut',
+            'rut' => 'required|cl_rut|unique:alumnos|',
             'nro_documento' => 'required|max:10|min:1',
             'nombre' => 'required|max:30|min:3',
             'ap_paterno' => 'required|max:10|min:3',

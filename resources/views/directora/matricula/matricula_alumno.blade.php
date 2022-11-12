@@ -15,14 +15,13 @@
                     @csrf
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-4">
                         <div>
-                            <label class="block text-gray-700 text-sm font-bold mb-2" for="rut_apoderado">Identificador del Apoderado</label>
+                            <label class="block text-gray-700 text-sm font-bold mb-2" for="rut_apoderado">Nombre del Apoderado</label>
                             @foreach ($apoderados as $apoderados )
                             <p type="text" 
                             class="bg-gray-200 text-gray-700 focus:outline-none focus:shadow-outline border border-gray-300 rounded py-2 px-4 block w-full
-                            appearance-none @error ('id_apoderado') border-red-500 @enderror"
-                            value="{{$apoderados->id}}"
+                            appearance-none"
                             @endforeach
-                            />{{ $apoderados->id }}
+                            />{{ $apoderados->nombre }} {{ $apoderados->ap_paterno }} {{ $apoderados->ap_materno }}
                         </div>
                         <div>
                             <label class="block text-gray-700 text-sm font-bold mb-2" for="rut">RUT del Apoderado</label>
@@ -30,6 +29,13 @@
                             class="bg-gray-200 text-gray-700 focus:outline-none focus:shadow-outline border border-gray-300 rounded py-2 px-4 block w-full
                             appearance-none"
                             />{{ $apoderados->rut }}
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 text-sm font-bold mb-2" for="rut">Identificador del Apoderado</label>
+                            <p type="text" 
+                            class="bg-gray-200 text-gray-700 focus:outline-none focus:shadow-outline border border-gray-300 rounded py-2 px-4 block w-full
+                            appearance-none"
+                            />{{ $apoderados->id }}
                         </div>
                         <div>
                             <label class="block text-gray-700 text-sm font-bold mb-2" for="rut_apoderado">Confirmar Apoderado</label>
@@ -206,6 +212,9 @@
                             <p class="bg-red-500 text-white my-2 rounded-lg text-sm p-2 text-center">{{$message}} </p>
                             @enderror
                         </div>
+                        <div>
+                            <label class="block text-gray-700 text-sm font-bold mb-2" for="matricula">Matrícula Física</label>
+                        </div>
                     </div>
                     <br>
                     <h2 class="text-lg text-gray-700 font-semibold">Información de Emergencia</h2>
@@ -259,9 +268,11 @@
                             @enderror
                         </div>
                     <br>
-                    <div class="flex rounded-md bg-white py-4 px-4 overflow-x-auto">
-                    <button class="px-6 py-3 bg-green-500 rounded-md text-white font-medium tracking-wide hover:bg-green-700">Guardar</button>
-                </div>
+                    <div>
+                        <button class="bg-green-500 text-white active:bg-green-600 font-bold uppercase text-xs px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none mr-1 ease-linear transition-all duration-150">
+                        Guardar
+                        </button>
+                    </div>
                 </form>
             </div>
         </div>
