@@ -22,7 +22,6 @@
                   @enderror
               </div>
               <!-- fin crear publicacion -->
-
               <!-- Descripcion -->
               <div class="mt-4">
                 <label class="block text-gray-700 text-sm font-bold mb-2" for="descripcion">Descripción</label>
@@ -40,8 +39,6 @@
                 @enderror
             </div>
             <!-- fin Descripcion -->
-
-
             <!-- IMAGENES -->
             <div class="mt-8">
                 <input
@@ -54,7 +51,6 @@
                 @enderror
             </div>
             <!-- IMAGENES -->
-        
               <div class="mt-8">
                   <button type="submit" class="bg-gray-700 text-white font-bold py-2 px-4 w-full rounded hover:bg-gray-600">Publicar actividad</button>
               </div>

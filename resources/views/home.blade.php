@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="{{ asset('index/style.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="{{ mix('css/app.css') }}" />
-   <!-- abajo se encuentra el script para app.js para dropzone-->
+    <!-- abajo se encuentra el script para app.js para dropzone-->
     <link rel="stylesheet" href="https://unpkg.com/dropzone@5/dist/min/dropzone.min.css" type="text/css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
-   
+
     <title>KingLions Calama - @yield('titulodirectora')</title>
     @livewireStyles
 
@@ -28,8 +28,7 @@
                             </a>
                         </div>
 
-                        <div class="flex items-center justify-end border-l lg:border-l-0">
-                            <input type="checkbox" name="hamburger" id="hamburger" class="peer" hidden>
+                        <div class="flex items-center justify-end border-l lg:border-l-0">                            
                             <label for="hamburger"
                                 class="peer-checked:hamburger block relative z-20 p-6 -mr-6 cursor-pointer lg:hidden">
                                 <div aria-hidden="true"
@@ -55,7 +54,7 @@
                                                 <button type="button"
                                                     class="inline-flex justify-center w-full rounded-md text-black focus:outline-none"
                                                     id="menu-button" aria-expanded="true" aria-haspopup="true">
-                                                    <a>Administrar</a> 
+                                                    <a>Administrar</a>
                                                     <!-- Heroicon name: solid/chevron-down -->
                                                     <svg class="-mr-1 ml-2 h-5 w-5" xmlns="http://www.w3.org/2000/svg"
                                                         viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
@@ -72,11 +71,12 @@
                                                 <div class="py-1" role="none">
                                                     <!-- Active: "bg-gray-100 text-gray-900", Not Active: "text-gray-700" -->
                                                     <a href="{{ route('posts.create') }}"
-                                                    class="text-black block px-4 py-2 text-sm hover:bg-amber-300"
-                                                    role="menuitem" tabindex="-1" id="menu-item-0">Actividades</a>
-                                                <a href="{{ route('posts.ver') }}"
-                                                    class="text-black block px-4 py-2 text-sm hover:bg-amber-300"
-                                                    role="menuitem" tabindex="-1" id="menu-item-1">Ver actividades</a>
+                                                        class="text-black block px-4 py-2 text-sm hover:bg-amber-300"
+                                                        role="menuitem" tabindex="-1" id="menu-item-0">Actividades</a>
+                                                    <a href="{{ route('posts.ver') }}"
+                                                        class="text-black block px-4 py-2 text-sm hover:bg-amber-300"
+                                                        role="menuitem" tabindex="-1" id="menu-item-1">Ver
+                                                        actividades</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -88,7 +88,7 @@
                                                 <button type="button"
                                                     class="inline-flex justify-center w-full rounded-md text-black focus:outline-none"
                                                     id="menu-button" aria-expanded="true" aria-haspopup="true">
-                                                    <a href="/ver_cursos">Cursos</a> 
+                                                    <a href="/ver_cursos">Cursos</a>
                                                     <!-- Heroicon name: solid/chevron-down -->
                                                 </button>
                                             </div>
@@ -129,27 +129,29 @@
                                                         role="menuitem" tabindex="-1" id="menu-item-1">Gestión de Reunión</a>
                                                 </div>
                                             </div>
+                                        </li>
+                                        <div
+                                            class="border-t py-8 px-6 md:px-12 md:py-16 lg:border-t-0 lg:border-l lg:py-0 lg:pr-0 lg:pl-6">
+                                            <span
+                                                class="px-6 py-3 rounded-full bg-gradient-to-r from-amber-500 to-amber-600 text-center text-white">
+                                                {{ Auth::user()->nombre }} {{ Auth::user()->ap_paterno }}
+                                            </span>
                                         </div>
-                                        </li>                    
-                                            <div class="border-t py-8 px-6 md:px-12 md:py-16 lg:border-t-0 lg:border-l lg:py-0 lg:pr-0 lg:pl-6">
-                                                <span
-                                                    class="px-6 py-3 rounded-full bg-gradient-to-r from-amber-500 to-amber-600 text-center text-white">
-                                                    {{ Auth::user()->nombre }} {{ Auth::user()->ap_paterno }}
-                                                </span>                            
-                                            </div>
-                                            <div class="border-t py-8 px-6 md:px-12 md:py-16 lg:border-t-0 lg:border-l lg:py-0 lg:pr-0 lg:pl-6">
-                                                <a class="dropdown-item" href="{{ route('logout') }}"
+                                        <div
+                                            class="border-t py-8 px-6 md:px-12 md:py-16 lg:border-t-0 lg:border-l lg:py-0 lg:pr-0 lg:pl-6">
+                                            <a class="dropdown-item" href="{{ route('logout') }}"
                                                 onclick="event.preventDefault();
                                                 document.getElementById('logout-form').submit();">
                                                 <span
                                                     class="px-6 py-3 rounded-full bg-gradient-to-r from-amber-500 to-amber-600 text-center text-white">
                                                     Cerrar sesión
                                                 </span>
-                                                </a>
-                                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                            </a>
+                                            <form id="logout-form" action="{{ route('logout') }}" method="POST"
+                                                class="d-none">
                                                 @csrf
-                                                </form>                                                                          
-                                            </div>
+                                            </form>
+                                        </div>
                                     </ul>
                                 </div>
                             </div>
@@ -161,11 +163,12 @@
 
         <div class="top-bar"></div>
         <main class="bg-slate-50">
-            <div class="container mx-auto">
+            <div>
                 <h2 class="font-black text-center text-5xl h-7">
                     @yield('titulodirectora')
                 </h2>
                 @yield('contenidodirectora')
+            </div>
         </main>
 
         <footer class="text-center lg:text-left bg-amber-300 text-amber-800">
@@ -248,6 +251,8 @@
 
     </div>
     @livewireScripts
+    <script src="https://unpkg.com/flowbite@1.5.3/dist/flowbite.js"></script>
+
 </body>
 <script>
     const boton = document.querySelector('#menu-button');
@@ -263,7 +268,6 @@
     botontwo.addEventListener('click', () => {
         botonSubtwo.classList.toggle('hidden')
     })
-    
 </script>
 
 </html>
