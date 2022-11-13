@@ -73,11 +73,11 @@ Route::group(["middleware" => 'AuthDirectora'], function() {
 
    //ROUTE:CORREOS
     //ruta para escoger los cursos
-
+   // Route::get('/seleccionar', [MailController::class,'escoger'])->name('seleccionar.escoger');
    //ruta para formulario
    Route::get('/enviarcorreo', [MailController::class,'index'])->name('enviarcorreo.index');
    //ruta para enviar el correo
-   Route::post('/enviarcorreo/enviando', [MailController::class,'store'])->name('enviarcorreo.store');
+   Route::get('/enviarcorreo/enviando', [MailController::class,'store'])->name('enviarcorreo.store');
 
   //Route: Gestión de Usuarios(Educadora)
             //Route: Vista principal de los usuarios(Educadora)

@@ -12,7 +12,7 @@ use Illuminate\Queue\SerializesModels;
 class TestMail extends Mailable
 {
     use Queueable, SerializesModels;
-    public $subject = "informacion del jardin";
+    public $subject ;
 
     public $mensaje ;
     /**
@@ -20,9 +20,12 @@ class TestMail extends Mailable
      *
      * @return void
      */
-    public function __construct($mensaje)
+    public function __construct($mensaje,$subject)
     {
         $this->mensaje = $mensaje;
+        $this->subject = $subject;
+        
+        
     }
 
     /**
@@ -32,6 +35,7 @@ class TestMail extends Mailable
      */
     public function envelope()
     {
+      
         return new Envelope(
             subject: $this->subject,
         );

@@ -7,38 +7,20 @@
 @section('contenidodirectora')
 <div class="py-32 h-screen ">
       <!-- crear   -->
-      <form action="" method="POST" novalidate>
+     
         <div class="mt-4">
             Seleccione los cursos a enviar correo:
             <table>
-            <tr>
-           <td> <label>
-                curso1
-            <input type="checkbox">
-            
-            </label><br></td>
-            <td>
-            <label>
-                curso2
-            <input type="checkbox">
-            
-            </label><br>
-            </td>
-            </tr>
+            @foreach ($cursos as $curso)
+            <form action="{{route('enviarcorreo.index' , [$curso->id])}}" method="get" novalidate>
+                @csrf
             <tr>
                 <td> <label>
-                     curso3
-                 <input type="checkbox">
-                 
-                 </label><br></td>
-                 <td>
-                 <label>
-                     curso4
-                 <input type="checkbox">
-                 
-                 </label><br>
-                 </td>
-                 </tr>
+                   
+                    <span>{{ $curso->nombre }}</span>
+                    <input type="checkbox">
+                </label><br></td></tr>
+            @endforeach
             </table>
         </div>
         <!-- fin crear publicacion -->
