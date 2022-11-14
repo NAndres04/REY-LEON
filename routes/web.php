@@ -15,7 +15,7 @@ use App\Http\Controllers\Directora\Cursos\CursoController;
 use App\Http\Controllers\Directora\Usuario\UsuarioController;
 use App\Http\Controllers\Directora\Matricula\AlumnoController;
 use App\Http\Controllers\Directora\Matricula\ApoderadoController;
-
+use App\Http\Controllers\Directora\Asistencia\AsistenciaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -129,6 +129,16 @@ Route::group(["middleware" => 'AuthDirectora'], function() {
             Route::get('/ver_alumnos_nt2b', [CursoController::class, 'obtenerAlumnoNT2B'])->name('curso.obtenerAlumnoNT2B');
             //Route: Vista para ver la información de cada alumnos
             Route::get('/info_alumno/{alumnos}', [AlumnoController::class, 'show'])->name('alumno.show');
+
+            //Route: Asistencia
+            //Route: Vista del curso NT1A
+            Route::get('/asistencia_alumnos_nt1a', [AsistenciaController::class, 'AlumnoNT1A'])->name('asistencia.AlumnoNT1A');
+            //Route: Vista del curso NT1B
+            Route::get('/asistencia_alumnos_nt1b', [AsistenciaController::class, 'AlumnoNT2B'])->name('asistencia.AlumnoNT2B');
+            //Route: Vista del curso NT2A
+            Route::get('/asistencia_alumnos_nt2a', [AsistenciaController::class, 'AlumnoNT2A'])->name('asistencia.AlumnoNT2A');
+            //Route: Vista del curso NT2B
+            Route::get('/asistencia_alumnos_nt2b', [AsistenciaController::class, 'AlumnoNT2B'])->name('asistencia.AlumnoNT2B');
     
  });
 

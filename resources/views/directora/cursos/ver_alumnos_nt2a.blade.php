@@ -11,7 +11,7 @@
             <div class="flex items-center border-b border-gray-200 dark:border-gray-700  justify-between px-6 py-3">
                 <p tabindex="0" class="font-medium leading-tight text-xl mt-0 mb-2 text-dark">Curso NT2A</p>
                 <button class="bg-green-500 text-white active:bg-green-600 font-bold uppercase text-xs px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none mr-1 ease-linear transition-all duration-150">
-                <a href="">Realizar Asistencia</a> 
+                <a href="/asistencia_alumnos_nt2a">Realizar Asistencia</a> 
                 </button>
             </div>
             <form class="m-3 flex">
