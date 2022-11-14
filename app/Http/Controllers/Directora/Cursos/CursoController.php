@@ -7,7 +7,6 @@ use App\Http\Controllers\Controller;
 use App\Models\Curso;
 use App\Models\Alumno;
 
-
 class CursoController extends Controller
 {
     public function index(){
@@ -15,24 +14,49 @@ class CursoController extends Controller
         return view('directora.cursos.ver_cursos', compact('cursos')); 
     }
 
-    public function obtenerAlumnoNT1A(){
-        $alumnos = Alumno::where('id_curso', '3')->get();
-        return view('directora.cursos.ver_alumnos_nt1a', compact('alumnos')); 
+    public function obtenerAlumnoNT1A(Request $request){
+        $buscador = $request['buscador'] ?? "";
+        if($buscador != ""){
+            $alumnos = Alumno::where('id_curso', '3')->where('rut', 'LIKE', "%$buscador%")->orwhere('nombre', 'LIKE', "%$buscador%")->get();
+        } else {
+            $alumnos = Alumno::where('id_curso', '3')->get();
+        }
+        $data = compact('alumnos','buscador');
+        return view('directora.cursos.ver_alumnos_nt1a')->with($data);
+        
     }
 
-    public function obtenerAlumnoNT2A(){
-        $alumnos = Alumno::where('id_curso', '4')->get();
-        return view('directora.cursos.ver_alumnos_nt2a', compact('alumnos')); 
+    public function obtenerAlumnoNT2A(Request $request){
+        $buscador = $request['buscador'] ?? "";
+        if($buscador != ""){
+            $alumnos = Alumno::where('id_curso', '4')->where('rut', 'LIKE', "%$buscador%")->orwhere('nombre', 'LIKE', "%$buscador%")->get();
+        } else {
+            $alumnos = Alumno::where('id_curso', '4')->get();
+        }
+        $data = compact('alumnos','buscador');
+        return view('directora.cursos.ver_alumnos_nt2a')->with($data);; 
     }
 
-    public function obtenerAlumnoNT1B(){
-        $alumnos = Alumno::where('id_curso', '5')->get();
-        return view('directora.cursos.ver_alumnos_nt1b', compact('alumnos')); 
+    public function obtenerAlumnoNT1B(Request $request){
+        $buscador = $request['buscador'] ?? "";
+        if($buscador != ""){
+            $alumnos = Alumno::where('id_curso', '5')->where('rut', 'LIKE', "%$buscador%")->orwhere('nombre', 'LIKE', "%$buscador%")->get();
+        } else {
+            $alumnos = Alumno::where('id_curso', '5')->get();
+        }
+        $data = compact('alumnos','buscador');
+        return view('directora.cursos.ver_alumnos_nt1b')->with($data);; 
     }
 
-    public function obtenerAlumnoNT2B(){
-        $alumnos = Alumno::where('id_curso', '6')->get();
-        return view('directora.cursos.ver_alumnos_nt2b', compact('alumnos')); 
+    public function obtenerAlumnoNT2B(Request $request){
+        $buscador = $request['buscador'] ?? "";
+        if($buscador != ""){
+            $alumnos = Alumno::where('id_curso', '6')->where('rut', 'LIKE', "%$buscador%")->orwhere('nombre', 'LIKE', "%$buscador%")->get();
+        } else {
+            $alumnos = Alumno::where('id_curso', '6')->get();
+        }
+        $data = compact('alumnos','buscador');
+        return view('directora.cursos.ver_alumnos_nt2b')->with($data);; 
     }
 
 

@@ -9,7 +9,7 @@
     <div class="container mx-auto py-8 ">
         <div class=" max-w-2xl mx-auto bg-white shadow-lg rounded-sm border border-gray-200">
             <div class="flex items-center border-b border-gray-200 dark:border-gray-700  justify-between px-6 py-3">
-                <p tabindex="0" class="font-medium leading-tight text-xl mt-0 mb-2 text-dark">Selecionar Apoderado</p>
+                <p tabindex="0" class="font-medium leading-tight text-xl mt-0 mb-2 text-dark">Seleccionar Apoderado</p>
             </div>
             <form class="m-3 flex">
                 <input type="search" name="buscador" value="{{$buscador}}" class="form-control relative flex-auto min-w-0 block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" placeholder="Ingrese el Rut o Nombre Completo del Apoderado.">
@@ -55,7 +55,7 @@
                                     <div class="text-left">{{ $apoderados->nombre }} {{ $apoderados->ap_paterno }} {{ $apoderados->ap_materno }}</div>
                                 </td>
                                 <td class="p-2 whitespace-nowrap">
-                                    <div class="text-center"><button class="px-1 py-1 border-blue-500 border text-blue-500 rounded transition duration-300 hover:bg-blue-500 hover:text-white focus:outline-none "><a href="{{ route ('apoderado.apoderadoseleccionado', $apoderados) }}">Selecionar Apoderado</button></a></div>
+                                    <div class="text-center"><button class="px-1 py-1 border-blue-500 border text-blue-500 rounded transition duration-300 hover:bg-blue-500 hover:text-white focus:outline-none "><a href="{{ route ('apoderado.apoderadoseleccionado', $apoderados) }}">Seleccionar Apoderado</button></a></div>
                                 </td>
                             </tr>
                         </tbody>
