@@ -257,14 +257,11 @@
 <script>
     const boton = document.querySelector('#menu-button');
     const botonSub = document.querySelector('#SubMenu');
-
     boton.addEventListener('click', () => {
         botonSub.classList.toggle('hidden')
     })
-
     const botontwo = document.querySelector('#menu-button-dir');
     const botonSubtwo = document.querySelector('#SubMenuDir');
-
     botontwo.addEventListener('click', () => {
         botonSubtwo.classList.toggle('hidden')
     })

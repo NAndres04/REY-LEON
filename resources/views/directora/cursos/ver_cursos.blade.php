@@ -5,59 +5,95 @@
 @endsection    
 
 @section('contenidodirectora')
-<div class="h-full xl:w-8/12 mb-12 xl:mb-0 px-4 mx-auto mt-24">
-    <div class="border rounded-lg border pb-6 border-gray-200 dark:border-gray-700">
-        <div class="flex items-center border-b border-gray-200 dark:border-gray-700  justify-between px-6 py-3">
-            <p tabindex="0" class="focus:outline-none text-2xl leading-tight text-gray-800 dark:text-black ">Cursos</p>
-        </div>
-        <div class="px-6 pt-6 overflow-x-auto"> 
-            <table class="table border-separate items-center bg-transparent w-full ">
-                <tbody>
-                    <tr class="bg-white shadow-2xl">
-                        <th class="border-t-0 px-6 align-middle border-l-0 border-r-0 whitespace-nowrap p-4 text-left text-blueGray-700 ">
-                        NT1A
-                        </th>
-                        <td class="border-t-0 px-6 align-middle border-l-0 border-r-0  whitespace-nowrap p-4 "></td>
-                        <td class="border-t-0 px-6 align-middle border-l-0 border-r-0  whitespace-nowrap p-4 text-right">
-                        <a href="/ver_alumnos_nt1a"><button class="px-5 py-2 border-blue-500 border text-blue-500 rounded transition duration-300 hover:bg-amber-500 hover:text-white focus:outline-none ">Gestionar Curso</button></a>
-                        </td>
-                    </tr>
-                    <tr class="bg-white shadow-2xl">
-                        <th class="border-t-0 px-6 align-middle border-l-0 border-r-0 whitespace-nowrap p-4 text-left text-blueGray-700 ">
-                        NT2A
-                        </th>
-                        <td class="border-t-0 px-6 align-middle border-l-0 border-r-0  whitespace-nowrap p-4 "></td>
-                        <td class="border-t-0 px-6 align-middle border-l-0 border-r-0  whitespace-nowrap p-4 text-right">
-                        <a href="/ver_alumnos_nt2a"><button class="px-5 py-2 border-blue-500 border text-blue-500 rounded transition duration-300 hover:bg-amber-500 hover:text-white focus:outline-none ">Gestionar Curso</button></a>
-                        </td>
-                    </tr>
-                    <tr class="bg-white shadow-2xl">
-                        <th class="border-t-0 px-6 align-middle border-l-0 border-r-0 whitespace-nowrap p-4 text-left text-blueGray-700 ">
-                        NT1B
-                        </th>
-                        <td class="border-t-0 px-6 align-middle border-l-0 border-r-0  whitespace-nowrap p-4 "></td>
-                        <td class="border-t-0 px-6 align-middle border-l-0 border-r-0  whitespace-nowrap p-4 text-right">
-                        <a href="/ver_alumnos_nt1b"><button class="px-5 py-2 border-blue-500 border text-blue-500 rounded transition duration-300 hover:bg-amber-500 hover:text-white focus:outline-none ">Gestionar Curso</button></a>
-                        </td>
-                    </tr>
-                    <tr class="bg-white shadow-2xl">
-                        <th class="border-t-0 px-6 align-middle border-l-0 border-r-0 whitespace-nowrap p-4 text-left text-blueGray-700 ">
-                        NT2B
-                        </th>
-                        <td class="border-t-0 px-6 align-middle border-l-0 border-r-0  whitespace-nowrap p-4 "></td>
-                        <td class="border-t-0 px-6 align-middle border-l-0 border-r-0  whitespace-nowrap p-4 text-right">
-                        <a href="/ver_alumnos_nt2b"><button class="px-5 py-2 border-blue-500 border text-blue-500 rounded transition duration-300 hover:bg-amber-500 hover:text-white focus:outline-none ">Gestionar Curso</button></a>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+<div class="w-full h-full bg-grey-lightest" style="padding-top: 4rem;">
+    <div class="container mx-auto py-8 ">
+        <div class=" max-w-2xl mx-auto bg-white shadow-lg rounded-sm border border-gray-200">
+            <div class="flex items-center border-b border-gray-200 dark:border-gray-700  justify-between px-6 py-3">
+                <p tabindex="0" class="font-medium leading-tight text-xl mt-0 mb-2 text-dark">Curso</p>
+            </div>
+            <div class="px-3 pt-3 overflow-x-auto"> 
+                <div class="overflow-x-auto">
+                    <table class="table-auto w-full">
+                        <thead class="text-xs font-semibold uppercase text-black bg-gray-100">
+                            <tr>
+                            <th class="p-2 whitespace-nowrap">
+                                    <div class="font-semibold text-left">Nombre</div>
+                                </th>
+                                <th class="p-2 whitespace-nowrap">
+                                    <div class="font-semibold text-left">Jornada</div>
+                                </th>
+                                <th class="p-2 whitespace-nowrap">
+                                    <div class="font-semibold text-left"></div>
+                                </th>
+                            </tr>
+                        </thead>
+                        
+                        <tbody class="text-sm divide-y">
+                            <tr>
+                                <td class="p-2 whitespace-nowrap">
+                                    <div class="flex items-center">
+                                        <div class="font-medium text-gray-800">NT1A</div>
+                                    </div>
+                                </td>
+                                <td class="p-2 whitespace-nowrap">
+                                    <div class="flex items-center">
+                                        <div class="text-left">Mañana</div>
+                                    </div>
+                                </td>
+                                <td class="p-2 whitespace-nowrap">
+                                    <div class="text-center"><button class="px-1 py-1 border-blue-500 border text-blue-500 rounded transition duration-300 hover:bg-blue-500 hover:text-white focus:outline-none "><a href="/ver_alumnos_nt1a">Gestionar Curso</button></a></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="p-2 whitespace-nowrap">
+                                    <div class="flex items-center">
+                                        <div class="font-medium text-gray-800">NT2A</div>
+                                    </div>
+                                </td>
+                                <td class="p-2 whitespace-nowrap">
+                                    <div class="flex items-center">
+                                        <div class="text-left">Mañana</div>
+                                    </div>
+                                </td>
+                                <td class="p-2 whitespace-nowrap">
+                                    <div class="text-center"><button class="px-1 py-1 border-blue-500 border text-blue-500 rounded transition duration-300 hover:bg-blue-500 hover:text-white focus:outline-none "><a href="/ver_alumnos_nt2a">Gestionar Curso</button></a></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="p-2 whitespace-nowrap">
+                                    <div class="flex items-center">
+                                        <div class="font-medium text-gray-800">NT1B</div>
+                                    </div>
+                                </td>
+                                <td class="p-2 whitespace-nowrap">
+                                    <div class="flex items-center">
+                                        <div class="text-left">Tarde</div>
+                                    </div>
+                                </td>
+                                <td class="p-2 whitespace-nowrap">
+                                    <div class="text-center"><button class="px-1 py-1 border-blue-500 border text-blue-500 rounded transition duration-300 hover:bg-blue-500 hover:text-white focus:outline-none "><a href="/ver_alumnos_nt1b">Gestionar Curso</button></a></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="p-2 whitespace-nowrap">
+                                    <div class="flex items-center">
+                                        <div class="font-medium text-gray-800">NT2B</div>
+                                    </div>
+                                </td>
+                                <td class="p-2 whitespace-nowrap">
+                                    <div class="flex items-center">
+                                        <div class="text-left">Tarde</div>
+                                    </div>
+                                </td>
+                                <td class="p-2 whitespace-nowrap">
+                                    <div class="text-center"><button class="px-1 py-1 border-blue-500 border text-blue-500 rounded transition duration-300 hover:bg-blue-500 hover:text-white focus:outline-none "><a href="/ver_alumnos_nt2b">Gestionar Curso</button></a></div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </div>
     </div>
 </div>
 @endsection 
-
-<style>
-	.table {
-		border-spacing: 0 15px;
-	}
-</style>

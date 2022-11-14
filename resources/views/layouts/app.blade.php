@@ -205,7 +205,6 @@
 <script>
     const boton = document.querySelector('#menu-button');
     const botonSub = document.querySelector('#SubMenu');
-
     boton.addEventListener('click', () => {
         botonSub.classList.toggle('hidden')
     })

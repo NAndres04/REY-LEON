@@ -11,12 +11,16 @@ use Illuminate\Support\Facades\Validator;
 
 class UsuarioController extends Controller
 {
-    public function index(){
-        $usuarios = User::all();
-        return view('directora.usuarios.ver_usuario', compact('usuarios'));
-        
+    public function index(Request $request){
+        $buscador = $request['buscador'] ?? "";
+        if($buscador != ""){
+            $usuarios = User::where('rut', 'LIKE', "%$buscador%")->orwhere('nombre', 'LIKE', "%$buscador%")->get();
+        } else {
+            $usuarios = User::all();
+        }
+        $data = compact('usuarios','buscador');
+        return view('directora.usuarios.ver_usuario')->with($data);   
     }
-   
 
     public function store(Request $request){
         $this->validate($request,[
@@ -32,7 +36,7 @@ class UsuarioController extends Controller
             'email' => 'required|max:60|unique:users|string',
             'password' => 'required|min:8|confirmed|string',
 
-      ] );
+     ] );
 
         $user = User::create([
             'rut' => $request->rut,
