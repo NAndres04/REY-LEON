@@ -72,7 +72,7 @@
                     ?>
                 @endforeach
                 <!-- En caso que una foto considere mas de una se utilizara el carousel para ver las diferentes fotos -->
-                @if ($cantidad >= 1)
+                @if ($cantidad >= 2)
                     <div class="overflow-hidden relative h-56 rounded-lg sm:h-64 xl:h-80 2xl:h-96 w-full">
                         <!-- A travez de un foreach se realiza erl recorido de la garia de fotos -->
                         @foreach ($actividad->galeria as $foto)
