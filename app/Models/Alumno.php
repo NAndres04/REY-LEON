@@ -14,7 +14,6 @@ class Alumno extends Model
         'id_apoderado',
         'id_curso',
         'rut',
-        'nro_documento',
         'nombre',
         'ap_paterno',
         'ap_materno',

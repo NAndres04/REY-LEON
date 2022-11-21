@@ -5,7 +5,7 @@
 @endsection    
 
 @section('contenidodirectora')
-<div class="w-full bg-grey-lightest" style="padding-top: 4rem;">
+<div class="w-full bg-grey-lightest">
     <div class="container mx-auto py-8 flex">
         <div class="w-5/6 lg:w-1/2 mx-auto bg-white rounded shadow">
             <div class="py-4 px-8 text-black text-2xl border-b border-grey-lighter font-bold text-center flex justify-between">
@@ -28,7 +28,7 @@
                             id="rut"
                             name="rut"
                             placeholder="12345678-9"
-                            maxlength="10"
+                            maxlength="11"
                             onkeyup="this.value=validate_input(this.value)" 
                             oninput="form_rut(this)"
                             />

@@ -4,7 +4,7 @@
 @endsection    
 
 @section('contenidodirectora')
-<div class="w-full h-full bg-grey-lightest" style="padding-top: 4rem;">
+<div class="w-full h-full bg-grey-lightest">
     <div class="container mx-auto py-8 ">
         <div class=" max-w-2xl mx-auto bg-white shadow-lg rounded-sm border border-gray-200">
             <div class="flex items-center border-b border-gray-200 dark:border-gray-700  justify-between px-6 py-3">

@@ -18,7 +18,6 @@ return new class extends Migration
             $table->foreignId('id_apoderado')->constrained('apoderados');
             $table->foreignId('id_curso')->constrained('cursos');
             $table->string('rut');
-            $table->string('nro_documento');
             $table->string('nombre');
             $table->string('ap_paterno');
             $table->string('ap_materno');

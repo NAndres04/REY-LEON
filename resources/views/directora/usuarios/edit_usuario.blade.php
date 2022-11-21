@@ -5,7 +5,7 @@
 @endsection    
 
 @section('contenidodirectora')
-<div class="w-full bg-grey-lightest" style="padding-top: 4rem;">
+<div class="w-full bg-grey-lightest">
     <div class="container mx-auto py-8 flex">
         <div class="w-5/6 lg:w-1/2 mx-auto bg-white rounded shadow">
             <div class="py-4 px-8 text-black text-2xl border-b border-grey-lighter font-bold ">Registrar Personal Educativo</div>
@@ -176,8 +176,8 @@
                             name="password_confirmation"
                             />
                         </div>
-                        <div class="flex rounded-md bg-white py-4 px-4 overflow-x-auto">
-                            <button class="px-6 py-3 bg-green-500 rounded-md text-white font-medium tracking-wide hover:bg-green-700">Modificar</button>
+                        <div>
+                            <button class="bg-green-500 text-white active:bg-green-600 font-bold uppercase text-xs px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none mr-1 ease-linear transition-all duration-150">Modificar</button>
                         </div>
                 </form>
             </div>

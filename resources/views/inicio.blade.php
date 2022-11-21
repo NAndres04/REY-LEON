@@ -120,7 +120,7 @@
         <div class="top-bar"></div>
         <main class="bg-slate-50">
             <div class="container mx-auto">
-                <h2 class="font-black text-center text-5xl h-7">
+                <h2 class="font-black text-center">
                     @yield('tituloeducadora')
                 </h2>
                 @yield('contenidoeducadora')
