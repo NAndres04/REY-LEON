@@ -4,12 +4,12 @@
 @endsection    
 
 @section('contenidodirectora')
-<div class="w-full h-full bg-grey-lightest" style="padding-top: 4rem;">
+<div class="w-full h-full bg-grey-lightest">
     <div class="container mx-auto py-8 ">
         <div class=" max-w-2xl mx-auto bg-white shadow-lg rounded-sm border border-gray-200">
             <div class="flex items-center border-b border-gray-200 dark:border-gray-700  justify-between px-6 py-3">
-                <p tabindex="0" class="font-medium leading-tight text-xl mt-0 mb-2 text-dark">Curso NT1A</p>
-                <p tabindex="0" class="bg-amber-500 text-white active:bg-amber-600 font-bold uppercase text-xs px-4 py-2 rounded outline-none focus:outline-none mr-1 ease-linear transition-all duration-150">Fecha:<?=date('d/m/Y');?></p>
+                <p class="font-medium leading-tight text-xl mt-0 mb-2 text-dark">Curso NT1A</p>
+                <input class="bg-amber-500 text-white active:bg-amber-600 font-bold uppercase text-xs px-4 py-2 rounded outline-none" value="Fecha:<?=date('d/m/Y');?>" readonly/>
             </div>
             <div class="px-3 pt-3 overflow-x-auto"> 
                 <div class="overflow-x-auto">
@@ -26,10 +26,7 @@
                                     <div class="font-semibold text-left">Rut</div>
                                 </th>
                                 <th class="p-2 whitespace-nowrap">
-                                    <div class="font-semibold text-left">Presente</div>
-                                </th>
-                                <th class="p-2 whitespace-nowrap">
-                                    <div class="font-semibold text-left">Ausente</div>
+                                    <div class="font-semibold text-left">Estado</div>
                                 </th>
                             </tr>
                         </thead>
@@ -54,14 +51,7 @@
                                 <td class="p-2 whitespace-nowrap">
                                     <div class="flex items-center">
                                     <label class="inline-flex">
-                                        <input type="radio" class=" text-green-500" name="radio">
-                                    </label>
-                                    </div>
-                                </td>
-                                <td class="p-2 whitespace-nowrap">
-                                    <div class="flex items-center">
-                                    <label class="inline-flex">
-                                        <input type="radio" class=" text-red-500" name="radio">
+                                        <input type="checkbox" class=" text-green-700" value="Presente" name="estado">
                                     </label>
                                     </div>
                                 </td>
@@ -79,3 +69,4 @@
     </div>
 </div>
 @endsection 
+

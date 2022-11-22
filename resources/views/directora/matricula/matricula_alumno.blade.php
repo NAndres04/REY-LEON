@@ -5,7 +5,7 @@
 @endsection    
 
 @section('contenidodirectora')
-<div class="w-full bg-grey-lightest" style="padding-top: 4rem;">
+<div class="w-full bg-grey-lightest">
     <div class="container mx-auto py-8 flex">
         <div class="w-5/6 lg:w-1/2 mx-auto bg-white rounded shadow">
             <div class="py-4 px-8 text-black text-2xl border-b border-grey-lighter font-bold ">Matrícula</div>
@@ -63,26 +63,12 @@
                             value="{{old('rut')}}"
                             id="rut"
                             name="rut"
-                            maxlength="10"
+                            maxlength="11"
                             onkeyup="this.value=validate_input(this.value)" 
                             oninput="form_rut(this)"
                             placeholder="12345678-9"
                             />
                             @error('rut')
-                            <p class="bg-red-500 text-white my-2 rounded-lg text-sm p-2 text-center">{{$message}} </p>
-                            @enderror
-                        </div>
-                        <div>
-                            <label class="block text-gray-700 text-sm font-bold mb-2" for="nro_documento">Número de Documento</label>
-                            <input type="text" 
-                            class="bg-gray-200 text-gray-700 focus:outline-none focus:shadow-outline border border-gray-300 rounded py-2 px-4 block w-full
-                            appearance-none @error ('nro_documento') border-red-500 @enderror"
-                            value="{{old('nro_documento')}}"
-                            id="nro_documento"
-                            name="nro_documento"
-                            placeholder="Número de Documento"
-                            />
-                            @error('nro_documento')
                             <p class="bg-red-500 text-white my-2 rounded-lg text-sm p-2 text-center">{{$message}} </p>
                             @enderror
                         </div>

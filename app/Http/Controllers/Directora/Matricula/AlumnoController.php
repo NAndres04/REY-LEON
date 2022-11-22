@@ -21,7 +21,6 @@ class AlumnoController extends Controller
         $this->validate($request,[
             'id_apoderado' => 'required|max:10|min:1',
             'rut' => 'required|cl_rut|unique:alumnos|',
-            'nro_documento' => 'required|max:10|min:1',
             'nombre' => 'required|max:30|min:3',
             'ap_paterno' => 'required|max:10|min:3',
             'ap_materno' => 'required|max:10|min:3',
@@ -40,7 +39,6 @@ class AlumnoController extends Controller
         $alumno = Alumno::create([
             'id_apoderado' => $request ->id_apoderado,
             'rut' => $request->rut,
-            'nro_documento' => $request->nro_documento,
             'nombre' => $request->nombre,
             'ap_paterno' => $request->ap_paterno,
             'ap_materno' => $request->ap_materno,
@@ -67,7 +65,6 @@ class AlumnoController extends Controller
     {
         $cursos = Curso::all();
         $alumnos->rut;
-        $alumnos->nro_documento;
         $alumnos->nombre;
         $alumnos->ap_paterno;
         $alumnos->ap_materno;
