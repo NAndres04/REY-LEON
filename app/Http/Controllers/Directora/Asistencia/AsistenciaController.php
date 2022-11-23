@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Directora\Asistencia;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\Alumno;
+use App\Models\Asistencia;
 
 class AsistenciaController extends Controller
 {
@@ -31,5 +32,18 @@ class AsistenciaController extends Controller
         return view('directora.asistencia.asistencia_alumnos_nt2b', compact('alumnos'));
         
     }
+
+    public function store(Request $request){
+        foreach($request->estado as $key => $value){
+       Asistencia::create([
+           'id_user' => auth()->user()->id,
+           'id_curso' => $request->id_curso,
+           'fecha' => $request->fecha,
+           'id_alumno' => $request['id_alumno'][$key], 
+           'estado' => $value, 
+       ]);
+   }
+       return view('directora.directora');
+   }
 
 }
