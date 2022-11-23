@@ -77,6 +77,9 @@
                                                         class="text-black block px-4 py-2 text-sm hover:bg-amber-300"
                                                         role="menuitem" tabindex="-1" id="menu-item-1">Ver
                                                         actividades</a>
+                                                        <a href="{{ route('crearinfo.create') }}"
+                                                        class="text-black block px-4 py-2 text-sm hover:bg-amber-300"
+                                                        role="menuitem" tabindex="-1" id="menu-item-1">Crear informativo</a>
                                                 </div>
                                             </div>
                                         </div>

@@ -53,7 +53,7 @@ class UsuarioController extends Controller
         ]);
         
         $usuarios = User::all();
-        return view('directora.usuarios.ver_usuario', compact('usuarios'));
+        return view('directora.directora');
         
     }
 

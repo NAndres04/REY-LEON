@@ -11,6 +11,7 @@ use App\Http\Controllers\PostController;
 use App\Http\Controllers\ImagenController;
 use App\Http\Controllers\posteosController;
 use App\Http\Controllers\EducadoraController;
+use App\Http\Controllers\InformativoController;
 use App\Http\Controllers\Directora\Cursos\CursoController;
 use App\Http\Controllers\Directora\Usuario\UsuarioController;
 use App\Http\Controllers\Directora\Matricula\AlumnoController;
@@ -71,13 +72,32 @@ Route::group(["middleware" => 'AuthDirectora'], function() {
     Route::get('/posts/{id}/modificar', [PostController::class, 'ModificarPubli'])->name('posts.ModificarPubli');
     Route::put('/posts/{id}/modificando', [PostController::class, 'update'])->name('posts.updatePubli');
 
-   //ROUTE:CORREOS
+                                     //ROUTE:CORREOS
     //ruta para escoger los cursos
    // Route::get('/seleccionar', [MailController::class,'escoger'])->name('seleccionar.escoger');
    //ruta para formulario
    Route::get('/enviarcorreo', [MailController::class,'index'])->name('enviarcorreo.index');
    //ruta para enviar el correo
    Route::get('/enviarcorreo/enviando', [MailController::class,'store'])->name('enviarcorreo.store');
+
+
+
+
+
+
+                                    //ROUTE: informativo
+                //Crear informativo
+   Route::get('/crearinformativo', [InformativoController::class,'create'])->name('crearinfo.create');
+   Route::post('/crearinformativo/guardando', [InformativoController::class,'store'])->name('crearinfo.store');
+   // ingresar a apartado para crear informativos
+   Route::get('/informativos', [InformativoController::class,'index'])->name('verinfo.index');
+   //ver los informativos creados
+   
+
+   //eliminar informativo
+
+   //modificar informativo
+
 
   //Route: Gestión de Usuarios(Educadora)
             //Route: Vista principal de los usuarios(Educadora)
