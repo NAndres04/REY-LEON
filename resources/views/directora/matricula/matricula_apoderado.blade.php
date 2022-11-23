@@ -107,57 +107,33 @@
                             @enderror
                         </div>
                         <div>
-                            <label class="block text-gray-700 text-sm font-bold mb-2" for="profesion_laboral">Profesión Laboral</label>
-                            <input type="text" 
-                            class="bg-gray-200 text-gray-700 focus:outline-none focus:shadow-outline border border-gray-300 rounded py-2 px-4 block w-full
-                            appearance-none @error ('profesion_laboral') border-red-500 @enderror"
-                            value="{{old('profesion_laboral')}}"
-                            id="profesion_laboral"
-                            name="profesion_laboral"
-                            placeholder="Profesión Laboral"
-                            />
-                            @error('profesion_laboral')
-                            <p class="bg-red-500 text-white my-2 rounded-lg text-sm p-2 text-center">{{$message}} </p>
-                            @enderror
-                        </div>
-                        <div>
                             <label class="block text-gray-700 text-sm font-bold mb-2" for="situacion_laboral">Situación Laboral</label>
-                            <input type="text" 
-                            class="bg-gray-200 text-gray-700 focus:outline-none focus:shadow-outline border border-gray-300 rounded py-2 px-4 block w-full
-                            appearance-none @error ('situacion_laboral') border-red-500 @enderror"
-                            value="{{old('situacion_laboral')}}"
-                            id="situacion_laboral"
-                            name="situacion_laboral"
-                            placeholder="Situación Laboral"
-                            />
+                            <select class="bg-gray-200 text-gray-700 focus:outline-none focus:shadow-outline border border-gray-300 rounded py-2 px-4 block w-full
+                            @error ('situacion_laboral') border-red-500 @enderror" 
+                            value="{{old('situacion_laboral')}}" 
+                            id="situacion_laboral" 
+                            name="situacion_laboral">
+                            <option>.:: Seleccione Situación Laboral ::.</option>
+                            <option value="Trabajador Dependiente">Trabajador Dependiente</option>
+                            <option value="Trabajador Independiente">Trabajador Independiente</option>
+                            <option value="Cesante">Cesante</option>
+                            </select>
                             @error('situacion_laboral')
                             <p class="bg-red-500 text-white my-2 rounded-lg text-sm p-2 text-center">{{$message}} </p>
                             @enderror
                         </div>
                         <div>
-                            <label class="block text-gray-700 text-sm font-bold mb-2" for="grado_estudio">Grado de Estudio</label>
-                            <input type="text" 
-                            class="bg-gray-200 text-gray-700 focus:outline-none focus:shadow-outline border border-gray-300 rounded py-2 px-4 block w-full
-                            appearance-none @error ('grado_estudio') border-red-500 @enderror"
-                            value="{{old('grado_estudio')}}"
-                            id="grado_estudio"
-                            name="grado_estudio"
-                            placeholder="Grado Estudio"
-                            />
-                            @error('grado_estudio')
-                            <p class="bg-red-500 text-white my-2 rounded-lg text-sm p-2 text-center">{{$message}} </p>
-                            @enderror
-                        </div>
-                        <div>
                             <label class="block text-gray-700 text-sm font-bold mb-2" for="tipo_salud">Tipo de Salud</label>
-                            <input type="text" 
-                            class="bg-gray-200 text-gray-700 focus:outline-none focus:shadow-outline border border-gray-300 rounded py-2 px-4 block w-full
-                            appearance-none @error ('tipo_salud') border-red-500 @enderror"
-                            value="{{old('tipo_salud')}}"
-                            id="tipo_salud"
-                            name="tipo_salud"
-                            placeholder="Tipo de Salud"
-                            />
+                            <select class="bg-gray-200 text-gray-700 focus:outline-none focus:shadow-outline border border-gray-300 rounded py-2 px-4 block w-full
+                            @error ('tipo_salud') border-red-500 @enderror" 
+                            value="{{old('tipo_salud')}}" 
+                            id="tipo_salud" 
+                            name="tipo_salud">
+                            <option>.:: Seleccione Tipo de Salud ::.</option>
+                            <option value="Fonasa">Fonasa</option>
+                            <option value="Isapre">Isapre</option>
+                            <option value="No Aplica">No Aplica</option>
+                            </select>
                             @error('tipo_salud')
                             <p class="bg-red-500 text-white my-2 rounded-lg text-sm p-2 text-center">{{$message}} </p>
                             @enderror

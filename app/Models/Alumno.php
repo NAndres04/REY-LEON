@@ -18,13 +18,11 @@ class Alumno extends Model
         'ap_paterno',
         'ap_materno',
         'fecha_nac',
-        'ciudad_nac',
         'nacionalidad',
         'domicilio',
         'edad',
         'nombre_emergencia',
         'fono_emergencia',
-        'discapacidad',
         'matricula',
     ];
 

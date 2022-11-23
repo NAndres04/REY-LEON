@@ -24,7 +24,7 @@ class UsuarioController extends Controller
 
     public function store(Request $request){
         $this->validate($request,[
-            'rut' => 'required|cl_rut|unique:users',
+            'rut' => 'required|cl_rut|unique:users|unique:alumnos',
             'nombre' => 'required|max:30|min:3',
             'ap_paterno' => 'required|max:10|min:3',
             'ap_materno' => 'required|max:10|min:3',

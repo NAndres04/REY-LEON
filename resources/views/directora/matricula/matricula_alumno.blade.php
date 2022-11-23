@@ -129,29 +129,31 @@
                             @enderror
                         </div>
                         <div>
-                            <label class="block text-gray-700 text-sm font-bold mb-2" for="ciudad_nac">Ciudad de Nacimiento</label>
-                            <input type="text" 
-                            class="bg-gray-200 text-gray-700 focus:outline-none focus:shadow-outline border border-gray-300 rounded py-2 px-4 block w-full
-                            appearance-none @error ('ciudad_nac') border-red-500 @enderror"
-                            value="{{old('ciudad_nac')}}"
-                            id="ciudad_nac"
-                            name="ciudad_nac"
-                            placeholder="Ciudad de Nacimiento"
-                            />
-                            @error('ciudad_nac')
-                            <p class="bg-red-500 text-white my-2 rounded-lg text-sm p-2 text-center">{{$message}} </p>
-                            @enderror
-                        </div>
-                        <div>
                             <label class="block text-gray-700 text-sm font-bold mb-2" for="nacionalidad">Nacionalidad</label>
-                            <input type="text" 
-                            class="bg-gray-200 text-gray-700 focus:outline-none focus:shadow-outline border border-gray-300 rounded py-2 px-4 block w-full
-                            appearance-none @error ('nacionalidad') border-red-500 @enderror"
-                            value="{{old('nacionalidad')}}"
-                            id="nacionalidad"
-                            name="nacionalidad"
-                            placeholder="Nacionalidad"
-                            />
+                            <select class="bg-gray-200 text-gray-700 focus:outline-none focus:shadow-outline border border-gray-300 rounded py-2 px-4 block w-full
+                            @error ('nacionalidad') border-red-500 @enderror" 
+                            value="{{old('nacionalidad')}}" 
+                            id="nacionalidad" 
+                            name="nacionalidad">
+                            <option>.:: Seleccione Nacionalidad ::.</option>
+                            <option value="Brasilera">BRASILERA</option>
+                            <option value="Boliviana">BOLIVIANA</option>
+                            <option value="Argentina">ARGENTINA</option>
+                            <option value="Chilena">CHILENA</option>
+                            <option value="Colombiana">COLOMBIANA</option>
+                            <option value="Cubana">CUBANA</option>
+                            <option value="Dominicana">DOMINICANA</option>
+                            <option value="Ecuatoriana">ECUATORIANA</option>
+                            <option value="Española">ESPAÑOLA</option>
+                            <option value="EstadoUnidense">ESTADOUNIDENSE</option>
+                            <option value="Haitiana">HAITIANA</option>
+                            <option value="Mexicana">MEXICANA</option>
+                            <option value="Panameña">PANAMEÑA</option>
+                            <option value="Paraguaya">PARAGUAYA</option>
+                            <option value="Peruana">PERUANA</option>
+                            <option value="Uruguaya">URUGUAYA</option>
+                            <option value="Venezolana">VENEZOLANA</option>
+                            </select>
                             @error('nacionalidad')
                             <p class="bg-red-500 text-white my-2 rounded-lg text-sm p-2 text-center">{{$message}} </p>
                             @enderror
@@ -172,29 +174,20 @@
                         </div>
                         <div>
                             <label class="block text-gray-700 text-sm font-bold mb-2" for="edad">Edad</label>
-                            <input type="text" 
-                            class="bg-gray-200 text-gray-700 focus:outline-none focus:shadow-outline border border-gray-300 rounded py-2 px-4 block w-full
-                            appearance-none @error ('edad') border-red-500 @enderror"
-                            value="{{old('edad')}}"
-                            id="edad"
-                            name="edad"
-                            placeholder="Edad"
-                            />
+                            <select class="bg-gray-200 text-gray-700 focus:outline-none focus:shadow-outline border border-gray-300 rounded py-2 px-4 block w-full
+                            @error ('edad') border-red-500 @enderror" 
+                            value="{{old('edad')}}" 
+                            id="edad" 
+                            name="edad">
+                            <option>.:: Seleccione Edad ::.</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            </select>
                             @error('edad')
-                            <p class="bg-red-500 text-white my-2 rounded-lg text-sm p-2 text-center">{{$message}} </p>
-                            @enderror
-                        </div>
-                        <div>
-                            <label class="block text-gray-700 text-sm font-bold mb-2" for="discapacidad">Discapacidad</label>
-                            <input type="text" 
-                            class="bg-gray-200 text-gray-700 focus:outline-none focus:shadow-outline border border-gray-300 rounded py-2 px-4 block w-full
-                            appearance-none @error ('discapacidad') border-red-500 @enderror"
-                            value="{{old('discapacidad')}}"
-                            id="discapacidad"
-                            name="discapacidad"
-                            placeholder="Discapacidad"
-                            />
-                            @error('discapacidad')
                             <p class="bg-red-500 text-white my-2 rounded-lg text-sm p-2 text-center">{{$message}} </p>
                             @enderror
                         </div>
@@ -244,7 +237,7 @@
                             value="{{old('id_curso')}}" 
                             id="id_curso" 
                             name="id_curso">
-                            <option>Seleccione:</option>
+                            <option>.:: Seleccione Curso ::.</option>
                             @foreach ($cursos as $curso )
                             <option value="{{$curso->id}}">{{ $curso->nombre }}</option>
                             @endforeach
