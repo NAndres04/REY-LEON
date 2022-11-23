@@ -62,9 +62,7 @@
             <br>
             <div class="flex items-center border-b border-gray-200 dark:border-gray-700  justify-between px-6 py-3">
             <p tabindex="0" class="focus:outline-none text-2xl leading-tight text-gray-800 dark:text-white "></p>
-            <button class="focus:outline-none focus:ring-2 flex cursor-pointer items-center justify-center px-3 py-2.5 border rounded border-green-500 text-black transition duration-300 hover:bg-green-500 hover:text-white">
-                <a href="{{ route ('usuario.edit', $usuarios) }}"><p class="focus:outline-none text-1xl md:text-sm leading-none border-green-500 text-black transition duration-300 hover:bg-green-500 hover:text-white ">Modificar Usuario</p></a>
-            </button>
+            <a href="{{ route ('usuario.edit', $usuarios) }}"><button class="bg-green-500 text-white active:bg-green-600 font-bold uppercase text-xs px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none mr-1 ease-linear transition-all duration-150">Modificar</button></a>
         </div>  
         </div>
     </div>

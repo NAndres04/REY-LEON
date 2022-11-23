@@ -16,9 +16,7 @@ class Apoderado extends Model
         'ap_materno',
         'fono',
         'correo',
-        'profesion_laboral',
         'situacion_laboral',
-        'grado_estudio',
         'tipo_salud',
     ];
 

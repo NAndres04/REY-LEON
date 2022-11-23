@@ -140,7 +140,7 @@
                             id="rol" 
                             name="rol">
                             <option value="1">Educadora</option>
-                            <option value="1">Directora</option>
+                            <option value="0">Directora</option>
                             </select>
                             @error('rol')
                             <p class="bg-red-500 text-white my-2 rounded-lg text-sm p-2 text-center">{{$message}} </p>

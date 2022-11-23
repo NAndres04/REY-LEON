@@ -21,9 +21,7 @@ return new class extends Migration
             $table->string('ap_materno');
             $table->string('fono');
             $table->string('correo');
-            $table->string('profesion_laboral');
             $table->string('situacion_laboral');
-            $table->string('grado_estudio');
             $table->string('tipo_salud');
             $table->timestamps();
         });

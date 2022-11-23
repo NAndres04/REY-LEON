@@ -22,13 +22,11 @@ return new class extends Migration
             $table->string('ap_paterno');
             $table->string('ap_materno');
             $table->date('fecha_nac');
-            $table->string('ciudad_nac');
             $table->string('nacionalidad');
             $table->string('domicilio');
             $table->string('edad');
             $table->string('nombre_emergencia');
             $table->string('fono_emergencia');
-            $table->string('discapacidad');
             $table->string('matricula')->nullable();
             $table->timestamps();
         });
