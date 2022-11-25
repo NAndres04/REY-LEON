@@ -51,6 +51,10 @@ class PostController extends Controller
 
     
     public function update(Request $request, $actividad) {
+        $this->validate($request,[
+            'titulo' => 'required|min:3',
+            'descripcion' => 'required|min:3',
+     ] );
         $actividad = Post::find($actividad);
         $actividad->titulo =$request->input('titulo');
         $actividad->descripcion= $request->input('descripcion');

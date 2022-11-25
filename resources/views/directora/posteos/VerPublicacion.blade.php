@@ -131,7 +131,7 @@
                 @csrf
                 <!--- Boton para volver al menu de actividades principal --->
                 <div class="flex mt-3">
-                    @method('delete')
+                 
                     <a href="/posts/verpost"
                         class="bg-gray-700 text-white font-bold py-2 px-4 w-full rounded hover:bg-gray-600 text-center">Volver al menu</a>
                 </div>

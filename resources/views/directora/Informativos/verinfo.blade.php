@@ -5,50 +5,51 @@
 @endsection    
 
 @section('contenidodirectora')
-<div class="py-32 h-screen ">
-    <div class="flex bg-white rounded-lg shadow-lg overflow-hidden mx-auto max-w-sm lg:max-w-4xl">
-          <div class="w-full p-8 lg:w-1/2">
-              <h2 class="text-2xl font-semibold text-gray-700 text-center">Crear informativo</h2>
-              <!-- crear informativo  -->
-              <form action="{{ route('crearinfo.store') }}" method="get" novalidate>
-              <div class="mt-4">
-                  <label class="block text-gray-700 text-sm font-bold mb-2" for="titulo">Título</label>
-                  <input 
-                  class="bg-gray-200 text-gray-700 focus:outline-none focus:shadow-outline border border-gray-300 rounded py-2 px-4 block w-full appearance-none
-                  @error ('titulo') border-red-500 @enderror" 
-                  id="titulo"
-                  wire:model="titulo"
-                  type="text"
-                  placeholder="Ingrese el título"
-                  value="{{old('titulo')}}"
-                  />
-                  @error('titulo')
-                      <p class="bg-red-500 text-white my-2 rounded-lg text-sm p-2 text-center">{{$message}} </p>
-                  @enderror
-              </div>
-              <!-- fin crear informativo  -->
-              <!-- Descripcion -->
-              <div class="mt-4">
-                <label class="block text-gray-700 text-sm font-bold mb-2" for="descripcion">Descripción</label>
-                <textarea 
-                class="bg-gray-200 text-gray-700 focus:outline-none focus:shadow-outline border border-gray-300 rounded py-2 px-4 block w-full appearance-none
-                @error ('descripcion') border-red-500 @enderror" 
-                id="descripcion"
-                wire:model="descripcion"
-                placeholder="Ingrese la descripción"
-                >
-                {{old('descripcion')}} 
-                </textarea>
-                @error('descripcion')
-                    <p class="bg-red-500 text-white my-2 rounded-lg text-sm p-2 text-center">{{$message}} </p>
-                @enderror
+<div class="px-3 lg:w-2/5">
+    <div class="mx-auto mb-8 max-w-lg text-center lg:mx-0 lg:max-w-md lg:text-left">
+        <h2 class="mb-4 text-3xl font-bold  lg:text-5xl mt-6">
+            Administración de
+            <span class="text-5xl text-amber-600 leading-relaxeds">Informativos
+        </h2>
+    </div>
+</div>
+
+
+
+<!--- Inicio de formulario con un valor de 12 columnas para el dic de contenido --->
+<div class="grid grid-cols-4">
+    <!--- Foreach para recorredi de todos los informativos --->
+    @foreach ($informativos as $informativo)
+      
+        <!--- Formulario para enviar la la id de una actividad en especifico al seleccionarla a travez de un botton, ademas se configura con un espaciado de 4 columnos dentro del div --->
+        <form action="{{ route('verinfo.veruno', [$informativo->id]) }}" method="get" novalidate class="col-span-1">
+            @csrf
+            <!--- LLamado a diseño para formularios personalizados (Dentro del for each, ya que se debe personalizar en cada actividad ingresada) --->
+            <script src="https://cdn.tailwindcss.com"></script>
+            <div class="mx-auto w-full">
+                <a
+                    class="relative inline-block w-full transform transition-transform duration-300 ease-in-out hover:-translate-y-2">
+                    <div class="rounded-lg p-4 mt-5">
+                        
+                        <div class="pt-1">
+                            <div class="text-black absolute">
+                                <div class="inline-block h-3 border-l-2 border-amber-600 mr-2"></div><span
+                                    class="text-xl">{{ $informativo->titulo }}</span>
+                                    <div class="inline-block h-3 border-l-2 border-amber-600 mr-2"></div><span
+                                    class="text-xl">{{ $informativo->descripcion }}</span>
+                            </div>
+                        </div>
+                        <!--- Botton para enviar el Id de un informativo seleccionado para poder ir a modificarlo o eliminarlo --->
+                        <button type="submit"
+                            class="border bg-white text-black font-bold py-2 px-4 w-full rounded mt-16  border-amber-500 group hover:bg-amber-500 
+                            rounded-xss
+                            transition-all duration-200">Ver
+                            más</button>
+                     
+                    </div>
+                </a>
             </div>
-            <!-- fin Descripcion -->
-              <div class="mt-8">
-                  <button type="submit" class="bg-gray-700 text-white font-bold py-2 px-4 w-full rounded hover:bg-gray-600">crear informativo</button>
-              </div>
-              </form>
-            </div>
-         </div>
-       </div>
+        </form>
+    @endforeach
+</div>
 @endsection

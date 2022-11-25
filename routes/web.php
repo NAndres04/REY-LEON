@@ -81,23 +81,19 @@ Route::group(["middleware" => 'AuthDirectora'], function() {
    Route::get('/enviarcorreo/enviando', [MailController::class,'store'])->name('enviarcorreo.store');
 
 
-
-
-
-
-                                    //ROUTE: informativo
+                                       //ROUTE: informativo
                 //Crear informativo
    Route::get('/crearinformativo', [InformativoController::class,'create'])->name('crearinfo.create');
    Route::post('/crearinformativo/guardando', [InformativoController::class,'store'])->name('crearinfo.store');
-   // ingresar a apartado para crear informativos
+     //ver los informativos creados
    Route::get('/informativos', [InformativoController::class,'index'])->name('verinfo.index');
-   //ver los informativos creados
-   
-
+   //Ruta para ver el informativo seleccionado
+   Route::get('/informativos/{id}', [InformativoController::class, 'veruno'])->name('verinfo.veruno');
    //eliminar informativo
-
+   Route::delete('/informativos/{id}/eliminar', [InformativoController::class, 'eliminarInfo'])->name('info.eliminar');
    //modificar informativo
-
+   Route::get('/informativos/{id}/modificar', [InformativoController::class, 'ModificarInfo'])->name('info.modificar');
+   Route::put('/informativos/{id}/modificando', [InformativoController::class, 'update'])->name('info.update');
 
   //Route: Gestión de Usuarios(Educadora)
             //Route: Vista principal de los usuarios(Educadora)

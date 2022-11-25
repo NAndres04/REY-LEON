@@ -19,7 +19,9 @@ class SubirFotos extends Component
 
   public function save(){
     $this->validate([
-      'fotografias.*' => 'image|max:8128|required', // 1MB Max
+      'fotografias.*' => 'image|max:8128|required',
+      'titulo' => 'required|min:3',
+      'descripcion' => 'required|min:3', // 1MB Max
     ]);
 
     // Este tiene un string con las fotos concatenadas con ++

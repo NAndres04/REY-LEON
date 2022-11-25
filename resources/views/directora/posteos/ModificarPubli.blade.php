@@ -12,20 +12,20 @@
         <!--- COnfiguracion del div--->
         <div class="grid grid-cols-2">
             <div class="w-full  p-8">
-                <h1 class=" text-2xl font-bold">Administrar publicacion</h1>
+                <h1 class=" text-2xl font-bold">Administrar publicación</h1>
                 <!--- Div para modificar el titulo--->
                 <div class="mb-4 mt-6">
                     <!--- Titulo --->
                     <label class="block text-gray-700 text-sm font-semibold mb-2" htmlFor="password">
-                        Titulo
+                        Título
                     </label>
                     <!--- Input para rescatar el titulo de una actividad y modificarla --->
                     <input type="text"
                         class="bg-gray-200 text-gray-700 focus:outline-none focus:shadow-outline border border-gray-300 rounded py-2 px-4 block w-full
-    appearance-none @error('rut') border-red-500 @enderror"
+    appearance-none @error('titulo') border-red-500 @enderror"
                         value="{{ $actividad->titulo }}" id="titulo" name="titulo" placeholder="Ingrese el titulo" />
                     <!--- Mensaje de error --->
-                    @error('rut')
+                    @error('titulo')
                         <p class="bg-red-500 text-white my-2 rounded-lg text-sm p-2 text-center">{{ $message }} </p>
                     @enderror
                 </div>
@@ -38,11 +38,11 @@
                     <!--- Input para rescatar la descripcion de una actividad y modificarla --->
                     <input type="text"
                         class="bg-gray-200 text-gray-700 focus:outline-none focus:shadow-outline border border-gray-300 rounded py-2 px-4 block w-full
-                        appearance-none @error('rut') border-red-500 @enderror"
+                        appearance-none @error('descripcion') border-red-500 @enderror"
                         value="{{ $actividad->descripcion }}" id="descripcion" name="descripcion"
                         placeholder="Ingrese la descripcion" />
                     <!--- Mensaje de error --->
-                    @error('rut')
+                    @error('descripcion')
                         <p class="bg-red-500 text-white my-2 rounded-lg text-sm p-2 text-center">{{ $message }} </p>
                     @enderror
                 </div>
