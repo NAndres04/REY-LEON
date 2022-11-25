@@ -7,6 +7,12 @@ use Illuminate\Http\Request;
 
 class InformativoController extends Controller
 {
+
+    public function __construct()
+     {
+         $this->middleware('auth');
+         $this->middleware('AuthDirectora', ['only' => 'index']);
+     }
     
     public function create() {
         return view('directora.Informativos.crearinfo');

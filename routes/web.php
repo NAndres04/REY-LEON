@@ -12,6 +12,7 @@ use App\Http\Controllers\ImagenController;
 use App\Http\Controllers\posteosController;
 use App\Http\Controllers\EducadoraController;
 use App\Http\Controllers\InformativoController;
+use App\Http\Controllers\visitavistasController;
 use App\Http\Controllers\Directora\Cursos\CursoController;
 use App\Http\Controllers\Directora\Usuario\UsuarioController;
 use App\Http\Controllers\Directora\Matricula\AlumnoController;
@@ -32,9 +33,14 @@ Route::get('/trabajadores', function () {
     return view('index.trabajadores');
 });
 //ver todas las publicaciones
-Route::get('/actividades', [PostController::class, 'index'])->name('posts.index');
+Route::get('/actividades', [visitavistasController::class, 'index'])->name('posts.index');
 //Ver una publicacion en particular cliente
-Route::get('/actividades/{id}', [PostController::class, 'verPublicacionCliente'])->name('posts.verPubli');
+Route::get('/actividades/{id}', [visitavistasController::class, 'verPublicacionCliente'])->name('posts.verPubli');
+
+//ver todas las publicaciones
+Route::get('/información', [visitavistasController::class, 'indexinfo'])->name('info.index');
+//Ver una publicacion en particular cliente
+Route::get('/información/{id}', [visitavistasController::class, 'verInfoCliente'])->name('info.verInfo');
 
 Route::get('/colegio', function () {
     return view('index.colegio');
