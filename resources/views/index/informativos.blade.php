@@ -18,7 +18,7 @@
 
 
 <!--- Inicio de formulario con un valor de 12 columnas para el dic de contenido --->
-<div class="grid grid-cols-4">
+<div class="grid grid-cols-4 mb-52">
     <!--- Foreach para recorredi de todos los informativos --->
     @foreach ($informativos as $informativo)
       
@@ -36,8 +36,6 @@
                             <div class="text-black absolute">
                                 <div class="inline-block h-3 border-l-2 border-amber-600 mr-2"></div><span
                                     class="text-xl">{{ $informativo->titulo }}</span>
-                                    <div class="inline-block h-3 border-l-2 border-amber-600 mr-2"></div><span
-                                    class="text-xl">{{ $informativo->descripcion }}</span>
                             </div>
                         </div>
                         <!--- Botton para enviar el Id de un informativo seleccionado para poder ir a modificarlo o eliminarlo --->

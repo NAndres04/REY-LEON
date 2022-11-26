@@ -73,27 +73,4 @@
                 </p>
             </section>
     </main>
-
-    <!-- Copyright Bar -->
-    <div class="pt-2">
-        <!-- Required Unicons (if you want) -->
-        <div class="md:flex-auto md:flex-row-reverse mt-2 flex-row flex">
-            <a href="#" class="w-6 mx-1">
-                <i class="uil uil-facebook-f"></i>
-            </a>
-            <a href="#" class="w-6 mx-1">
-                <i class="uil uil-twitter-alt"></i>
-            </a>
-            <a href="#" class="w-6 mx-1">
-                <i class="uil uil-youtube"></i>
-            </a>
-            <a href="#" class="w-6 mx-1">
-                <i class="uil uil-linkedin"></i>
-            </a>
-            <a href="#" class="w-6 mx-1">
-                <i class="uil uil-instagram"></i>
-            </a>
-        </div>
-    </div>
-    </footer>
 @endsection
