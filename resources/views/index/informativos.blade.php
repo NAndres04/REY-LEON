@@ -1,10 +1,11 @@
-@extends('home')
+@extends('layouts.app')
+<!--- Titulo de la vista --->
+@section('titulo')
+@endsection
 
-@section('titulodirectora')
-      
-@endsection    
 
-@section('contenidodirectora')
+<!--- Contenido del frame --->
+@section('contenido')
 <div class="px-3 lg:w-2/5">
     <div class="mx-auto mb-8 max-w-lg text-center lg:mx-0 lg:max-w-md lg:text-left">
         <h2 class="mb-4 text-3xl font-bold  lg:text-5xl mt-6">
@@ -22,7 +23,7 @@
     @foreach ($informativos as $informativo)
       
         <!--- Formulario para enviar la la id de una actividad en especifico al seleccionarla a travez de un botton, ademas se configura con un espaciado de 4 columnos dentro del div --->
-        <form action="{{ route('verinfo.veruno', [$informativo->id]) }}" method="get" novalidate class="col-span-1">
+        <form action="{{ route('info.verInfo', [$informativo->id]) }}" method="get" novalidate class="col-span-1">
             @csrf
             <!--- LLamado a diseño para formularios personalizados (Dentro del for each, ya que se debe personalizar en cada actividad ingresada) --->
             <script src="https://cdn.tailwindcss.com"></script>

@@ -51,7 +51,13 @@
                                                 class="group relative before:absolute before:inset-x-0 before:bottom-0 before:h-2 before:origin-right before:scale-x-0">
                                                 <span class="relative group-hover:text-amber-800">Actividades</span>
                                             </a>
-                                        </li>                        
+                                        </li>
+                                        <li>
+                                            <a href="{{ route('info.index') }}"
+                                                class="group relative before:absolute before:inset-x-0 before:bottom-0 before:h-2 before:origin-right before:scale-x-0">
+                                                <span class="relative group-hover:text-amber-800">Noticias</span>
+                                            </a>
+                                        </li>                          
                                         <div class="relative inline-block text-left">
                                             <div>
                                                 <button type="button"

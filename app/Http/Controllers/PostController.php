@@ -7,20 +7,12 @@ use Illuminate\Http\Request;
 
 class PostController extends Controller
 {
-    // public function __construct()
-    // {
-    //     $this->middleware('auth');
-    //     $this->middleware('AuthDirectora', ['only' => 'index']);
-    // }
-  //cliente
-    public function index() {
-        $actividades = Post::all();
-        return view('index.actividades', compact('actividades'));
-    }
-    public function verPublicacionCliente($request) {
-        $actividad = Post::find($request);
-        return view('index.ver_actividad', compact('actividad'));
-    }
+     public function __construct()
+     {
+         $this->middleware('auth');
+         $this->middleware('AuthDirectora', ['only' => 'index']);
+     }
+  
     
     //directora
     public function verPublicacion($request) {
@@ -51,6 +43,10 @@ class PostController extends Controller
 
     
     public function update(Request $request, $actividad) {
+        $this->validate($request,[
+            'titulo' => 'required|min:3',
+            'descripcion' => 'required|min:3',
+     ] );
         $actividad = Post::find($actividad);
         $actividad->titulo =$request->input('titulo');
         $actividad->descripcion= $request->input('descripcion');
