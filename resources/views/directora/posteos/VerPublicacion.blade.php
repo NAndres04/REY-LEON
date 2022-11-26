@@ -9,7 +9,8 @@
     <!-- Gogole Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;1,100;1,200&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;1,100;1,200&display=swap"
+        rel="stylesheet" />
 
     <!-- Page Main -->
     <main class="flex flex-col items-center justify-center">
@@ -17,14 +18,14 @@
         <section
             class="flex flex-wrap items-center -mx-3 font-sans px-4 w-full lg:max-w-screen-lg sm:max-w-screen-sm md:max-w-screen-md pb-20">
             <!-- Column-1 -->
-            <div class="px-3 w-full lg:w-2/5">
-                <div class="mx-auto mb-8 max-w-lg text-center lg:mx-0 lg:max-w-md lg:text-left">
+            <div class="px-3 w-full lg:w-2/5 mt-8">
+                <div class="mx-auto max-w-lg text-center lg:mx-0 lg:max-w-md lg:text-left">
                     <h2 class="mb-4 text-3xl font-bold  lg:text-5xl">
-                        Administracion 
+                        Actividad
                         <span class="text-5xl text-amber-600 leading-relaxeds">{{ $actividad->titulo }}
                         </span>
                     </h2>
-                    <p class="visible mx-0 mt-3 mb-0 text-sm leading-relaxed text-left text-slate-400">
+                    <p class="visible mx-0 mt-3 text-sm leading-relaxed text-left text-slate-400">
                         Establecimiento subvencionado The lions kions, calama.
                     </p>
                 </div>
@@ -89,18 +90,19 @@
                     @endif
                     <!-- En caso de que solo se encuentre una imagene n la galeria se imprimira solo esta sin carousel -->
                     @if ($cantidad == 1)
-                    <div id="default-carousel" class="relative w-full  p-8" data-carousel="static">
-                        <div class="overflow-hidden relative h-56 rounded-lg sm:h-64 xl:h-80 2xl:h-96 w-full">
-                            <!-- Se rescata la foto -->
-                            <img src="<?php echo $actividad->imagen; ?>" class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2"
-                            alt="..." />
+                        <div id="default-carousel" class="relative w-full  p-8" data-carousel="static">
+                            <div class="overflow-hidden relative h-56 rounded-lg sm:h-64 xl:h-80 2xl:h-96 w-full">
+                                <!-- Se rescata la foto -->
+                                <img src="<?php echo $actividad->imagen; ?>"
+                                    class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2"
+                                    alt="..." />
+                            </div>
                         </div>
-                    </div>
                     @endif
                 </div>
             </section>
             <!-- Descripcion del establecimiento -->
-            <section class="space-y-8">
+            <section class="space-y-8 w-full">
                 <h1 class="text-4xl text-center">Informacion de la actividad</h1>
                 <p>
                     <label class="block text-gray-700 text-sm font-semibold mb-2">
@@ -108,58 +110,44 @@
                         <span>{{ $actividad->descripcion }}</span>
                     </label>
                 </p>
-            <!--- Formulario para al terminarlo enviar los datos para moder modificar el titulo y descripcion de una actividad --->
-            <form action="{{ route('posts.ModificarPubli', [$actividad->id]) }}" method="get" novalidate>
-                <div class="flex mt-3">
+                <!--- Formulario para al terminarlo enviar los datos para moder modificar el titulo y descripcion de una actividad --->
+                <div class="flex space-x-3">
+                    <form action="{{ route('posts.ModificarPubli', [$actividad->id]) }}" method="get" novalidate>
+                        <div class="flex mt-3">
+                            @csrf
+                            <button type="submit"
+                                class="rounded-2xl border px-3 py-1 text-xs font-semibold bg-white text-black w-96 border-amber-500 group hover:bg-amber-500 
+                        rounded-xss
+                        transition-all duration-200">Editar
+                                publicación</button>
+                        </div>
+                    </form>
+                    <!--- Formulario para al terminarlo eliminar una actividad --->
+                    <form action="{{ route('posts.eliminarPubli', [$actividad->id]) }}" method="post" novalidate>
+                        @csrf
+                        <!--- configuracion y llamado al metodo para eliminar una actividad --->
+                        <div class="flex mt-3">
+                            @method('delete')
+                            <button type="submit"
+                                class="rounded-2xl border px-3 py-1 text-xs font-semibold bg-white text-black w-96 border-amber-500 group hover:bg-amber-500 
+                        rounded-xss
+                        transition-all duration-200">Eliminar
+                                publicación</button>
+                        </div>
+                    </form>
                     @csrf
-                    <button type="submit"
-                        class="bg-gray-700 text-white font-bold py-2 px-4 w-full rounded hover:bg-gray-600">Editar
-                        publicación</button>
-                </div>
-            </form>
-            <!--- Formulario para al terminarlo eliminar una actividad --->
-            <form action="{{ route('posts.eliminarPubli', [$actividad->id]) }}" method="post" novalidate>
-                @csrf
-                <!--- configuracion y llamado al metodo para eliminar una actividad --->
-                <div class="flex mt-3">
-                    @method('delete')
-                    <button type="submit"
-                        class="bg-gray-700 text-white font-bold py-2 px-4 w-full rounded hover:bg-gray-600">Eliminar
-                        publicación</button>
-                </div>
-            </form>
-                @csrf
-                <!--- Boton para volver al menu de actividades principal --->
-                <div class="flex mt-3">
-                 
-                    <a href="/posts/verpost"
-                        class="bg-gray-700 text-white font-bold py-2 px-4 w-full rounded hover:bg-gray-600 text-center">Volver al menu</a>
+                    <!--- Boton para volver al menu de actividades principal --->
+                    <div class="flex mt-3">
+                        <a href="/posts/verpost"
+                            class="rounded-2xl border px-3 py-1 text-xs font-semibold bg-white text-black w-72 border-amber-500 group hover:bg-amber-500 
+                        rounded-xss
+                        transition-all duration-200 text-center">Volver
+                            al menu</a>
+                    </div>
                 </div>
             </section>
+        </section>
     </main>
-
-    <!-- Copyright Bar -->
-    <div class="pt-2">
-        <!-- Required Unicons (if you want) -->
-        <div class="md:flex-auto md:flex-row-reverse mt-2 flex-row flex">
-            <a href="#" class="w-6 mx-1">
-                <i class="uil uil-facebook-f"></i>
-            </a>
-            <a href="#" class="w-6 mx-1">
-                <i class="uil uil-twitter-alt"></i>
-            </a>
-            <a href="#" class="w-6 mx-1">
-                <i class="uil uil-youtube"></i>
-            </a>
-            <a href="#" class="w-6 mx-1">
-                <i class="uil uil-linkedin"></i>
-            </a>
-            <a href="#" class="w-6 mx-1">
-                <i class="uil uil-instagram"></i>
-            </a>
-        </div>
-    </div>
-    </footer>
 @endsection
 
 <style>

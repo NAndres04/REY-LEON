@@ -100,7 +100,7 @@
                 </div>
             </section>
             <!-- Descripcion del establecimiento -->
-            <section class="space-y-8">
+            <section class="space-y-8 w-full">
                 <h1 class="text-4xl text-center">Informacion de la actividad</h1>
                 <p>
                     <label class="block text-gray-700 text-sm font-semibold mb-2">
@@ -108,35 +108,14 @@
                         <span>{{ $actividad->descripcion }}</span>
                     </label>
                 </p>
-                <div class="flex">
+                <div>
                     <a href="/actividades"
-                        class="bg-gray-700 text-white font-bold py-2 px-4 w-full rounded hover:bg-gray-600 text-center">Cerrar</a>
+                        class="rounded-2xl border px-3 py-1 text-xs font-semibold bg-white text-black w-72 border-amber-500 group hover:bg-amber-500 
+                        rounded-xss
+                        transition-all duration-200 text-center">Cerrar</a>
                 </div>
             </section>
     </main>
-
-    <!-- Copyright Bar -->
-    <div class="pt-2">
-        <!-- Required Unicons (if you want) -->
-        <div class="md:flex-auto md:flex-row-reverse mt-2 flex-row flex">
-            <a href="#" class="w-6 mx-1">
-                <i class="uil uil-facebook-f"></i>
-            </a>
-            <a href="#" class="w-6 mx-1">
-                <i class="uil uil-twitter-alt"></i>
-            </a>
-            <a href="#" class="w-6 mx-1">
-                <i class="uil uil-youtube"></i>
-            </a>
-            <a href="#" class="w-6 mx-1">
-                <i class="uil uil-linkedin"></i>
-            </a>
-            <a href="#" class="w-6 mx-1">
-                <i class="uil uil-instagram"></i>
-            </a>
-        </div>
-    </div>
-    </footer>
 @endsection
 
 <style>
