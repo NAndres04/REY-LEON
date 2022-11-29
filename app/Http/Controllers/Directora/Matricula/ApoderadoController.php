@@ -13,9 +13,11 @@ class ApoderadoController extends Controller
     public function index(Request $request){
         $buscador = $request['buscador'] ?? "";
         if($buscador != ""){
-            $apoderados = Apoderado::where('rut', 'LIKE', "%$buscador%")->orwhere('nombre', 'LIKE', "%$buscador%")->get();
+            $apoderados = Apoderado::where('rut', 'LIKE', "%$buscador%")
+                                    ->orwhere('nombre', 'LIKE', "%$buscador%")
+                                    ->paginate(10);
         } else {
-            $apoderados = Apoderado::all();
+            $apoderados = Apoderado::paginate(10);
         }
         $data = compact('apoderados','buscador');
         return view('directora.matricula.matricula_buscar_apoderado')->with($data);

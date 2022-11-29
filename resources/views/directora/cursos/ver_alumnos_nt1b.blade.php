@@ -19,20 +19,17 @@
                 <button type="submit" class="inline-flex items-center py-2.5 px-3 ml-2 text-sm font-medium text-white bg-blue-700 border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                     <svg aria-hidden="true" class="mr-2 -ml-1 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>Buscar
                 </button>
-            </form>
+                 </form>
             <div class="px-3 pt-3 overflow-x-auto"> 
                 <div class="overflow-x-auto">
                     <table class="table-auto w-full">
                         <thead class="text-xs font-semibold uppercase text-black bg-gray-100">
                             <tr>
-                            <th class="p-2 whitespace-nowrap">
+                                 <th class="p-2 whitespace-nowrap">
+                                    <div class="font-semibold text-left">#</div>
+                                </th>
+                                <th class="p-2 whitespace-nowrap">
                                     <div class="font-semibold text-left">Nombre</div>
-                                </th>
-                                <th class="p-2 whitespace-nowrap">
-                                    <div class="font-semibold text-left">Nombre del Apoderado</div>
-                                </th>
-                                <th class="p-2 whitespace-nowrap">
-                                    <div class="font-semibold text-left">Telefono del Apoderado</div>
                                 </th>
                                 <th class="p-2 whitespace-nowrap">
                                     <div class="font-semibold text-left">Curso</div>
@@ -52,31 +49,31 @@
                                 </td>
                         </tbody>
                         @else
-                        @foreach ( $alumnos as $alumnos )
+                        @foreach ( $alumnos as $alumno )
                         <tbody class="text-sm divide-y">
                             <tr>
                                 <td class="p-2 whitespace-nowrap">
                                     <div class="flex items-center">
-                                        <div class="font-medium text-gray-800">{{ $alumnos->nombre }} {{ $alumnos->ap_paterno }} {{ $alumnos->ap_materno }}</div>
+                                        <div class="font-medium text-gray-800">{{ $loop->iteration }}</div>
                                     </div>
                                 </td>
                                 <td class="p-2 whitespace-nowrap">
-                                    <div class="text-left">{{ $alumnos->apoderados->nombre }} {{ $alumnos->apoderados->ap_paterno }} {{ $alumnos->apoderados->ap_materno }}</div>
+                                    <div class="flex items-center">
+                                        <div class="font-medium text-gray-800">{{ $alumno->nombre }} {{ $alumno->ap_paterno }} {{ $alumno->ap_materno }}</div>
+                                    </div>
                                 </td>
                                 <td class="p-2 whitespace-nowrap">
-                                    <div class="text-left">{{ $alumnos->apoderados->fono }}</div>
+                                    <div class="text-left">{{ $alumno->cursos->nombre}}</div>
                                 </td>
                                 <td class="p-2 whitespace-nowrap">
-                                    <div class="text-left">{{ $alumnos->cursos->nombre}}</div>
-                                </td>
-                                <td class="p-2 whitespace-nowrap">
-                                    <div class="text-center"><button class="px-1 py-1 border-blue-500 border text-blue-500 rounded transition duration-300 hover:bg-blue-500 hover:text-white focus:outline-none "><a href="{{ route ('alumno.show', $alumnos) }}">Ver Información</button></a></div>
+                                    <div class="text-center"><button class="px-1 py-1 border-blue-500 border text-blue-500 rounded transition duration-300 hover:bg-blue-500 hover:text-white focus:outline-none "><a href="{{ route ('alumno.show', $alumno) }}">Ver Información</button></a></div>
                                 </td>
                             </tr>
                         </tbody>
                         @endforeach
                         @endif
                     </table>
+                    {{ $alumnos->links() }}
                 </div>
             </div>
         </div>

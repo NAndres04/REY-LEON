@@ -23,6 +23,9 @@
                         <thead class="text-xs font-semibold uppercase text-black bg-gray-100">
                             <tr>
                                 <th class="p-2 whitespace-nowrap">
+                                    <div class="font-semibold text-left">#</div>
+                                </th>
+                                <th class="p-2 whitespace-nowrap">
                                     <div class="font-semibold text-left">Rut</div>
                                 </th>
                                 <th class="p-2 whitespace-nowrap">
@@ -43,16 +46,21 @@
                                 </td>
                         </tbody>
                         @else
-                        @foreach ( $apoderados as $apoderados )
+                        @foreach ( $apoderados as $apoderado )
                         <tbody class="text-sm divide-y">
                             <tr>
                                 <td class="p-2 whitespace-nowrap">
                                     <div class="flex items-center">
-                                        <div class="font-medium text-gray-800"> {{ $apoderados->rut }}</div>
+                                        <div class="font-medium text-gray-800"> {{ $loop->iteration }}</div>
                                     </div>
                                 </td>
                                 <td class="p-2 whitespace-nowrap">
-                                    <div class="text-left">{{ $apoderados->nombre }} {{ $apoderados->ap_paterno }} {{ $apoderados->ap_materno }}</div>
+                                    <div class="flex items-center">
+                                        <div class="font-medium text-gray-800"> {{ $apoderado->rut }}</div>
+                                    </div>
+                                </td>
+                                <td class="p-2 whitespace-nowrap">
+                                    <div class="text-left">{{ $apoderado->nombre }} {{ $apoderado->ap_paterno }} {{ $apoderado->ap_materno }}</div>
                                 </td>
                                 <td class="p-2 whitespace-nowrap">
                                     <div class="text-center"><button class="px-1 py-1 border-blue-500 border text-blue-500 rounded transition duration-300 hover:bg-blue-500 hover:text-white focus:outline-none "><a href="{{ route ('apoderado.apoderadoseleccionado', $apoderados) }}">Seleccionar Apoderado</button></a></div>
@@ -62,6 +70,7 @@
                         @endforeach
                         @endif
                     </table>
+                    {{ $apoderados->links() }}
                 </div>
             </div>
         </div>

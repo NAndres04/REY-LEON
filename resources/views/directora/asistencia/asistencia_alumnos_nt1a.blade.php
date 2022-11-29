@@ -32,7 +32,7 @@
                                 </th>
                             </tr>
                         </thead>
-                        @foreach ( $alumnos as $alumnos )
+                        @foreach ( $alumnos as $alumno )
                         <tbody class="text-sm divide-y">
                             <tr>
                                 <td class="p-2 whitespace-nowrap">
@@ -42,13 +42,13 @@
                                 </td>
                                 <td class="p-2 whitespace-nowrap">
                                     <div class="flex items-center">
-                                        <div class="font-medium text-gray-800">{{ $alumnos->nombre }} {{ $alumnos->ap_paterno }} {{ $alumnos->ap_materno }}</div>
-                                        <input type="hidden" value="{{ $alumnos->id }}" name="id_alumno[]" id="id_alumno"><input type="hidden" value="{{ $alumnos->id_curso }}" name="id_curso" id="id_curso">
+                                        <div class="font-medium text-gray-800">{{ $alumno->nombre }} {{ $alumno->ap_paterno }} {{ $alumno->ap_materno }}</div>
+                                        <input type="hidden" value="{{ $alumno->id }}" name="id_alumno[]" id="id_alumno"><input type="hidden" value="{{ $alumno->id_curso }}" name="id_curso" id="id_curso">
                                     </div>
                                 </td>
                                 <td class="p-2 whitespace-nowrap">
                                     <div class="flex items-center">
-                                        <div class="font-medium text-gray-800">{{ $alumnos->rut }}</div>
+                                        <div class="font-medium text-gray-800">{{ $alumno->rut }}</div>
                                     </div>
                                 </td>
                                 <td class="p-2 whitespace-nowrap">
@@ -69,6 +69,7 @@
                     </div>
                     </form>
                 </div>
+                 {{ $alumnos->links() }}
             </div>
         </div>
     </div>

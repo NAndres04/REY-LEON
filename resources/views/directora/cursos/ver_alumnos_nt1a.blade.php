@@ -25,14 +25,11 @@
                     <table class="table-auto w-full">
                         <thead class="text-xs font-semibold uppercase text-black bg-gray-100">
                             <tr>
-                            <th class="p-2 whitespace-nowrap">
+                                 <th class="p-2 whitespace-nowrap">
+                                    <div class="font-semibold text-left">#</div>
+                                </th>
+                                <th class="p-2 whitespace-nowrap">
                                     <div class="font-semibold text-left">Nombre</div>
-                                </th>
-                                <th class="p-2 whitespace-nowrap">
-                                    <div class="font-semibold text-left">Nombre del Apoderado</div>
-                                </th>
-                                <th class="p-2 whitespace-nowrap">
-                                    <div class="font-semibold text-left">Telefono del Apoderado</div>
                                 </th>
                                 <th class="p-2 whitespace-nowrap">
                                     <div class="font-semibold text-left">Curso</div>
@@ -52,31 +49,31 @@
                                 </td>
                         </tbody>
                         @else
-                        @foreach ( $alumnos as $alumnos )
+                        @foreach ( $alumnos as $alumno )
                         <tbody class="text-sm divide-y">
                             <tr>
                                 <td class="p-2 whitespace-nowrap">
                                     <div class="flex items-center">
-                                        <div class="font-medium text-gray-800">{{ $alumnos->nombre }} {{ $alumnos->ap_paterno }} {{ $alumnos->ap_materno }}</div>
+                                        <div class="font-medium text-gray-800">{{ $loop->iteration }}</div>
                                     </div>
                                 </td>
                                 <td class="p-2 whitespace-nowrap">
-                                    <div class="text-left">{{ $alumnos->apoderados->nombre }} {{ $alumnos->apoderados->ap_paterno }} {{ $alumnos->apoderados->ap_materno }}</div>
+                                    <div class="flex items-center">
+                                        <div class="font-medium text-gray-800">{{ $alumno->nombre }} {{ $alumno->ap_paterno }} {{ $alumno->ap_materno }}</div>
+                                    </div>
                                 </td>
                                 <td class="p-2 whitespace-nowrap">
-                                    <div class="text-left">{{ $alumnos->apoderados->fono }}</div>
+                                    <div class="text-left">{{ $alumno->cursos->nombre}}</div>
                                 </td>
                                 <td class="p-2 whitespace-nowrap">
-                                    <div class="text-left">{{ $alumnos->cursos->nombre}}</div>
-                                </td>
-                                <td class="p-2 whitespace-nowrap">
-                                    <div class="text-center"><button class="px-1 py-1 border-blue-500 border text-blue-500 rounded transition duration-300 hover:bg-blue-500 hover:text-white focus:outline-none "><a href="{{ route ('alumno.show', $alumnos) }}">Ver Información</button></a></div>
+                                    <div class="text-center"><button class="px-1 py-1 border-blue-500 border text-blue-500 rounded transition duration-300 hover:bg-blue-500 hover:text-white focus:outline-none "><a href="{{ route ('alumno.show', $alumno) }}">Ver Información</button></a></div>
                                 </td>
                             </tr>
                         </tbody>
                         @endforeach
                         @endif
                     </table>
+                    {{ $alumnos->links() }}
                 </div>
             </div>
         </div>

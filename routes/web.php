@@ -153,6 +153,8 @@ Route::group(["middleware" => 'AuthDirectora'], function() {
             Route::get('/info_alumno/{alumnos}', [AlumnoController::class, 'show'])->name('alumno.show');
 
             //Route: Asistencia
+            //Route: Vista principal de los cursos;
+            Route::get('/ver_asistencia', [AsistenciaController::class, 'index'])->name('asistencia.index');
             //Route: Vista del curso NT1A
             Route::get('/asistencia_alumnos_nt1a', [AsistenciaController::class, 'AlumnoNT1A'])->name('asistencia.AlumnoNT1A');
             //Route: Vista del curso NT1B
@@ -164,6 +166,9 @@ Route::group(["middleware" => 'AuthDirectora'], function() {
 
             //Route: Insert Asistencia
             Route::post('asistencia', [AsistenciaController::class, 'store'])->name('asistencia.store');
+
+            //Route: Insert Asistencia
+            Route::get('/info_asistencia/{asistencias}', [AsistenciaController::class, 'show'])->name('asistencia.show');
 
 
 

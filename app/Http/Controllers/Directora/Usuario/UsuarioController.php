@@ -14,9 +14,11 @@ class UsuarioController extends Controller
     public function index(Request $request){
         $buscador = $request['buscador'] ?? "";
         if($buscador != ""){
-            $usuarios = User::where('rut', 'LIKE', "%$buscador%")->orwhere('nombre', 'LIKE', "%$buscador%")->get();
+            $usuarios = User::where('rut', 'LIKE', "%$buscador%")
+                            ->orwhere('nombre', 'LIKE', "%$buscador%")
+                            ->paginate(10);
         } else {
-            $usuarios = User::all();
+            $usuarios = User::paginate(10);
         }
         $data = compact('usuarios','buscador');
         return view('directora.usuarios.ver_usuario')->with($data);   
