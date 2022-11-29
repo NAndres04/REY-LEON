@@ -25,7 +25,10 @@
                     <table class="table-auto w-full">
                         <thead class="text-xs font-semibold uppercase text-black bg-gray-100">
                             <tr>
-                            <th class="p-2 whitespace-nowrap">
+                                <th class="p-2 whitespace-nowrap">
+                                    <div class="font-semibold text-left">#</div>
+                                </th>
+                                <th class="p-2 whitespace-nowrap">
                                     <div class="font-semibold text-left">Rut</div>
                                 </th>
                                 <th class="p-2 whitespace-nowrap">
@@ -54,6 +57,11 @@
                             <tr>
                                 <td class="p-2 whitespace-nowrap">
                                     <div class="flex items-center">
+                                        <div class="font-medium text-gray-800">{{ $loop->iteration }}</div>
+                                    </div>
+                                </td>
+                                <td class="p-2 whitespace-nowrap">
+                                    <div class="flex items-center">
                                         <div class="font-medium text-gray-800">{{ $users->rut }}</div>
                                     </div>
                                 </td>
@@ -73,6 +81,7 @@
                         @endforeach
                         @endif
                     </table>
+                    {{ $usuarios->links() }}
                 </div>
             </div>
         </div>

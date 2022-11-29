@@ -17,9 +17,12 @@ class CursoController extends Controller
     public function obtenerAlumnoNT1A(Request $request){
         $buscador = $request['buscador'] ?? "";
         if($buscador != ""){
-            $alumnos = Alumno::where('id_curso', '3')->where('rut', 'LIKE', "%$buscador%")->orwhere('nombre', 'LIKE', "%$buscador%")->get();
+            $alumnos = Alumno::where('id_curso', '3')
+                            ->where('rut', 'LIKE', "%$buscador%")
+                            ->orwhere('nombre', 'LIKE', "%$buscador%")
+                            ->paginate(10);
         } else {
-            $alumnos = Alumno::where('id_curso', '3')->get();
+            $alumnos = Alumno::where('id_curso', '3')->paginate(10);
         }
         $data = compact('alumnos','buscador');
         return view('directora.cursos.ver_alumnos_nt1a')->with($data);
@@ -29,9 +32,12 @@ class CursoController extends Controller
     public function obtenerAlumnoNT2A(Request $request){
         $buscador = $request['buscador'] ?? "";
         if($buscador != ""){
-            $alumnos = Alumno::where('id_curso', '4')->where('rut', 'LIKE', "%$buscador%")->orwhere('nombre', 'LIKE', "%$buscador%")->get();
+            $alumnos = Alumno::where('id_curso', '4')
+                                ->where('rut', 'LIKE', "%$buscador%")
+                                ->orwhere('nombre', 'LIKE', "%$buscador%")
+                                ->paginate(10);
         } else {
-            $alumnos = Alumno::where('id_curso', '4')->get();
+            $alumnos = Alumno::where('id_curso', '4')->paginate(10);
         }
         $data = compact('alumnos','buscador');
         return view('directora.cursos.ver_alumnos_nt2a')->with($data);; 
@@ -40,9 +46,12 @@ class CursoController extends Controller
     public function obtenerAlumnoNT1B(Request $request){
         $buscador = $request['buscador'] ?? "";
         if($buscador != ""){
-            $alumnos = Alumno::where('id_curso', '5')->where('rut', 'LIKE', "%$buscador%")->orwhere('nombre', 'LIKE', "%$buscador%")->get();
+            $alumnos = Alumno::where('id_curso', '5')
+                            ->where('rut', 'LIKE', "%$buscador%")
+                            ->orwhere('nombre', 'LIKE', "%$buscador%")
+                            ->paginate(10);
         } else {
-            $alumnos = Alumno::where('id_curso', '5')->get();
+            $alumnos = Alumno::where('id_curso', '5')->paginate(10);
         }
         $data = compact('alumnos','buscador');
         return view('directora.cursos.ver_alumnos_nt1b')->with($data);; 
@@ -51,14 +60,15 @@ class CursoController extends Controller
     public function obtenerAlumnoNT2B(Request $request){
         $buscador = $request['buscador'] ?? "";
         if($buscador != ""){
-            $alumnos = Alumno::where('id_curso', '6')->where('rut', 'LIKE', "%$buscador%")->orwhere('nombre', 'LIKE', "%$buscador%")->get();
+            $alumnos = Alumno::where('id_curso', '6')
+                            ->where('rut', 'LIKE', "%$buscador%")
+                            ->orwhere('nombre', 'LIKE', "%$buscador%")
+                            ->paginate(10);
         } else {
-            $alumnos = Alumno::where('id_curso', '6')->get();
+            $alumnos = Alumno::where('id_curso', '6')->paginate(10);
         }
         $data = compact('alumnos','buscador');
         return view('directora.cursos.ver_alumnos_nt2b')->with($data);; 
     }
-
-
     
 }
