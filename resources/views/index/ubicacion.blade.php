@@ -34,7 +34,7 @@
         <div class="mt-40 md:flex space-x-6">
             <div>
                 <!--Imagen calendario-->
-                <img class="lg:h-80 md:h-48 w-full" src="{{ asset('img/Calendario.jpg') }}" alt="">
+                <img class="lg:h-80 md:h-48 w-full" src="{{ asset('https://res.cloudinary.com/du7xx1dwx/image/upload/v1669757762/samples/3_kfuamo.jpg') }}" alt="">
                 <div>
                     <!--Descripcion de los horarios de atencion-->
                     <h1 class="mt-3 text-gray-800 text-2xl font-bold my-2">¡Diferentes horarios para los pupilos!</h1>
@@ -56,7 +56,7 @@
             </div>
             <div>
                 <!--Imagen actividades-->
-                <img class="lg:h-80 md:h-48 w-full" src="{{ asset('img/Actividades.jpg') }}" alt="">
+                <img class="lg:h-80 md:h-48 w-full" src="{{ asset('https://res.cloudinary.com/du7xx1dwx/image/upload/v1669757765/samples/2_ogbrpr.jpg') }}" alt="">
                 <div>
                     <!--Descripcion de las actividades recreativas-->
                     <h1 class="mt-3 text-gray-800 text-2xl font-bold my-2">¡Actividades recreativas!</h1>

@@ -7,10 +7,10 @@
     <div class="2xl:mx-auto 2xl:container mx-4 py-16">
         <!--- Encabezado del contenido --->
         <div class="w-full relative flex items-center justify-center">
-            <img src="https://img.freepik.com/free-photo/classmates-friends-bag-school-education_53876-137717.jpg?w=1480&t=st=1665166219~exp=1665166819~hmac=b04e77e6d357f08eb446a1362dcf36582da3493bcc47d1272ea5afb81649c6f0" alt="dining" class="w-full h-full absolute z-0 hidden xl:block" />
-            <img src="https://i.ibb.co/bbS3J9C/pexels-max-vakhtbovych-6301182-1.png" alt="dining"
+            <img src="https://res.cloudinary.com/du7xx1dwx/image/upload/v1669757765/samples/2_ogbrpr.jpg" alt="dining" class="h-full absolute z-0 hidden xl:block" />
+            <img src="https://res.cloudinary.com/du7xx1dwx/image/upload/v1669757747/samples/4_fbv9he.jpg" alt="dining"
                 class="w-full h-full absolute z-0 hidden sm:block xl:hidden" />
-            <img src="https://i.ibb.co/JKkzGDs/pexels-max-vakhtbovych-6301182-1.png" alt="dining"
+            <img src="https://res.cloudinary.com/du7xx1dwx/image/upload/v1669757747/samples/4_fbv9he.jpg" alt="dining"
                 class="w-full h-full absolute z-0 sm:hidden" />
             <div
                 class="bg-gray-800 bg-opacity-80 md:my-16 lg:py-16 py-10 w-full md:mx-24 md:px-12 px-4  flex-col items-center justify-center relative z-10">
@@ -38,7 +38,7 @@
             <div class="space-y-6 md:space-y-0 md:flex md:gap-6 lg:items-center lg:gap-12">
                 <!--- Imagen de la mision del establecimiento --->
                 <div class="md:5/12 lg:w-5/12">
-                    <img src="https://www.ipchile.cl/wp-content/uploads/2018/09/Técnico-de-Nivel-Superior-Asistente-en-Educación-de-Párvulos-01.jpg"
+                    <img src="https://res.cloudinary.com/du7xx1dwx/image/upload/v1669757730/samples/10_bexlax.jpg"
                         alt="image" loading="lazy" width="" height="">
                 </div>
                 <!--- Descripcion de la mision del establecimiento --->
@@ -81,7 +81,7 @@
                 </div>
                 <!--- Imagen de la vision del establecimiento --->
                 <div class="md:5/12 lg:w-5/12">
-                    <img src="https://www.aiep.cl/dinamicas/carreras/vitrina/asistente-de-parvulos-37___Selected.jpg"
+                    <img src="https://res.cloudinary.com/du7xx1dwx/image/upload/v1669757762/samples/3_kfuamo.jpg"
                         alt="image" loading="lazy" width="" height="">
                 </div>
             </div>

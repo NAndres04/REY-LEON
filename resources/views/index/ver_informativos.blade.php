@@ -46,7 +46,7 @@
 
             <!-- Descripcion del establecimiento -->
             <section class="p-20 space-y-8">
-                <h1 class="text-4xl text-center">Informacion del comunicado</h1>
+                <h1 class="text-4xl text-center">Información del comunicado</h1>
                 <p>
                     {{ $informativo->descripcion }}
                 </p>

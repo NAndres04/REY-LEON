@@ -17,7 +17,7 @@
     </style>
 
     <!-- Page Main -->
-    <main class="flex flex-col items-center justify-center mt-32">
+    <main class="flex flex-col items-center justify-center">
         <!-- Hero -->
         <section
             class="flex flex-wrap items-center -mx-3 font-sans px-4 w-full lg:max-w-screen-lg sm:max-w-screen-sm md:max-w-screen-md pb-20">
@@ -25,8 +25,8 @@
             <div class="px-3 w-full lg:w-2/5">
                 <div class="mx-auto mb-8 max-w-lg text-center lg:mx-0 lg:max-w-md lg:text-left">
                     <h2 class="mb-4 text-3xl font-bold  lg:text-5xl">
-                        Educacion y apredizaje de
-                        <span class="text-5xl text-blue-500 leading-relaxeds">Calidad
+                        Educación y aprendizaje de
+                        <span class="text-5xl text-amber-600 leading-relaxeds">Calidad
                         </span>
                         Educativa
                     </h2>
@@ -39,7 +39,7 @@
             <!-- Parallax Background -->
             <section class="flex-col w-full h-[500px] bg-cover bg-fixed bg-center flex justify-center items-center "
                 style="
-        background-image: url(https://images.unsplash.com/photo-1484820540004-14229fe36ca4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1887&q=80);
+        background-image: url(https://res.cloudinary.com/du7xx1dwx/image/upload/v1669757740/samples/7_jhbvyp.jpg);
 ">
                 <h1 class="text-white text-5xl font-semibold mt-20 mb-10">
                     The Lions king
@@ -49,7 +49,7 @@
 
             <!-- Descripcion del establecimiento -->
             <section class="p-20 space-y-8">
-                <h1 class="text-4xl text-center my-20">Informacion de la empresa</h1>
+                <h1 class="text-4xl text-center my-20">Información del establecimiento</h1>
 
                 <p>
                     “KING LION´S SCHOOL” es una escuela de párvulo de carácter particular-subvencionado, fue reconocido por
