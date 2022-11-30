@@ -13,7 +13,7 @@
                 <form action="{{ route('apoderado.update', $apoderados) }}" method="POST">           
                     @csrf
                     @method('put')
-                    <h2 class="text-lg text-gray-700 font-semibold">Información Personal del Alumno</h2>
+                    <h2 class="text-lg text-gray-700 font-semibold">Información Personal del Apoderado</h2>
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-4">
                         <div>
                             <label class="block text-gray-700 text-sm font-bold mb-2" for="rut">RUT</label>
@@ -81,25 +81,12 @@
                             <label class="block text-gray-700 text-sm font-bold mb-2" for="ciudad_nac">Correo Electrónico</label>
                             <input type="email" 
                             class="bg-gray-200 text-gray-700 focus:outline-none focus:shadow-outline border border-gray-300 rounded py-2 px-4 block w-full
-                            appearance-none @error ('email') border-red-500 @enderror"
-                            value="{{$apoderados->email}}"
-                            id="email"
-                            name="email"
+                            appearance-none @error ('correo') border-red-500 @enderror"
+                            value="{{$apoderados->correo}}"
+                            id="correo"
+                            name="correo"
                             />
-                            @error('email')
-                            <p class="bg-red-500 text-white my-2 rounded-lg text-sm p-2 text-center">{{$message}} </p>
-                            @enderror
-                        </div>
-                        <div>
-                            <label class="block text-gray-700 text-sm font-bold mb-2" for="nacionalidad">Profesión Laboral</label>
-                            <input type="text" 
-                            class="bg-gray-200 text-gray-700 focus:outline-none focus:shadow-outline border border-gray-300 rounded py-2 px-4 block w-full
-                            appearance-none @error ('apoderados') border-red-500 @enderror"
-                            value="{{$apoderados->profesion_laboral}}"
-                            id="profesion_laboral"
-                            name="profesion_laboral"
-                            />
-                            @error('nacionalidad')
+                            @error('correo')
                             <p class="bg-red-500 text-white my-2 rounded-lg text-sm p-2 text-center">{{$message}} </p>
                             @enderror
                         </div>
@@ -117,19 +104,6 @@
                             @enderror
                         </div>
                         <div>
-                            <label class="block text-gray-700 text-sm font-bold mb-2" for="grado_estudio">Grado de Estudio</label>
-                            <input type="text" 
-                            class="bg-gray-200 text-gray-700 focus:outline-none focus:shadow-outline border border-gray-300 rounded py-2 px-4 block w-full
-                            appearance-none @error ('grado_estudio') border-red-500 @enderror"
-                            value="{{$apoderados->grado_estudio}}"
-                            id="grado_estudio"
-                            name="grado_estudio"
-                            />
-                            @error('edad')
-                            <p class="bg-red-500 text-white my-2 rounded-lg text-sm p-2 text-center">{{$message}} </p>
-                            @enderror
-                        </div>
-                        <div>
                             <label class="block text-gray-700 text-sm font-bold mb-2" for="discapacidad">Tipo de Salud</label>
                             <input type="text" 
                             class="bg-gray-200 text-gray-700 focus:outline-none focus:shadow-outline border border-gray-300 rounded py-2 px-4 block w-full
@@ -138,15 +112,15 @@
                             id="tipo_salud"
                             name="tipo_salud"
                             />
-                            @error('discapacidad')
+                            @error('tipo_salud')
                             <p class="bg-red-500 text-white my-2 rounded-lg text-sm p-2 text-center">{{$message}} </p>
                             @enderror
                         </div>
                     </div>
                     <br>
-                    <div class="flex rounded-md bg-white py-4 px-4 overflow-x-auto">
-                    <button class="px-6 py-3 bg-green-500 rounded-md text-white font-medium tracking-wide hover:bg-green-700">Modificar</button>
-                </div>
+                    <div>
+                            <button class="bg-green-500 text-white active:bg-green-600 font-bold uppercase text-xs px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none mr-1 ease-linear transition-all duration-150">Modificar</button>
+                        </div>
                 </form>
             </div>
         </div>

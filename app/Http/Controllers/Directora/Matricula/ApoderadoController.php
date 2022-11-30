@@ -53,4 +53,32 @@ class ApoderadoController extends Controller
         ]);
         return view('directora.matricula.matricula_apoderado_confirmar');
     }
+
+      public function show(Apoderado $apoderados)
+    {
+        return view('directora.apoderados.info_apoderado', compact('apoderados'));
+    }
+
+
+    public function edit(Apoderado $apoderados)
+    {
+        $apoderados->rut;
+        $apoderados->nombre;
+        $apoderados->ap_paterno;
+        $apoderados->ap_materno;
+        $apoderados->fono;
+        $apoderados->correo;
+        $apoderados->situacion_laboral;
+        $apoderados->tipo_salud;
+        return view('directora.apoderados.edit_apoderado', [
+            'apoderados' => $apoderados
+        ]);
+    }
+
+    public function update(Request $request, Apoderado $apoderados)
+    {
+        $apoderados->update($request->all());
+        return view('directora.apoderados.info_apoderado', compact('apoderados'));
+    }
+
 }
