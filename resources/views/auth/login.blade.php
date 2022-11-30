@@ -13,7 +13,7 @@
         <div class="w-full md:w-1/2 flex flex-col">
             <div class="flex flex-col justify-center md:justify-start my-auto pt-8 md:pt-0 px-8 md:px-24 lg:px-32">
             <h2 class="text-2xl font-semibold text-green-800 text-center">Bienvenido</h2>
-            <p class="text-xl text-gray-600 text-center">Por favor ingrese sus datos!</p>
+            <p class="text-xl text-gray-600 text-center">¡Por favor ingrese sus datos!</p>
                 <form class="flex flex-col pt-3 md:pt-8" action="{{route('login')}}" method="POST"">
                     @csrf
                     @if (session('mensaje'))

@@ -2,7 +2,7 @@
     <div class="bg-white rounded-lg shadow-lg overflow-hidden mx-auto max-w-sm lg:max-w-4xl">
         <div class="w-full p-8 ">
             <h2 class="text-2xl font-semibold text-gray-700 text-center">Publicar actividad</h2>
-            <p class="text-xl text-gray-600 text-center">Por favor ingrese las fotos!</p>
+            <p class="text-xl text-gray-600 text-center">¡Por favor ingrese las fotos!</p>
 
             <!-- crear publicacion  -->
             <form wire:submit.prevent="save" enctype="multipart/form-data">

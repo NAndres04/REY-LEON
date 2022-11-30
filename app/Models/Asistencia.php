@@ -17,6 +17,8 @@ class Asistencia extends Model
         'fecha',
     ];
 
+public const ESTADOS  = ['Directora', 'Educadora'];
+
         public function cursos(){
         return $this->belongsTo(Curso::class, 'id_curso');
     }

@@ -146,19 +146,16 @@
                         <p class="mb-4">
                             <a href="#!" class="text-amber-800">Envíanos un correo</a>
                         </p>
-                        <p class="mb-4">
-                            <a href="#!" class="text-amber-800">Nuestro número telefónico</a>
-                        </p>
                     </div>
                     <div class="mt-20">
                         <h6 class="uppercase font-semibold mb-4 flex justify-center md:justify-start">
                             Comunicación
                         </h6>
                         <p class="mb-4">
-                            <a href="#!" class="text-amber-800">Contáctanos</a>
+                            <a href="/ubicacion" class="text-amber-800">Contáctanos</a>
                         </p>
                         <p class="mb-4">
-                            <a href="#!" class="text-amber-800">Servicios</a>
+                            <a href="/" class="text-amber-800">Servicios</a>
                         </p>
                     </div>
                     <div class="mt-20">
