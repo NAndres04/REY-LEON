@@ -12,7 +12,7 @@
                 <h1 class="text-gray-800 font-bold text-2xl my-2">Ubicación del establecimiento</h1>
                 <!--Descripcion de la ubicacion parrafo 1-->
                 <p class="text-gray-700 mb-2 md:mb-6">La ubicación del establecimiento está instalada cerca de la cercanía
-                    del centro de la ciudad de calama, donde normalmente transcurre mucha gente.</p>
+                    del centro de la ciudad de Calama, donde normalmente transcurre mucha gente.</p>
                 <!--Descripcion de la ubicacion parrafo 2-->
                 <p class="text-gray-700 mb-2 md:mb-6">Los horarios de atención dentro del establecimiento son durante la
                     mañana de 9:00 a 13:00 hrs o en la

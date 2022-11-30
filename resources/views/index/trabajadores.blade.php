@@ -11,8 +11,7 @@
                 <h2 class="mb-4 text-center text-2xl text-gray-900 font-bold md:text-4xl">Administración del establecimiento
                 </h2>
                 <!--- Descrpcion encabezado directora --->
-                <p class="text-gray-600 lg:w-8/12 lg:mx-auto">Dentro del establecimiento existen tres tipos de personal
-                    administrativo el cual esta encargado de las tareas fundamentales del establecimiento The King lions</p>
+                <p class="text-gray-600 lg:w-8/12 lg:mx-auto">Dentro del establecimiento existen tres tipos de personal administrativo, el cual está encargado de las tareas fundamentales del establecimiento King lions.</p>
             </div>
             <div class="space-y-4 text-center">
                 <img class="w-64 h-64 mx-auto object-cover rounded-xl md:w-48 md:h-64 lg:w-64 lg:h-80"

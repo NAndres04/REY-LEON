@@ -31,7 +31,7 @@
                         Educativa
                     </h2>
                     <p class="visible mx-0 mt-3 mb-0 text-sm leading-relaxed text-left text-slate-400">
-                        Establecimiento subvencionado The lions kions, calama.
+                        Establecimiento subvencionado King Lions, Calama.
                     </p>
                 </div>
             </div>
@@ -41,9 +41,6 @@
                 style="
         background-image: url(https://res.cloudinary.com/du7xx1dwx/image/upload/v1669757740/samples/7_jhbvyp.jpg);
 ">
-                <h1 class="text-white text-5xl font-semibold mt-20 mb-10">
-                    The Lions king
-                </h1>
                 </span>
             </section>
 

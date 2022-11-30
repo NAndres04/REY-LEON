@@ -104,7 +104,7 @@
                 <!--Descripcion calidad de enseñansa-->
                 <p class="text-xl font-medium text-slate-700 mt-3">Calidad de enseñanza</p>
                 <p class="mt-2 text-sm text-slate-500">El establecimiento es reconocido por la enseñanza que se le entrega
-                    a sus alumnos</p>
+                    a sus alumnos.</p>
             </div>
             <div class="p-10 flex flex-col items-center text-center group     hover:bg-slate-50">
                 <span class="p-5 rounded-full bg-indigo-500 text-white shadow-lg shadow-indigo-200"><svg
@@ -115,8 +115,7 @@
                     </svg></span>
                 <!--Descripcion protocolos de seguridad-->
                 <p class="text-xl font-medium text-slate-700 mt-3">Protocolos de seguridad</p>
-                <p class="mt-2 text-sm text-slate-500">Adquiere procesos y protocolos de seguridad para las
-                    medidaspreventivas de los alumnos y la pandemia covid-19</p>
+                <p class="mt-2 text-sm text-slate-500">Adquiere procesos y protocolos de seguridad para las medidas preventivas de los alumnos y la pandemia covid-19.</p>
             </div>
         </div>
         <!--Boton para consultas del usuario redirige a al apartado de ubicacion-->
@@ -211,7 +210,7 @@
                             <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">Prevención e
                                 información</h2>
                             <!--Descripcion de la actividad-->
-                            <h1 class="title-font text-lg font-medium text-gray-600 mb-3">Prevencion y señalicas
+                            <h1 class="title-font text-lg font-medium text-gray-600 mb-3">Prevención y señaléticas
                             </h1>
                             <h1 class="leading-relaxed mb-3">Diferentes tipos de señales
                                 dentro del establecimiento para evitar una mala organización.</p>
@@ -229,9 +228,9 @@
                         <div class="p-6">
                             <!--Actividades inferiores de la plataforma-->
                             <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">Salas de
-                                enfermeria</h2>
+                                enfermería</h2>
                             <!--Descripcion de la actividad-->
-                            <h1 class="title-font text-lg font-medium text-gray-600 mb-3">Lugares ante accidedntes
+                            <h1 class="title-font text-lg font-medium text-gray-600 mb-3">Lugares ante accidentes
                             </h1>
                             <p class="leading-relaxed mb-3">Se encuentran disponibles lugares de sanaciones para los
                                 pupilos del establecimiento.</p>

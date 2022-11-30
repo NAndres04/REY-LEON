@@ -226,7 +226,7 @@
                         </div>
                     </div>
                     <br>
-                    <h2 class="text-lg text-gray-700 font-semibold">Selecionar Horario del Alumno</h2>
+                    <h2 class="text-lg text-gray-700 font-semibold">Seleccionar Horario del Alumno</h2>
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-4">
                     <div>
                             <label class="block text-gray-700 text-sm font-bold mb-2" for="id_curso">Curso</label>

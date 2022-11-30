@@ -55,7 +55,7 @@
                         enfrentar su mundo socialmente y a sí mismo. Para ello contamos con un establecimiento equipado de
                         recursos humanos, tecnológicos y pedagógicos que fortalecen y apoya efectivamente los procesos de
                         enseñanza - aprendizaje, mejorando así los niveles de logro institucionales con resultados de
-                        calidad y equidad para nuestros alumnos, en un ambiente armónico, accesibles e equilibrado para
+                        calidad y equidad para nuestros alumnos, en un ambiente armónico, accesibles y equilibrado para
                         todos los actores de la comunidad escolar.</p>
                 </div>
             </div>
@@ -183,7 +183,7 @@
             <li class="cursor-pointer my-1">
                 <span class="font-bold text-xl tracking-tight text-gray-500 flex flex-row justify-between items-center">
                     <!-- Nombre del valor -->
-                    <p>Soliraridad</p>
+                    <p>Solidaridad</p>
                     <svg class="text-gray-500 mr-1"xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                         fill="currentColor" class="bi bi-arrow-down-short" viewBox="0 0 16 16">
                         <path fill-rule="evenodd"
