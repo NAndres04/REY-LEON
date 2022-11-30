@@ -120,12 +120,12 @@
             </div>
         </div>
         <!--Boton para consultas del usuario redirige a al apartado de ubicacion-->
-        <div class="w-full   dark:bg-gray-900 shadow-xl shadow-indigo-200 py-10 px-20 flex justify-between items-center">
+        <div class="w-full bg-gray-900 shadow-xl shadow-indigo-200 py-10 px-20 flex justify-between items-center">
             <p class=" text-white"> <span class="text-4xl font-medium">¿Tienes consultas?</span> <br> <span
                     class="text-lg">¡Estamos disponibles para ti! </span></p>
             <a href="/ubicacion"
-                class="px-1 py-4 font-medium text-slate-500 shadow-xl  hover:bg-white duration-150  bg-yellow-400">Contáctanos
-                en nuestro establecimiento></a>
+                class="px-1 py-4 font-medium text-black shadow-xl  hover:bg-white duration-150  bg-yellow-400 rounded">Contáctanos
+                en nuestro establecimiento</a>
         </div>
     </div>
 
@@ -213,7 +213,7 @@
                             <!--Descripcion de la actividad-->
                             <h1 class="title-font text-lg font-medium text-gray-600 mb-3">Prevencion y señalicas
                             </h1>
-                            <h1 class="title-font text-lg font-medium text-gray-600 mb-3">Diferentes tipos de señales
+                            <h1 class="leading-relaxed mb-3">Diferentes tipos de señales
                                 dentro del establecimiento para evitar una mala organización.</p>
                                 <div class="flex items-center flex-wrap ">
                                 </div>
@@ -250,8 +250,7 @@
                 <div class=" grid grid-cols-1 text-left p-6">
                     <h1>Zonas seguras</h1>
                     <p class="mt-4 text-2xl">
-                        Dentro del establecimiento existen varias zonas seguras especificadas, en las cuales se pueden resguardar segun lo amerite alguna situacion, ejemplo en caso de terremotos u diferentes actividades.
-                    </p>
+                        Dentro del establecimiento existen varias zonas seguras especificadas, en las cuales se pueden resguardar según lo amerite alguna situación, ejemplo en caso de terremotos u diferentes actividades.</p>
                     <button id="close" class="bg-gray-700 text-white font-bold py-2 px-4 w-full rounded hover:bg-gray-600 mt-4">Cerrar</button>
                 </div>
                 <div class=" grid grid-cols-1">

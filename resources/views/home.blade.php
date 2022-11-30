@@ -82,7 +82,7 @@
                                                         role="menuitem" tabindex="-1" id="menu-item-1">Crear informativo</a>
                                                         <a href="{{ route('verinfo.index') }}"
                                                         class="text-black block px-4 py-2 text-sm hover:bg-amber-300"
-                                                        role="menuitem" tabindex="-1" id="menu-item-1">ver informativos</a>
+                                                        role="menuitem" tabindex="-1" id="menu-item-1">Ver informativos</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -127,12 +127,14 @@
                                                     <a href="/ver_asistencia"
                                                         class="text-black block px-4 py-2 text-sm hover:bg-amber-300"
                                                         role="menuitem" tabindex="-1" id="menu-item-1">Gestión de Asistencia</a>
-                                                    <a href="{{ route('enviarcorreo.index') }}"
+                                                    <!--
+                                                    <a href=""
                                                         class="text-black block px-4 py-2 text-sm hover:bg-amber-300"
                                                         role="menuitem" tabindex="-1" id="menu-item-1">Gestión de correo</a>
                                                     <a href="#"
                                                         class="text-black block px-4 py-2 text-sm hover:bg-amber-300"
                                                         role="menuitem" tabindex="-1" id="menu-item-1">Gestión de Reunión</a>
+                                                    --> 
                                                 </div>
                                             </div>
                                         </li>

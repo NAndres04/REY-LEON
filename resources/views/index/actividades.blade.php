@@ -7,7 +7,7 @@
     <div class="px-3 lg:w-2/5">
         <div class="mx-auto mb-8 max-w-lg text-center lg:mx-0 lg:max-w-md lg:text-left">
             <h2 class="mb-4 text-3xl font-bold  lg:text-5xl mt-6">
-                Administración de
+                Publicación de 
                 <span class="text-5xl text-amber-600 leading-relaxeds">Actividades
             </h2>
         </div>

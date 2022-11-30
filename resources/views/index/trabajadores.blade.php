@@ -8,7 +8,7 @@
         <div class="container mx-auto px-6 md:px-12 xl:px-32">
             <div class="mb-16 text-center">
                 <!--- Titulo encabezado directora --->
-                <h2 class="mb-4 text-center text-2xl text-gray-900 font-bold md:text-4xl">Administracion del establecimiento
+                <h2 class="mb-4 text-center text-2xl text-gray-900 font-bold md:text-4xl">Administración del establecimiento
                 </h2>
                 <!--- Descrpcion encabezado directora --->
                 <p class="text-gray-600 lg:w-8/12 lg:mx-auto">Dentro del establecimiento existen tres tipos de personal
@@ -16,7 +16,7 @@
             </div>
             <div class="space-y-4 text-center">
                 <img class="w-64 h-64 mx-auto object-cover rounded-xl md:w-48 md:h-64 lg:w-64 lg:h-80"
-                    src="https://tailus.io/sources/blocks/classic/preview/images/man.jpg" alt="man" loading="lazy"
+                    src="https://res.cloudinary.com/du7xx1dwx/image/upload/v1669759564/samples/profile-42914_960_720_oixzvb.webp" alt="man" loading="lazy"
                     width="1000" height="667">
                 <div>
                     <!--- Descrpcion directora --->
@@ -38,7 +38,7 @@
                     <p class="text-gray-500 text-lg text-center font-normal pb-3">Educadoras del establecimiento</p>
                     <!--- Descrpcion primer grupo --->
                     <h1 class="xl:text-4xl text-3xl text-center text-gray-800 font-extrabold pb-6 sm:w-4/6 w-5/6 mx-auto">
-                        Grupo primer nivel de transicion</h1>
+                        Grupo primer nivel de transición</h1>
                 </div>
             </div>
             <div class="px-52 pt-10 border-b">
@@ -52,7 +52,7 @@
                             <div class="rounded overflow-hidden shadow-md bg-white">
                                 <div class="absolute -mt-20 w-full flex justify-center">
                                     <div class="h-32 w-32">
-                                        <img src="https://cdn.tuk.dev/assets/photo-1530577197743-7adf14294584.jfif"
+                                        <img src="https://res.cloudinary.com/du7xx1dwx/image/upload/v1669759564/samples/profile-42914_960_720_oixzvb.webp"
                                             alt="Display Picture of Andres Berlin" role="img"
                                             class="rounded-full object-cover h-full w-full shadow-md" />
                                     </div>
@@ -71,7 +71,7 @@
                             <div class="rounded overflow-hidden shadow-md bg-white">
                                 <div class="absolute -mt-20 w-full flex justify-center">
                                     <div class="h-32 w-32">
-                                        <img src="https://cdn.tuk.dev/assets/photo-1530577197743-7adf14294584.jfif"
+                                        <img src="https://res.cloudinary.com/du7xx1dwx/image/upload/v1669759564/samples/profile-42914_960_720_oixzvb.webp"
                                             alt="Display Picture of Silene Tokyo" role="img"
                                             class="rounded-full object-cover h-full w-full shadow-md" />
                                     </div>
@@ -90,7 +90,7 @@
                             <div class="rounded overflow-hidden shadow-md bg-white">
                                 <div class="absolute -mt-20 w-full flex justify-center">
                                     <div class="h-32 w-32">
-                                        <img src="https://cdn.tuk.dev/assets/photo-1566753323558-f4e0952af115.jfif"
+                                        <img src="https://res.cloudinary.com/du7xx1dwx/image/upload/v1669759564/samples/profile-42914_960_720_oixzvb.webp"
                                             alt="Display Picture of Johnson Stone" role="img"
                                             class="rounded-full object-cover h-full w-full shadow-md" />
                                     </div>
@@ -109,7 +109,7 @@
                             <div class="rounded overflow-hidden shadow-md bg-white">
                                 <div class="absolute -mt-20 w-full flex justify-center">
                                     <div class="h-32 w-32">
-                                        <img src="https://cdn.tuk.dev/assets/boy-smiling_23-2148155640.jpg"
+                                        <img src="https://res.cloudinary.com/du7xx1dwx/image/upload/v1669759564/samples/profile-42914_960_720_oixzvb.webp"
                                             alt="Display Picture of Dean Jones" role="img"
                                             class="rounded-full object-cover h-full w-full shadow-md" />
                                     </div>
@@ -135,7 +135,7 @@
                             <!-- Titulo informacion educadores -->
                             <h1
                                 class="xl:text-4xl text-3xl text-center text-gray-800 font-extrabold pb-6 sm:w-4/6 w-5/6 mx-auto">
-                                Grupo segundo nivel de transicion</h1>
+                                Grupo segundo nivel de transición</h1>
                         </div>
                     </div>
                     <div class="px-52 pt-10">
@@ -148,7 +148,7 @@
                                     <div class="rounded overflow-hidden shadow-md bg-white">
                                         <div class="absolute -mt-20 w-full flex justify-center">
                                             <div class="h-32 w-32">
-                                                <img src="https://cdn.tuk.dev/assets/photo-1530577197743-7adf14294584.jfif"
+                                                <img src="https://res.cloudinary.com/du7xx1dwx/image/upload/v1669759564/samples/profile-42914_960_720_oixzvb.webp"
                                                     alt="Display Picture of Andres Berlin" role="img"
                                                     class="rounded-full object-cover h-full w-full shadow-md" />
                                             </div>
@@ -167,7 +167,7 @@
                                     <div class="rounded overflow-hidden shadow-md bg-white">
                                         <div class="absolute -mt-20 w-full flex justify-center">
                                             <div class="h-32 w-32">
-                                                <img src="https://cdn.tuk.dev/assets/photo-1530577197743-7adf14294584.jfif"
+                                                <img src="https://res.cloudinary.com/du7xx1dwx/image/upload/v1669759564/samples/profile-42914_960_720_oixzvb.webp"
                                                     alt="Display Picture of Silene Tokyo" role="img"
                                                     class="rounded-full object-cover h-full w-full shadow-md" />
                                             </div>
@@ -186,7 +186,7 @@
                                     <div class="rounded overflow-hidden shadow-md bg-white">
                                         <div class="absolute -mt-20 w-full flex justify-center">
                                             <div class="h-32 w-32">
-                                                <img src="https://cdn.tuk.dev/assets/photo-1566753323558-f4e0952af115.jfif"
+                                                <img src="https://res.cloudinary.com/du7xx1dwx/image/upload/v1669759564/samples/profile-42914_960_720_oixzvb.webp"
                                                     alt="Display Picture of Johnson Stone" role="img"
                                                     class="rounded-full object-cover h-full w-full shadow-md" />
                                             </div>
@@ -205,7 +205,7 @@
                                     <div class="rounded overflow-hidden shadow-md bg-white">
                                         <div class="absolute -mt-20 w-full flex justify-center">
                                             <div class="h-32 w-32">
-                                                <img src="https://cdn.tuk.dev/assets/boy-smiling_23-2148155640.jpg"
+                                                <img src="https://res.cloudinary.com/du7xx1dwx/image/upload/v1669759564/samples/profile-42914_960_720_oixzvb.webp"
                                                     alt="Display Picture of Dean Jones" role="img"
                                                     class="rounded-full object-cover h-full w-full shadow-md" />
                                             </div>

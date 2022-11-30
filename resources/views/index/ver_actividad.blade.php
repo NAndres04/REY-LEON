@@ -20,7 +20,7 @@
             <div class="px-3 w-full lg:w-2/5">
                 <div class="mx-auto mb-8 max-w-lg text-center lg:mx-0 lg:max-w-md lg:text-left">
                     <h2 class="mb-4 text-3xl font-bold  lg:text-5xl">
-                        Administracion 
+                        Publicación 
                         <span class="text-5xl text-amber-600 leading-relaxeds">{{ $actividad->titulo }}
                         </span>
                     </h2>
@@ -101,7 +101,7 @@
             </section>
             <!-- Descripcion del establecimiento -->
             <section class="space-y-8 w-full">
-                <h1 class="text-4xl text-center">Informacion de la actividad</h1>
+                <h1 class="text-4xl text-center">Información de la actividad</h1>
                 <p>
                     <label class="block text-gray-700 text-sm font-semibold mb-2">
                         <!--- Rescate de la descripcion de la actividad ingresada --->
