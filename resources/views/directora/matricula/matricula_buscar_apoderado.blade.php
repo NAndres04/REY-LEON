@@ -34,6 +34,9 @@
                                 <th class="p-2 whitespace-nowrap">
                                     <div class="font-semibold text-left"></div>
                                 </th>
+                                 <th class="p-2 whitespace-nowrap">
+                                    <div class="font-semibold text-left"></div>
+                                </th>
                             </tr>
                         </thead>
                         @if(count($apoderados)<=0)
@@ -63,7 +66,10 @@
                                     <div class="text-left">{{ $apoderado->nombre }} {{ $apoderado->ap_paterno }} {{ $apoderado->ap_materno }}</div>
                                 </td>
                                 <td class="p-2 whitespace-nowrap">
-                                    <div class="text-center"><button class="px-1 py-1 border-blue-500 border text-blue-500 rounded transition duration-300 hover:bg-blue-500 hover:text-white focus:outline-none "><a href="{{ route ('apoderado.apoderadoseleccionado', $apoderados) }}">Seleccionar Apoderado</button></a></div>
+                                    <div class="text-center"><button class="px-1 py-1 border-blue-500 border text-blue-500 rounded transition duration-300 hover:bg-blue-500 hover:text-white focus:outline-none "><a href="{{ route ('apoderado.apoderadoseleccionado', $apoderado) }}">Seleccionar Apoderado</button></a></div>
+                                </td>
+                                <td class="p-2 whitespace-nowrap">
+                                    <div class="text-center"><button class="px-1 py-1 border-blue-500 border text-blue-500 rounded transition duration-300 hover:bg-blue-500 hover:text-white focus:outline-none "><a href="{{ route ('apoderado.show', $apoderado) }}">Ver Información</button></a></div>
                                 </td>
                             </tr>
                         </tbody>

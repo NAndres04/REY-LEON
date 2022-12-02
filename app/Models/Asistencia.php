@@ -17,7 +17,11 @@ class Asistencia extends Model
         'fecha',
     ];
 
-public const ESTADOS  = ['Directora', 'Educadora'];
+public const ESTADOS  = ['Presente', 'Ausente'];
+
+    public function estados(){
+        return self::ESTADOS[$this->estado];
+    }
 
         public function cursos(){
         return $this->belongsTo(Curso::class, 'id_curso');
@@ -30,4 +34,5 @@ public const ESTADOS  = ['Directora', 'Educadora'];
      public function alumnos(){
         return $this->belongsTo(Alumno::class, 'id_alumno');
     }
+
 }

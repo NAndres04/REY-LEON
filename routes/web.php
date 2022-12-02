@@ -129,14 +129,17 @@ Route::group(["middleware" => 'AuthDirectora'], function() {
             //Route: Insert Apoderado
             Route::post('apoderado', [ApoderadoController::class, 'store'])->name('apoderado.store');
             //Route: Update Apoderado
-            //Route: Delete Apoderado
+            Route::get('edit_apoderado/{apoderados}', [ApoderadoController::class, 'edit'])->name('apoderado.edit');
+            Route::put('edit_apoderado/{apoderados}', [ApoderadoController::class, 'update'])->name('apoderado.update');
+            //Route: Vista para ver la información del apoderado
+            Route::get('/info_apoderado/{apoderados}', [ApoderadoController::class, 'show'])->name('apoderado.show');
 
             //Route: Insert Alumno
             Route::post('alumno', [AlumnoController::class, 'store'])->name('alumno.store');
             //Route: Update Alumno
             Route::get('edit_alumno/{alumnos}', [AlumnoController::class, 'edit'])->name('alumno.edit');
             Route::put('edit_alumno/{alumnos}', [AlumnoController::class, 'update'])->name('alumno.update');
-            //Route: Delete Alumno
+
 
              //Route: Cursos
             //Route: Vista principal de los cursos;
@@ -153,12 +156,20 @@ Route::group(["middleware" => 'AuthDirectora'], function() {
             Route::get('/info_alumno/{alumnos}', [AlumnoController::class, 'show'])->name('alumno.show');
 
             //Route: Asistencia
-            //Route: Vista principal de los cursos;
-            Route::get('/ver_asistencia', [AsistenciaController::class, 'index'])->name('asistencia.index');
+            //Route: Vista principal de los cursos
+            Route::get('/asistencia_cursos', function () {return view('directora.asistencia.asistencia_cursos');});
+            //Route: Asistencia curso NT1A
+            Route::get('/asistencia_nt1a', [AsistenciaController::class, 'AsistenciaAlumnoNT1A'])->name('asistencia.AsistenciaAlumnoNT1A');
+            //Route: Asistencia curso NT1B
+            Route::get('/asistencia_nt1b', [AsistenciaController::class, 'AsistenciaAlumnoNT1B'])->name('asistencia.AsistenciaAlumnoNT1B');
+            //Route: Asistencia curso NT2A
+            Route::get('/asistencia_nt2a', [AsistenciaController::class, 'AsistenciaAlumnoNT2A'])->name('asistencia.AsistenciaAlumnoNT2A');
+            //Route: Asistencia curso NT2B
+            Route::get('/asistencia_nt2b', [AsistenciaController::class, 'AsistenciaAlumnoNT2B'])->name('asistencia.AsistenciaAlumnoNT2B');
             //Route: Vista del curso NT1A
             Route::get('/asistencia_alumnos_nt1a', [AsistenciaController::class, 'AlumnoNT1A'])->name('asistencia.AlumnoNT1A');
             //Route: Vista del curso NT1B
-            Route::get('/asistencia_alumnos_nt1b', [AsistenciaController::class, 'AlumnoNT2B'])->name('asistencia.AlumnoNT2B');
+            Route::get('/asistencia_alumnos_nt1b', [AsistenciaController::class, 'AlumnoNT1B'])->name('asistencia.AlumnoNT1B');
             //Route: Vista del curso NT2A
             Route::get('/asistencia_alumnos_nt2a', [AsistenciaController::class, 'AlumnoNT2A'])->name('asistencia.AlumnoNT2A');
             //Route: Vista del curso NT2B
@@ -167,8 +178,6 @@ Route::group(["middleware" => 'AuthDirectora'], function() {
             //Route: Insert Asistencia
             Route::post('asistencia', [AsistenciaController::class, 'store'])->name('asistencia.store');
 
-            //Route: Insert Asistencia
-            Route::get('/info_asistencia/{asistencias}', [AsistenciaController::class, 'show'])->name('asistencia.show');
 
 
 
