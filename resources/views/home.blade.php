@@ -124,7 +124,7 @@
                                                     <a href="/ver_usuario"
                                                         class="text-black block px-4 py-2 text-sm hover:bg-amber-300"
                                                         role="menuitem" tabindex="-1" id="menu-item-1">Gestión de Educadoras</a>
-                                                    <a href="/asistencia_cursos"
+                                                    <a href="/ver_cursos_asistencia"
                                                         class="text-black block px-4 py-2 text-sm hover:bg-amber-300"
                                                         role="menuitem" tabindex="-1" id="menu-item-1">Gestión de Asistencia</a>
                                                     <!--

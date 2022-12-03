@@ -16,7 +16,10 @@
                     <table class="table-auto w-full">
                         <thead class="text-xs font-semibold uppercase text-black bg-gray-100">
                             <tr>
-                            <th class="p-2 whitespace-nowrap">
+                                <th class="p-2 whitespace-nowrap">
+                                    <div class="font-semibold text-left">#</div>
+                                </th>
+                                <th class="p-2 whitespace-nowrap">
                                     <div class="font-semibold text-left">Nombre</div>
                                 </th>
                                 <th class="p-2 whitespace-nowrap">
@@ -25,71 +28,47 @@
                                 <th class="p-2 whitespace-nowrap">
                                     <div class="font-semibold text-left"></div>
                                 </th>
+                                <th class="p-2 whitespace-nowrap">
+                                    <div class="font-semibold text-left"></div>
+                                </th>
                             </tr>
                         </thead>
-                        
+                        @foreach ($cursos as $curso )
                         <tbody class="text-sm divide-y">
                             <tr>
                                 <td class="p-2 whitespace-nowrap">
                                     <div class="flex items-center">
-                                        <div class="font-medium text-gray-800">NT1A</div>
+                                        <div class="font-medium text-gray-800">{{ $loop->iteration }}</div>
                                     </div>
                                 </td>
                                 <td class="p-2 whitespace-nowrap">
                                     <div class="flex items-center">
-                                        <div class="text-left">Mañana</div>
-                                    </div>
-                                </td>
-                                <td class="p-2 whitespace-nowrap">
-                                    <div class="text-center"><button class="px-1 py-1 border-blue-500 border text-blue-500 rounded transition duration-300 hover:bg-blue-500 hover:text-white focus:outline-none "><a href="/ver_alumnos_nt1a">Gestionar Curso</button></a></div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="p-2 whitespace-nowrap">
-                                    <div class="flex items-center">
-                                        <div class="font-medium text-gray-800">NT2A</div>
+                                        <div class="font-medium text-gray-800">{{ $curso->nombre }}</div>
                                     </div>
                                 </td>
                                 <td class="p-2 whitespace-nowrap">
                                     <div class="flex items-center">
-                                        <div class="text-left">Mañana</div>
+                                        <div class="text-left">{{ $curso->jornada }}</div>
                                     </div>
                                 </td>
                                 <td class="p-2 whitespace-nowrap">
-                                    <div class="text-center"><button class="px-1 py-1 border-blue-500 border text-blue-500 rounded transition duration-300 hover:bg-blue-500 hover:text-white focus:outline-none "><a href="/ver_alumnos_nt2a">Gestionar Curso</button></a></div>
+                                    <div class="text-center"><button class="px-1 py-1 border-amber-500 border text-amber-500 rounded transition duration-300 hover:bg-amber-500 hover:text-white focus:outline-none "><a href="{{ route ('curso.obtenerAlumnos', $curso->id) }}">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" viewBox="0 0 20 20" fill="currentColor">
+                                            <path d="M9 4.804A7.968 7.968 0 005.5 4c-1.255 0-2.443.29-3.5.804v10A7.969 7.969 0 015.5 14c1.669 0 3.218.51 4.5 1.385A7.962 7.962 0 0114.5 14c1.255 0 2.443.29 3.5.804v-10A7.968 7.968 0 0014.5 4c-1.255 0-2.443.29-3.5.804V12a1 1 0 11-2 0V4.804z"></path>
+                                        </svg>
+                                    </button></a></div>
                                 </td>
-                            </tr>
-                            <tr>
-                                <td class="p-2 whitespace-nowrap">
-                                    <div class="flex items-center">
-                                        <div class="font-medium text-gray-800">NT1B</div>
-                                    </div>
-                                </td>
-                                <td class="p-2 whitespace-nowrap">
-                                    <div class="flex items-center">
-                                        <div class="text-left">Tarde</div>
-                                    </div>
-                                </td>
-                                <td class="p-2 whitespace-nowrap">
-                                    <div class="text-center"><button class="px-1 py-1 border-blue-500 border text-blue-500 rounded transition duration-300 hover:bg-blue-500 hover:text-white focus:outline-none "><a href="/ver_alumnos_nt1b">Gestionar Curso</button></a></div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="p-2 whitespace-nowrap">
-                                    <div class="flex items-center">
-                                        <div class="font-medium text-gray-800">NT2B</div>
-                                    </div>
-                                </td>
-                                <td class="p-2 whitespace-nowrap">
-                                    <div class="flex items-center">
-                                        <div class="text-left">Tarde</div>
-                                    </div>
-                                </td>
-                                <td class="p-2 whitespace-nowrap">
-                                    <div class="text-center"><button class="px-1 py-1 border-blue-500 border text-blue-500 rounded transition duration-300 hover:bg-blue-500 hover:text-white focus:outline-none "><a href="/ver_alumnos_nt2b">Gestionar Curso</button></a></div>
+                                 <td class=" whitespace-nowrap">
+                                    <div class="text-center"><button class="px-1 py-1 border-green-500 border text-green-500 rounded transition duration-300 hover:bg-green-500 hover:text-white focus:outline-none "><a href="{{ route ('asistencia.realizarAsistencia', $curso->id) }}">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" viewBox="0 0 20 20" fill="currentColor">
+                                            <path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z"></path>
+                                            <path fill-rule="evenodd" d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z" clip-rule="evenodd"></path>
+                                        </svg>
+                                    </button></a></div>
                                 </td>
                             </tr>
                         </tbody>
+                        @endforeach
                     </table>
                 </div>
             </div>
