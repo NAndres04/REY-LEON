@@ -39,14 +39,14 @@
                         </span>
                     </h2>
                     <p class="visible mx-0 mt-3 mb-0 text-sm leading-relaxed text-left text-slate-400">
-                        Establecimiento subvencionado The lions kions, calama.
+                        Establecimiento subvencionado King Lions, Calama.
                     </p>
                 </div>
             </div>
 
             <!-- Descripcion del establecimiento -->
             <section class="p-20 space-y-8">
-                <h1 class="text-4xl text-center">Información del comunicado</h1>
+                <h1 class="text-4xl text-center">{{ $informativo->titulo }}</h1>
                 <p>
                     {{ $informativo->descripcion }}
                 </p>

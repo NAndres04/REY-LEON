@@ -25,7 +25,7 @@
                         </span>
                     </h2>
                     <p class="visible mx-0 mt-3 mb-0 text-sm leading-relaxed text-left text-slate-400">
-                        Establecimiento subvencionado The lions kions, calama.
+                        Establecimiento subvencionado King Lions, Calama.
                     </p>
                 </div>
             </div>

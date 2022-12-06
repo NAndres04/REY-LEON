@@ -87,100 +87,70 @@ Route::group(["middleware" => 'AuthDirectora'], function() {
    Route::get('/enviarcorreo/enviando', [MailController::class,'store'])->name('enviarcorreo.store');
 
 
-                                       //ROUTE: informativo
-                //Crear informativo
-   Route::get('/crearinformativo', [InformativoController::class,'create'])->name('crearinfo.create');
-   Route::post('/crearinformativo/guardando', [InformativoController::class,'store'])->name('crearinfo.store');
-     //ver los informativos creados
-   Route::get('/informativos', [InformativoController::class,'index'])->name('verinfo.index');
-   //Ruta para ver el informativo seleccionado
-   Route::get('/informativos/{id}', [InformativoController::class, 'veruno'])->name('verinfo.veruno');
-   //eliminar informativo
-   Route::delete('/informativos/{id}/eliminar', [InformativoController::class, 'eliminarInfo'])->name('info.eliminar');
-   //modificar informativo
-   Route::get('/informativos/{id}/modificar', [InformativoController::class, 'ModificarInfo'])->name('info.modificar');
-   Route::put('/informativos/{id}/modificando', [InformativoController::class, 'update'])->name('info.update');
+                                       //ROUTE: Informativos
+            //Crear informativo
+            Route::get('/crearinformativo', [InformativoController::class,'create'])->name('crearinfo.create');
+            Route::post('/crearinformativo/guardando', [InformativoController::class,'store'])->name('crearinfo.store');
+            //ver los informativos creados
+            Route::get('/informativos', [InformativoController::class,'index'])->name('verinfo.index');
+            //Ruta para ver el informativo seleccionado
+            Route::get('/informativos/{id}', [InformativoController::class, 'veruno'])->name('verinfo.veruno');
+            //eliminar informativo
+            Route::delete('/informativos/{id}/eliminar', [InformativoController::class, 'eliminarInfo'])->name('info.eliminar');
+            //modificar informativo
+            Route::get('/informativos/{id}/modificar', [InformativoController::class, 'ModificarInfo'])->name('info.modificar');
+            Route::put('/informativos/{id}/modificando', [InformativoController::class, 'update'])->name('info.update');
 
-  //Route: Gestión de Usuarios(Educadora)
-            //Route: Vista principal de los usuarios(Educadora)
+                                       //ROUTE: Usuarios
+            //Route: Ver los usuarios
             Route::get('/ver_usuario', [UsuarioController::class, 'index'])->name('usuario.index');
-            //Route: Vista para ver la información de cada usuarios
+            //Route: Ver información de cada usuarios
             Route::get('/info_usuario/{usuarios}', [UsuarioController::class, 'show'])->name('usuario.show');
-            //Route: Vista del formulario del usuario(Educadora)
-             Route::get('/agregar_usuario', function () {return view('directora.usuarios.agregar_usuario');});
-            //Route: Insert Usuario(Educadora)
-             Route::post('usuario', [UsuarioController::class, 'store'])->name('usuario.store');
-            //Route: Update Usuario(Educadora)
+            //Route: Crear Usuario
+            Route::get('/agregar_usuario', function () {return view('directora.usuarios.agregar_usuario');});
+            Route::post('usuario', [UsuarioController::class, 'store'])->name('usuario.store');
+            //Route: Modificar Usuario
             Route::get('edit_usuario/{usuarios}', [UsuarioController::class, 'edit'])->name('usuario.edit');
             Route::put('edit_usuario/{usuarios}', [UsuarioController::class, 'update'])->name('usuario.update');
-            //Route: Delete Usuario(Educadora)
 
-        //Route: Matrícula
-            //Route: Matrícula Apoderado
+                                        //Route: Matrícula
+            //Route: Crear Apoderado
             Route::get('/matricula_apoderado', function () {return view('directora.matricula.matricula_apoderado'); });
-            //Route: Matrícula Alumno
-            Route::get('/matricula_alumno', [AlumnoController::class, 'index'])->name('alumno.index');
-
-             //Route: Selecionar Apoderado
-            Route::get('/buscar_apoderado', [ApoderadoController::class, 'index'])->name('apoderado.index');
-            //Route: Matricula Apoderado Existente
-            Route::get('/matricula_alumno/{apoderados}', [ApoderadoController::class, 'apoderadoseleccionado'])->name('apoderado.apoderadoseleccionado');
-
-            //Route: Insert Apoderado
             Route::post('apoderado', [ApoderadoController::class, 'store'])->name('apoderado.store');
-            //Route: Update Apoderado
+            //Route: Ver información de cada apoderado
+            Route::get('/info_apoderado/{apoderados}', [ApoderadoController::class, 'show'])->name('apoderado.show');
+            //Route: Modificar Apoderado
             Route::get('edit_apoderado/{apoderados}', [ApoderadoController::class, 'edit'])->name('apoderado.edit');
             Route::put('edit_apoderado/{apoderados}', [ApoderadoController::class, 'update'])->name('apoderado.update');
-            //Route: Vista para ver la información del apoderado
-            Route::get('/info_apoderado/{apoderados}', [ApoderadoController::class, 'show'])->name('apoderado.show');
 
-            //Route: Insert Alumno
+            //Route: Crear Alumno
+            Route::get('/matricula_alumno', [AlumnoController::class, 'index'])->name('alumno.index');
             Route::post('alumno', [AlumnoController::class, 'store'])->name('alumno.store');
-            //Route: Update Alumno
+            //Route: Modificar Alumno
             Route::get('edit_alumno/{alumnos}', [AlumnoController::class, 'edit'])->name('alumno.edit');
             Route::put('edit_alumno/{alumnos}', [AlumnoController::class, 'update'])->name('alumno.update');
-
-
-             //Route: Cursos
-            //Route: Vista principal de los cursos;
-            Route::get('/ver_cursos', [CursoController::class, 'index'])->name('curso.index');
-            //Route: Vista del curso NT1A
-            Route::get('/ver_alumnos_nt1a', [CursoController::class, 'obtenerAlumnoNT1A'])->name('curso.obtenerAlumnoNT1A');
-            //Route: Vista del curso NT2A
-            Route::get('/ver_alumnos_nt2a', [CursoController::class, 'obtenerAlumnoNT2A'])->name('curso.obtenerAlumnoNT2A');
-            //Route: Vista del curso NT1B
-            Route::get('/ver_alumnos_nt1b', [CursoController::class, 'obtenerAlumnoNT1B'])->name('curso.obtenerAlumnoNT1B');
-            //Route: Vista del curso NT2B
-            Route::get('/ver_alumnos_nt2b', [CursoController::class, 'obtenerAlumnoNT2B'])->name('curso.obtenerAlumnoNT2B');
-            //Route: Vista para ver la información de cada alumnos
+            //Route: Ver información de cada alumno
             Route::get('/info_alumno/{alumnos}', [AlumnoController::class, 'show'])->name('alumno.show');
 
-            //Route: Asistencia
-            //Route: Vista principal de los cursos
-            Route::get('/asistencia_cursos', function () {return view('directora.asistencia.asistencia_cursos');});
-            //Route: Asistencia curso NT1A
-            Route::get('/asistencia_nt1a', [AsistenciaController::class, 'AsistenciaAlumnoNT1A'])->name('asistencia.AsistenciaAlumnoNT1A');
-            //Route: Asistencia curso NT1B
-            Route::get('/asistencia_nt1b', [AsistenciaController::class, 'AsistenciaAlumnoNT1B'])->name('asistencia.AsistenciaAlumnoNT1B');
-            //Route: Asistencia curso NT2A
-            Route::get('/asistencia_nt2a', [AsistenciaController::class, 'AsistenciaAlumnoNT2A'])->name('asistencia.AsistenciaAlumnoNT2A');
-            //Route: Asistencia curso NT2B
-            Route::get('/asistencia_nt2b', [AsistenciaController::class, 'AsistenciaAlumnoNT2B'])->name('asistencia.AsistenciaAlumnoNT2B');
-            //Route: Vista del curso NT1A
-            Route::get('/asistencia_alumnos_nt1a', [AsistenciaController::class, 'AlumnoNT1A'])->name('asistencia.AlumnoNT1A');
-            //Route: Vista del curso NT1B
-            Route::get('/asistencia_alumnos_nt1b', [AsistenciaController::class, 'AlumnoNT1B'])->name('asistencia.AlumnoNT1B');
-            //Route: Vista del curso NT2A
-            Route::get('/asistencia_alumnos_nt2a', [AsistenciaController::class, 'AlumnoNT2A'])->name('asistencia.AlumnoNT2A');
-            //Route: Vista del curso NT2B
-            Route::get('/asistencia_alumnos_nt2b', [AsistenciaController::class, 'AlumnoNT2B'])->name('asistencia.AlumnoNT2B');
+            //Route: Selecionar Apoderado
+            Route::get('/buscar_apoderado', [ApoderadoController::class, 'index'])->name('apoderado.index');
+            //Route: Crear Alumno, con un apoderado ya existente
+            Route::get('/matricula_alumno/{apoderados}', [ApoderadoController::class, 'apoderadoseleccionado'])->name('apoderado.apoderadoseleccionado');
 
-            //Route: Insert Asistencia
+                                        //ROUTE: Cursos
+            //Route: Ver los cursos 
+            Route::get('/ver_cursos', [CursoController::class, 'index'])->name('curso.index');
+            //Route: Ver alumnos con su cursos respectivo
+            Route::get('/ver_alumnos/{cursos}', [CursoController::class, 'obtenerAlumnos'])->name('curso.obtenerAlumnos');
+
+                                        //ROUTE: Asistencia
+            //Route: Ver los cursos
+            Route::get('/ver_cursos_asistencia', [AsistenciaController::class, 'index'])->name('asistencia.index');
+            //Route: Crear asistencia
+            Route::get('/realizar_asistencia/{cursos}', [AsistenciaController::class, 'realizarAsistencia'])->name('asistencia.realizarAsistencia');
             Route::post('asistencia', [AsistenciaController::class, 'store'])->name('asistencia.store');
-
-
-
-
+            //Route: Ver asistencia
+            Route::get('/ver_asistencia/{cursos}', [AsistenciaController::class, 'AsistenciaAlumnos'])->name('asistencia.AsistenciaAlumnos');
     
  });
 

@@ -21,7 +21,6 @@ class InformativoController extends Controller
     public function store(Request $request) {
         $this->validate($request,[
             'titulo' => 'required|min:3',
-            'descripcion' => 'required|min:3',
             'descripcion' => 'required|max:30',
      ] );
 
